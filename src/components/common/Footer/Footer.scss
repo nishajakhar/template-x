@@ -1,0 +1,104 @@
+@import '../../../styles/variables.scss';
+
+.footer {
+  @apply flex-col;
+  margin: $containerMargin;
+  padding: 20px 0px;
+  @include media-breakpoint-down($tablet2) {
+    margin: $containerMarginMedium;
+  }
+  .footer__primary {
+    @apply flex justify-between pb-8;
+
+    .footer__primary-left {
+      @apply flex-col;
+      flex: 1;
+      .footer__primary-left__logo {
+        @apply flex items-center justify-start pb-3;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        .footer__primary-left__text {
+          font-size: $largeFont;
+          font-family: $fontStyle;
+          color: $color1;
+
+          span {
+            color: $color2;
+          }
+        }
+      }
+      .footer__primary-left__subtext {
+        @apply pb-5;
+        font-size: 13px;
+      }
+
+      .footer__primary-left__social {
+        @apply flex;
+        font-size: $smallFont;
+        div {
+          padding: 0px 20px;
+          font-size: 15px;
+        }
+        div:not(:last-child) {
+          border-right: 1px solid $gradient1;
+        }
+        div:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
+
+    .footer__primary-middle {
+      @apply flex-col;
+      flex: 1;
+      h1 {
+        font-size: $smallFont;
+        font-family: $fontStyle;
+        color: $color2;
+        padding-bottom: 1rem;
+      }
+      .footer__primary-middle__navitems {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 15px;
+        column-gap: 10px;
+      }
+    }
+    .footer__primary-right {
+      @apply flex-col;
+      flex: 1;
+      h1 {
+        font-size: $smallFont;
+        font-family: $fontStyle;
+        color: $color2;
+        padding-bottom: 1rem;
+      }
+      p {
+        padding-bottom: 1rem;
+      }
+      form {
+        display: flex;
+        button {
+          width: 50px;
+          background: $linearGradient1;
+        }
+      }
+    }
+  }
+  .footer__secondary {
+    @apply flex justify-between;
+    font-size: 13px;
+    .footer__secondary-navitems {
+      display: flex;
+      a {
+        color: $color2;
+      }
+      a:first-child {
+        padding: 0px 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/variables';
+
+// the desktop design has 1920px width
+// so not sure which breakpoint to use
+
+$tablet: md;
+$desktop: xl;
+$gradient1: rgba(207, 70, 241, 0.3);
+$gradient2: rgba(207, 70, 241, 0.7);
+$gradient3: rgba(90, 47, 179, 0.3);
+$fontStyle: 'Quantico';
+$fontStyle2: 'Raleway';
+$clipPath1: polygon(100% 0, 100% 64%, 89% 100%, 0% 100%, 0 32%, 11% 0);
+$clipPath2: polygon(100% 0, 100% 88%, 86% 100%, 0% 100%, 0 12%, 14% 0);
+$clipPath3: polygon(100% 0, 100% 97%, 90% 100%, 0% 100%, 0 3%, 10% 0);
+$clipPath4: polygon(100% 0, 100% 97%, 100% 100%, 0% 100%, 0 23%, 10% 0);
+$clipPath5: polygon(100% 0, 100% 98%, 92% 100%, 0% 100%, 0 27%, 2% 0);
+$clipPath6: polygon(100% 0, 100% 89%, 97% 100%, 0 100%, 0 11%, 3% 0);
+$clipPath7: polygon(100% 0, 100% 92%, 89% 100%, 0 100%, 0 8%, 11% 0);
+$jumboFont: 60px;
+$extraLargeFont: 40px;
+$largeFont: 30px;
+$mediumFont: 20px;
+$smallFont: 16px;
+$extraSmallFont: 12px;
+$color1: #5a2fb3;
+$color2: #cf46f1;
+$color3: #161953;
+$color4: #010239;
+$bgColor1: rgb(100, 82, 153);
+$linearGradient1: linear-gradient(91.66deg, #cf46f1 -0.64%, #e98342 101.06%);
+$linearGradient2: linear-gradient(87.78deg, #4a29ac 12.46%, #cf46f1 135.86%);
+$linearGradient3: linear-gradient(91.95deg, #cf46f1 -22.35%, #e98342 113.17%);
+$desktop: xl;
+$tablet2: lg;
+$tablet: md;
+$mobile: sm;
+$mob: xs;
+$containerMargin: 0rem 14rem;
+$containerMarginLarge: 0rem 8rem;
+$containerMarginMedium: 0rem 5rem;
+$containerMarginSmall: 0rem 2rem;
+
+@include media-breakpoint-down(xs) {
+  $containerMargin: 0rem 2rem;
+}
+@include media-breakpoint-down(sm) {
+  $containerMargin: 0rem 2rem;
+}
+@include media-breakpoint-down(md) {
+  $containerMargin: 0rem 2rem;
+}

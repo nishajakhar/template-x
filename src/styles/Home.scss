@@ -1,0 +1,54 @@
+@import './variables.scss';
+@import './shared.scss';
+
+.home__screen {
+  position: relative;
+  overflow-x: hidden;
+  .home__screen-categories {
+    @apply flex justify-between;
+    margin: $containerMargin;
+    padding: 50px 0px;
+    min-height: 70vh;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+      padding: 80px 0px;
+      min-height: fit-content;
+    }
+  }
+}
+
+.circle__home-1 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  left: -350px;
+  top: -150px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+
+  @include media-breakpoint-down($tablet2) {
+    top: 150px;
+  }
+}
+
+.circle__home-2 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  right: -350px;
+  top: -150px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 2;
+  @include media-breakpoint-down($tablet2) {
+    right: 350px;
+    top: 800px;
+    width: 400px;
+    height: 400px;
+  }
+}

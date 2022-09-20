@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.cookie__information {
+  margin: $containerMargin;
+  padding-top: 80px;
+  h2 {
+    font-weight: bold;
+    font-family: $fontStyle;
+    font-size: $smallFont;
+  }
+  p {
+    padding: 20px 0px 25px 0px;
+    font-size: 14px;
+    font-weight: 100;
+  }
+}

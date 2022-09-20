@@ -1,0 +1,97 @@
+@import './variables.scss';
+
+.profile {
+  position: relative;
+  overflow: hidden;
+
+  .profile__container {
+    @apply py-16;
+    position: relative;
+    margin: $containerMargin;
+
+    .profile__form {
+      @apply text-white;
+      font-size: $extraSmallFont;
+
+      .profile__form-heading__text {
+        font-family: $fontStyle;
+        font-weight: 400;
+        font-size: $mediumFont;
+      }
+
+      h5 {
+        @apply pb-2;
+      }
+      .profile__form-name {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-email {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-vat {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-birthday {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-company {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-gender {
+        @apply flex-col;
+        padding: 10px 0px;
+        flex: 1;
+        span {
+          font-size: 11px;
+        }
+      }
+      .profile__form-birthday {
+        flex: 1;
+        padding: 10px 0px;
+      }
+      .profile__form-password {
+        flex: 1;
+        h1 {
+          @apply pb-5;
+          font-size: $mediumFont;
+        }
+        input {
+          @apply mb-5;
+        }
+        button {
+          font-size: $extraSmallFont;
+        }
+      }
+      .profile__form-pricing__plan {
+        flex: 1;
+        h1 {
+          @apply pb-5;
+          font-size: $mediumFont;
+        }
+        button {
+          font-size: $extraSmallFont;
+        }
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

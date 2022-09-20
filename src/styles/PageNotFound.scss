@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.pagenotfound__screen {
+  position: relative;
+}
+.pagenotfound {
+  position: relative;
+  overflow-x: hidden;
+  img {
+    width: 100vh;
+    position: absolute;
+    right: 120px;
+  }
+  .pagenotfound__container {
+    margin: $containerMargin;
+    min-height: 100vh;
+    padding: 60px 0px;
+    .pagenotfound__heading {
+      font-size: 60px;
+      margin-bottom: 3rem;
+    }
+  }
+}
+.color__circles {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
+}
+.circle__4 {
+  width: 500px;
+  height: 500px;
+  left: -350px;
+  top: 50px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}
+
+.circle__5 {
+  width: 500px;
+  height: 500px;
+  right: -350px;
+  top: -150px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 2;
+}

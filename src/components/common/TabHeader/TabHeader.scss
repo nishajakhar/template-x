@@ -1,0 +1,57 @@
+@import '../../../styles/variables.scss';
+
+.tab__header {
+  margin: 0px;
+  background-color: $color1;
+  padding: 10px 0px;
+  position: relative;
+  overflow: hidden;
+  .tab__header-route {
+    display: flex;
+    margin: $containerMargin;
+    position: absolute;
+
+    div {
+      padding: 5px;
+    }
+  }
+  .tab__header-heading {
+    margin: $containerMargin;
+    font-size: $extraLargeFont;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 80px 0px;
+    h1 {
+      font-weight: 500;
+      font-style: $fontStyle;
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle__14 {
+  width: 500px;
+  height: 500px;
+  left: 50px;
+  top: 30px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  background: $color2 !important;
+  z-index: 1;
+}
+
+.circle__15 {
+  width: 500px;
+  height: 500px;
+  right: -200px;
+  top: -300px;
+  background: $color2 !important;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 2;
+}

@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.faq {
+  position: relative;
+  overflow: hidden;
+
+  .faq__filters {
+    @apply flex mt-16;
+    overflow-x: scroll;
+  }
+  .faq__container {
+    @apply flex justify-center mb-10;
+    position: relative;
+    padding: $containerMargin;
+    z-index: 100;
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

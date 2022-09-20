@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+.contactus {
+  position: relative;
+  overflow: hidden;
+
+  .contactus__container {
+    @apply flex justify-center my-16;
+    position: relative;
+    padding: $containerMargin;
+
+    z-index: 100;
+
+    .contactus__form {
+      @apply text-white;
+      font-size: $extraSmallFont;
+      div {
+        padding: 10px 0px;
+      }
+      .contactus__form-heading__text {
+        font-family: $fontStyle;
+        font-weight: 400;
+        font-size: $extraLargeFont;
+        line-height: 60px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      label {
+        @apply py-1;
+      }
+      .contactus__form-forgot__pwd {
+        @apply text-orange-500 underline;
+      }
+      .contactus__form-button {
+        @apply flex justify-center pt-10;
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

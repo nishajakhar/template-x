@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.catalog {
+  min-height: 70vh;
+  @include media-breakpoint-down($tablet2) {
+    min-height: fit-content;
+    padding-bottom: 50px;
+  }
+  .catalog__heading {
+    @apply flex justify-between pb-10;
+    margin: $containerMargin;
+
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
+    h1 {
+      font-size: $extraLargeFont;
+    }
+  }
+  .catalog__items {
+    @apply flex;
+    overflow-x: scroll;
+    img {
+      width: 200px;
+      height: 150px;
+      padding: 5px;
+    }
+  }
+}

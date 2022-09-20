@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+h1 {
+  font-family: $fontStyle;
+}
+.primary__button {
+  background: $linearGradient3;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-family: $fontStyle;
+  font-weight: 700;
+  font-size: $smallFont;
+  clip-path: $clipPath1;
+}
+
+.secondary__button {
+  background-color: $color1;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-family: $fontStyle;
+  font-weight: 700;
+  font-size: $smallFont;
+  clip-path: $clipPath1;
+}
+
+.tertiary__button-outer {
+  background: $linearGradient3;
+  width: 160px;
+  height: 50px;
+  clip-path: $clipPath1;
+  position: relative;
+  .tertiary__button {
+    position: absolute;
+    clip-path: $clipPath1;
+    color: white;
+    background: $color4;
+    font-family: $fontStyle;
+    font-weight: 700;
+    font-size: $smallFont;
+    width: 154px;
+    height: 44px;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.primary__input {
+  @apply w-full px-3 py-2;
+  background: $color1;
+  opacity: 0.3;
+  color: white;
+  font-weight: 300;
+  font-size: $extraSmallFont;
+  border-radius: 3px;
+}
+
+.primary__input::placeholder {
+  color: white;
+}
+.primary__input::hover {
+}
+.primary__input::focus {
+  outline: none;
+  border: none;
+}

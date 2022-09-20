@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.cookie__form {
+  margin: $containerMargin;
+  .cookie__form-heading {
+    @apply flex items-center py-2;
+    h2 {
+      font-size: $smallFont;
+      font-weight: 500;
+    }
+    p {
+      @apply px-2;
+      flex: 1;
+      color: #4a29ac;
+      text-align: right;
+    }
+  }
+  .cookie__form-subheading {
+    @apply flex justify-between items-center py-4;
+    font-size: 14px;
+    color: #cf46f1;
+  }
+  .subheading-description {
+    @apply pb-2;
+    font-size: 14px;
+    margin-right: 60px;
+    font-weight: 100;
+  }
+  .cookie__form-button {
+    @apply flex justify-center py-8;
+    div {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import './variables.scss';
+
+.team {
+  position: relative;
+  overflow: hidden;
+
+  .team__container {
+    @apply flex-col mt-16;
+    padding: $containerMargin;
+
+    .team__filter {
+      p {
+        font-weight: bold;
+        .social__icons {
+          padding-right: 10px;
+          color: $color2;
+        }
+      }
+    }
+    .team__accounts {
+      display: grid;
+      padding: 30px 0px;
+      grid-template-columns: auto auto auto;
+      row-gap: 40px;
+      column-gap: 20px;
+    }
+    .team__pagination {
+      @apply flex justify-center;
+      span {
+        padding: 5px;
+        color: $color2;
+      }
+    }
+  }
+}
+
+.team__card__outer {
+  position: relative;
+  height: 350px;
+  width: 270px;
+  background-color: $bgColor1;
+  clip-path: $clipPath7;
+  .team__card {
+    position: absolute;
+    clip-path: $clipPath7;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    height: 344px;
+    width: 264px;
+    top: 3px;
+    left: 3px;
+
+    background-color: $color3;
+
+    .team__card-subheading {
+      color: green;
+      font-size: $extraSmallFont;
+      padding-bottom: 10px;
+    }
+    .team__card-heading {
+      font-size: $mediumFont;
+      padding-bottom: 20px;
+    }
+    .team__card-description {
+      font-size: $extraSmallFont;
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+    .team__card-more {
+      font-size: $extraSmallFont;
+      padding-bottom: 20px;
+      text-decoration: underline;
+      color: orange;
+    }
+    .team__card-button {
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

@@ -1,0 +1,130 @@
+@import './variables.scss';
+
+.login__screen {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.login {
+  padding: $containerMargin;
+  position: relative;
+  overflow: hidden;
+
+  .login__container {
+    @apply flex justify-center mt-16 mb-64;
+    position: relative;
+    z-index: 100;
+
+    .login__form {
+      @apply p-10 text-white;
+      width: 75%;
+      border: 3px solid $gradient2;
+      background: $gradient3;
+      backdrop-filter: blur(100px);
+      font-size: $extraSmallFont;
+      div {
+        padding: 10px 0px;
+      }
+      .login__form-heading__text {
+        font-family: $fontStyle;
+        font-weight: 400;
+        font-size: $extraLargeFont;
+        line-height: 60px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .login__form-subheading {
+        @apply py-2 text-center;
+      }
+      label {
+        @apply py-1;
+      }
+      .login__form-forgot__pwd {
+        @apply text-orange-500 underline;
+      }
+      .login__form-button {
+        @apply flex justify-center pt-10;
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
+}
+.circle__1 {
+  width: 230px;
+  height: 230px;
+  left: 20px;
+  top: -51px;
+  transform: rotate(1.3deg);
+  z-index: -10;
+}
+
+.circle__2 {
+  width: 126px;
+  height: 126px;
+  right: 40px;
+  bottom: 30px;
+  z-index: -1;
+  transform: matrix(-1, 0.02, 0.02, 1, 0, 0);
+}
+.circle__3 {
+  width: 180px;
+  height: 180px;
+  right: 55px;
+  bottom: -80px;
+  background: $linearGradient1;
+  transform: rotate(1.3deg);
+  z-index: -10;
+}
+
+.circle__4 {
+  width: 500px;
+  height: 500px;
+  left: -350px;
+  top: -150px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}
+
+.circle__5 {
+  width: 500px;
+  height: 500px;
+  right: -350px;
+  bottom: -150px;
+  filter: blur(200px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}
+
+.circle__6 {
+  width: 60px;
+  height: 60px;
+  top: 700px;
+  left: 50px;
+  background: $linearGradient2;
+  transform: rotate(1.3deg);
+  z-index: 1;
+}
+.circle__7 {
+  width: 45px;
+  height: 45px;
+  top: 230px;
+  right: 50px;
+  background: $linearGradient2;
+  transform: rotate(1.3deg);
+  z-index: 1;
+}
+.circle__8 {
+  width: 20px;
+  height: 20px;
+  top: 230px;
+  right: 85px;
+  background: linear-gradient(91.66deg, #cf46f1 -0.64%, #e98342 101.06%);
+  transform: rotate(1.3deg);
+  z-index: 2;
+}

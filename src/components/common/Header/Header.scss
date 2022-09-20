@@ -1,0 +1,104 @@
+@import '../../../styles/shared.scss';
+@import '../../../styles/variables.scss';
+
+.header {
+  position: relative;
+
+  .header__secondary {
+    background-color: rgb(16, 7, 66);
+    font-size: 10px;
+    z-index: 5;
+    .header__secondary-container {
+      @apply flex justify-between;
+      margin: $containerMargin;
+      padding: 0.4rem 0rem;
+      @include media-breakpoint-down($tablet2) {
+        margin: $containerMarginMedium;
+        padding: 0.8rem 0rem;
+      }
+
+      .header__secondary-social {
+        @apply flex;
+        font-size: $extraSmallFont;
+
+        div {
+          padding: 0px 15px;
+          font-size: 10px;
+          @include media-breakpoint-down($tablet2) {
+            font-size: $smallFont;
+            padding: 0px 20px;
+          }
+        }
+        div:not(:last-child) {
+          border-right: 1px solid $gradient1;
+        }
+      }
+      .header__secondary-translate {
+        @apply flex text-xs items-center;
+        @include media-breakpoint-down($tablet2) {
+          font-size: $smallFont;
+        }
+      }
+    }
+  }
+  .header__primary {
+    @apply flex justify-between py-5 items-center;
+    margin: $containerMargin;
+
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
+    @include media-breakpoint-down($tablet) {
+      margin: $containerMarginMedium;
+    }
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
+
+    .header__primary-left {
+      @apply flex items-center justify-center;
+      img {
+        @include media-breakpoint-down($tablet2) {
+          width: 45px;
+          padding-right: 5px;
+        }
+      }
+      .header__primary-left__text {
+        font-size: 28px;
+        font-family: $fontStyle;
+        color: $color1;
+        @include media-breakpoint-down($tablet2) {
+          font-size: $extraLargeFont;
+        }
+
+        span {
+          color: $color2;
+        }
+      }
+    }
+    .header__primary-navitems {
+      @apply flex-1 flex justify-around px-5;
+      font-size: $smallFont;
+      @include media-breakpoint-down($tablet2) {
+        display: none;
+      }
+    }
+    .header__primary-actions {
+      @include media-breakpoint-down($tablet2) {
+        display: none;
+      }
+    }
+    .header__primary-collapse {
+      display: none;
+      .social__icons {
+        @include media-breakpoint-down($tablet2) {
+          height: 150px;
+        }
+      }
+
+      @include media-breakpoint-down($tablet2) {
+        display: block;
+      }
+    }
+  }
+}
