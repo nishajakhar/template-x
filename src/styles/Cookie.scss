@@ -3,5 +3,9 @@
 .cookie__screen {
   .cookie {
     padding-bottom: 100px;
+    margin: $containerMargin;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
   }
 }

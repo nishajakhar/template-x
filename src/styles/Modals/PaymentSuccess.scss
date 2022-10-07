@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+.payment-success-modal {
+  .modal-container {
+    @apply flex justify-center items-center;
+  }
+  .modal-content {
+    width: 90%;
+  }
+
+  .payment-success-modal__heading {
+    @apply flex justify-center py-2;
+    font-size: 30px;
+  }
+  .payment-success-modal__subheading,
+  .payment-success-modal__transaction-id {
+    @apply flex justify-center text-center py-2;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .payment-success-modal__choose-storage {
+    @apply my-8 flex justify-center;
+    font-weight: 600;
+    color: $color2;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .payment-success-modal__actions {
+    @apply flex justify-center pt-4 pb-2 gap-5;
+    .tertiary__button {
+      background-color: $color3;
+    }
+    button {
+      font-weight: 500;
+    }
+  }
+}

@@ -22,8 +22,8 @@ export default function ProfileScreen() {
               <h1 className="profile__form-heading__text">Profile Information</h1>
             </div>
             <form>
-              <div className="flex">
-                <div className="profile__form-name mr-5">
+              <div className="profile__form-inputs flex">
+                <div className="profile__form-name">
                   <h5 className="">Name</h5>
                   <input type="text" placeholder="Please enter your name" className="primary__input" />
                 </div>
@@ -32,8 +32,8 @@ export default function ProfileScreen() {
                   <input type="text" placeholder="Please enter your VAT Number" className="primary__input" />
                 </div>
               </div>
-              <div className="flex">
-                <div className="profile__form-email mr-5">
+              <div className=" profile__form-inputs flex">
+                <div className="profile__form-email">
                   <h5 className="">Email</h5>
                   <input type="text" placeholder="Please enter your email" className="primary__input" />
                 </div>
@@ -43,8 +43,8 @@ export default function ProfileScreen() {
                 </div>
               </div>
 
-              <div className="flex">
-                <div className="profile__form-gender mr-5">
+              <div className=" profile__form-inputs flex">
+                <div className="profile__form-gender">
                   <h5 className="">Gender</h5>
                   <div className="flex justify-between items-center content-center">
                     <span>
@@ -67,8 +67,8 @@ export default function ProfileScreen() {
                   <input type="date" className="primary__input" />
                 </div>
               </div>
-              <div className="flex my-16">
-                <div className="profile__form-password flex-col mr-5">
+              <div className="profile__form-inputs flex my-16">
+                <div className="profile__form-password flex-col">
                   <h1>Password</h1>
                   <h5 className="">Password</h5>
                   <input type="password" placeholder="Please enter your password" className="primary__input" />
@@ -77,7 +77,7 @@ export default function ProfileScreen() {
                   </div>
                 </div>
 
-                <div className="profile__form-pricing__plan">
+                <div className="profile__form-inputs profile__form-pricing__plan">
                   <h1 className="mb-8">Pricing Plan</h1>
                   <div className="flex justify-between mb-8">
                     <p>Standard Pricing Plan</p>

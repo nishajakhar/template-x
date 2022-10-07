@@ -1,0 +1,43 @@
+@import '../variables.scss';
+
+.invite-user-modal {
+  .modal-container {
+    @apply flex justify-center;
+    margin-top: 10rem;
+  }
+  .modal-content {
+    @apply py-20 px-10;
+    width: 90%;
+  }
+
+  .invite-user-modal__heading {
+    @apply flex justify-center mb-10;
+    font-size: 30px;
+  }
+
+  .invite-user__form-roles {
+    p {
+      font-weight: 300;
+    }
+    @apply my-5;
+    .invite-user__form-role {
+      input {
+        @apply my-3 mr-2;
+      }
+      label {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+  .invite-user__form-action {
+    @apply flex justify-center pt-10 gap-5;
+    .tertiary__button {
+      background-color: $color3;
+    }
+    button {
+      font-weight: 500;
+    }
+  }
+}

@@ -16,6 +16,9 @@
         margin: $containerMarginMedium;
         padding: 0.8rem 0rem;
       }
+      @include media-breakpoint-down($mobile) {
+        display: none;
+      }
 
       .header__secondary-social {
         @apply flex;
@@ -48,9 +51,7 @@
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
     }
-    @include media-breakpoint-down($tablet) {
-      margin: $containerMarginMedium;
-    }
+
     @include media-breakpoint-down($mobile) {
       margin: $containerMarginSmall;
     }
@@ -58,9 +59,14 @@
     .header__primary-left {
       @apply flex items-center justify-center;
       img {
+        width: 35px;
+        padding-right: 5px;
         @include media-breakpoint-down($tablet2) {
           width: 45px;
           padding-right: 5px;
+        }
+        @include media-breakpoint-down($tablet2) {
+          width: 35px;
         }
       }
       .header__primary-left__text {
@@ -70,6 +76,9 @@
         @include media-breakpoint-down($tablet2) {
           font-size: $extraLargeFont;
         }
+        @include media-breakpoint-down($mobile) {
+          font-size: $largeFont;
+        }
 
         span {
           color: $color2;
@@ -78,7 +87,7 @@
     }
     .header__primary-navitems {
       @apply flex-1 flex justify-around px-5;
-      font-size: $smallFont;
+      font-size: 14px;
       @include media-breakpoint-down($tablet2) {
         display: none;
       }
@@ -90,9 +99,13 @@
     }
     .header__primary-collapse {
       display: none;
+      color: $color2;
       .social__icons {
         @include media-breakpoint-down($tablet2) {
-          height: 150px;
+          font-size: 40px;
+        }
+        @include media-breakpoint-down($mobile) {
+          font-size: 30px;
         }
       }
 

@@ -46,16 +46,16 @@ export default function LoginScreen() {
               </div>
             </form>
           </div>
-          <div className="color__circles circle__1"></div>
-          <div className="color__circles circle__2"></div>
-          <div className="color__circles circle__3"></div>
+          <div className="circle__login-1"></div>
+          <div className="circle__login-2"></div>
+          <div className="circle__login-3"></div>
         </div>
       </div>
-      <div className="color__circles circle__4"></div>
-      <div className="color__circles circle__5"></div>
-      <div className="color__circles circle__6"></div>
-      <div className="color__circles circle__7"></div>
-      <div className="color__circles circle__8"></div>
+      <div className="circle__login-4"></div>
+      <div className="circle__login-5"></div>
+      <div className="circle__login-6"></div>
+      <div className="circle__login-7"></div>
+      <div className="circle__login-8"></div>
     </div>
   );
 }

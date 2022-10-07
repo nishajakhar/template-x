@@ -22,8 +22,8 @@ export default function ContactUsScreen() {
               <h1 className="contactus__form-heading__text">Can we help you?</h1>
             </div>
             <form>
-              <div className="flex justify-between">
-                <div className="contactus__form-question mr-5">
+              <div className="contactus__form-inputs">
+                <div className="contactus__form-question">
                   <label className="">Question</label>
                   <input type="text" placeholder="Please enter your question" className="primary__input" />
                 </div>

@@ -1,0 +1,103 @@
+@import './variables.scss';
+
+.storages {
+  position: relative;
+  overflow: hidden;
+
+  .storages__container {
+    @apply flex-col mt-16;
+    padding: $containerMargin;
+
+    .storages__filter {
+      @apply flex justify-between;
+      p {
+        font-weight: bold;
+        .social__icons {
+          padding-right: 10px;
+          color: $color2;
+        }
+      }
+    }
+
+    .storages__pagination {
+      @apply flex justify-center;
+      span {
+        padding: 5px;
+        color: $color2;
+      }
+    }
+  }
+}
+
+.storage__card__outer {
+  position: relative;
+  height: 260px;
+  width: 850px;
+  background-color: $color2;
+  clip-path: $clipPath6;
+  margin: 2rem 0px;
+  .storage__card {
+    @apply flex gap-10;
+    position: absolute;
+    clip-path: $clipPath6;
+    padding: 1.5rem 2.5rem;
+    height: 254px;
+    width: 844px;
+    top: 3px;
+    left: 3px;
+    background-color: $color3;
+    .storage__card-image {
+      @apply flex items-center;
+      img {
+        width: 100%;
+      }
+    }
+    .storage__card-info {
+      flex: 1;
+      .storage__card-subheading {
+        font-size: 12px;
+        padding-bottom: 15px;
+      }
+      .storage__card-heading {
+        @apply flex justify-between;
+        font-size: $mediumFont;
+        font-weight: bold;
+        padding-bottom: 10px;
+        .storage__card-selected {
+          p {
+            font-size: $extraSmallFont;
+            color: green;
+          }
+        }
+      }
+      .storage__card-actions {
+        @apply flex justify-between items-end;
+        h2 {
+          font-family: $fontStyle;
+          font-weight: 700;
+          font-size: 24px;
+          color: #e98342;
+          span {
+            font-size: 15px;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

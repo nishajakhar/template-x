@@ -9,6 +9,9 @@
   @include media-breakpoint-down($tablet2) {
     padding: $containerMarginMedium;
   }
+  @include media-breakpoint-down($mobile) {
+    padding: $containerMarginSmall;
+  }
   .banner__left {
     width: 50%;
     @include media-breakpoint-down($tablet2) {
@@ -27,6 +30,10 @@
         @include media-breakpoint-down($tablet2) {
           text-align: center;
           font-size: 75px;
+        }
+        @include media-breakpoint-down($mobile) {
+          text-align: center;
+          font-size: 45px;
         }
       }
 

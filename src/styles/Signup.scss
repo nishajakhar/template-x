@@ -9,6 +9,9 @@
   padding: $containerMargin;
   position: relative;
   overflow: hidden;
+  @include media-breakpoint-down($tablet2) {
+    padding: $containerMarginMedium;
+  }
 
   .signup__container {
     @apply flex justify-center mt-16 mb-64;
@@ -52,12 +55,10 @@
   }
 }
 
-.color__circles {
+.circle__signup-1 {
   position: absolute;
   background: $linearGradient1;
   border-radius: 50%;
-}
-.circle__1 {
   width: 230px;
   height: 230px;
   left: 20px;
@@ -66,7 +67,10 @@
   z-index: -10;
 }
 
-.circle__2 {
+.circle__signup-2 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 126px;
   height: 126px;
   right: 40px;
@@ -74,7 +78,10 @@
   z-index: -1;
   transform: matrix(-1, 0.02, 0.02, 1, 0, 0);
 }
-.circle__3 {
+.circle__signup-3 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 180px;
   height: 180px;
   right: 55px;
@@ -84,7 +91,10 @@
   z-index: -10;
 }
 
-.circle__4 {
+.circle__signup-4 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 500px;
   height: 500px;
   left: -350px;
@@ -94,7 +104,10 @@
   z-index: 1;
 }
 
-.circle__5 {
+.circle__signup-5 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 500px;
   height: 500px;
   right: -350px;
@@ -104,7 +117,10 @@
   z-index: 1;
 }
 
-.circle__6 {
+.circle__signup-6 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   top: 700px;
@@ -113,7 +129,10 @@
   transform: rotate(1.3deg);
   z-index: 1;
 }
-.circle__7 {
+.circle__signup-7 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 45px;
   height: 45px;
   top: 230px;
@@ -122,7 +141,10 @@
   transform: rotate(1.3deg);
   z-index: 1;
 }
-.circle__8 {
+.circle__signup-8 {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
   width: 20px;
   height: 20px;
   top: 230px;

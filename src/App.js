@@ -19,6 +19,12 @@ import ProfileScreen from './pages/Profile';
 import TeamAccountScreen from './pages/TeamAccount';
 import CompanyGroupsScreen from './pages/CompanyGroups';
 import CompanyGroupDetailScreen from './pages/CompanyGroupDetail';
+import PaymentPlanScreen from './pages/PaymentPlan';
+import PaymentScreen from './pages/Payment';
+import StoragesScreen from './pages/Storages';
+import StorageDetailScreen from './pages/StorageDetail';
+import TemplatesScreen from './pages/Templates';
+import EmailsScreen from './pages/Emails';
 
 function App() {
   return (
@@ -41,6 +47,12 @@ function App() {
         <Route path={ROUTES.TEAM_ACCOUNT} element={<TeamAccountScreen />} />
         <Route path={ROUTES.COMPANY_GROUPS} element={<CompanyGroupsScreen />} />
         <Route path={ROUTES.COMPANY_GROUP_DETAIL} element={<CompanyGroupDetailScreen />} />
+        <Route path={ROUTES.PAYMENT_PLAN} element={<PaymentPlanScreen />} />
+        <Route path={ROUTES.PAYMENT} element={<PaymentScreen />} />
+        <Route path={ROUTES.STORAGES} element={<StoragesScreen />} />
+        <Route path={ROUTES.STORAGE_DETAIL} element={<StorageDetailScreen />} />
+        <Route path={ROUTES.TEMPLATES} element={<TemplatesScreen />} />
+        <Route path={ROUTES.EMAILS} element={<EmailsScreen />} />
       </Routes>
     </BrowserRouter>
   );

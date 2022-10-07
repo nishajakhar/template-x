@@ -1,0 +1,34 @@
+@import '../variables.scss';
+
+.choose-storage-modal {
+  .modal-container {
+    @apply flex justify-center items-center;
+  }
+  .modal-content {
+    width: 90%;
+  }
+
+  .choose-storage-modal__heading {
+    @apply flex justify-center py-2;
+    font-size: 30px;
+  }
+  .choose-storage-modal__subheading {
+    @apply flex justify-center text-center py-2;
+    font-size: 14px;
+    font-weight: 300;
+    span {
+      color: $color2;
+      font-weight: 500;
+    }
+  }
+
+  .choose-storage-modal__actions {
+    @apply flex justify-center pt-10 pb-2 gap-5;
+    .tertiary__button {
+      background-color: $color3;
+    }
+    button {
+      font-weight: 500;
+    }
+  }
+}

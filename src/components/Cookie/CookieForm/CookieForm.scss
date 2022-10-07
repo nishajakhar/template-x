@@ -1,7 +1,6 @@
 @import '../../../styles/variables.scss';
 
 .cookie__form {
-  margin: $containerMargin;
   .cookie__form-heading {
     @apply flex items-center py-2;
     h2 {

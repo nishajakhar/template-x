@@ -1,4 +1,5 @@
 import './Header.scss';
+import { Link } from 'react-router-dom';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,12 +44,24 @@ export default function Header() {
           </div>
         </div>
         <div className="header__primary-navitems">
-          <a href="#">Home</a>
-          <a href="#">FAQs</a>
-          <a href="#">API Docs</a>
-          <a href="#">Pricing</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+          <Link to="/login" className="">
+            Home
+          </Link>
+          <Link to="/faqs" className="">
+            FAQs
+          </Link>
+          <Link to="/team-account" className="">
+            API Docs
+          </Link>
+          <Link to="/pricing" className="">
+            Pricing
+          </Link>
+          <Link to="/blog" className="">
+            Blog
+          </Link>
+          <Link to="/contact-us" className="">
+            Contact
+          </Link>
         </div>
         <div className="header__primary-actions">
           <button className="primary__button">GET STARTED</button>

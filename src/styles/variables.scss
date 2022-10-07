@@ -43,7 +43,7 @@ $mob: xs;
 $containerMargin: 0rem 14rem;
 $containerMarginLarge: 0rem 8rem;
 $containerMarginMedium: 0rem 5rem;
-$containerMarginSmall: 0rem 2rem;
+$containerMarginSmall: 0rem 1rem;
 
 @include media-breakpoint-down(xs) {
   $containerMargin: 0rem 2rem;

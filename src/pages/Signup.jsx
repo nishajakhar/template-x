@@ -52,16 +52,16 @@ export default function SignupScreen() {
               </div>
             </form>
           </div>
-          <div className="color__circles circle__1"></div>
-          <div className="color__circles circle__2"></div>
-          <div className="color__circles circle__3"></div>
+          <div className="circle__signup-1"></div>
+          <div className="circle__signup-2"></div>
+          <div className="circle__signup-3"></div>
         </div>
       </div>
-      <div className="color__circles circle__4"></div>
-      <div className="color__circles circle__5"></div>
-      <div className="color__circles circle__6"></div>
-      <div className="color__circles circle__7"></div>
-      <div className="color__circles circle__8"></div>
+      <div className="circle__signup-4"></div>
+      <div className="circle__signup-5"></div>
+      <div className="circle__signup-6"></div>
+      <div className="circle__signup-7"></div>
+      <div className="circle__signup-8"></div>
     </div>
   );
 }

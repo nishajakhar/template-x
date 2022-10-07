@@ -1,0 +1,43 @@
+@import '../variables.scss';
+
+.add-storage-modal {
+  .modal-container {
+    @apply flex justify-center;
+    margin-top: 5rem;
+  }
+  .modal-content {
+    width: 90%;
+  }
+
+  .add-storage-modal__heading {
+    @apply flex justify-center py-5;
+    font-size: 30px;
+  }
+  .add-storage__form-subheading {
+    @apply py-2;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color2;
+  }
+  .add-storage__form-input {
+    @apply my-2;
+    label {
+      font-size: 15px;
+      font-weight: 350;
+    }
+    select {
+      @apply w-full px-3 py-2;
+      margin-bottom: 20px;
+      background: $color1;
+      border-radius: 3px;
+      opacity: 0.3;
+    }
+  }
+  .add-storage__form-action {
+    @apply flex justify-center pt-5 pb-2 gap-5;
+
+    button {
+      font-weight: 300;
+    }
+  }
+}

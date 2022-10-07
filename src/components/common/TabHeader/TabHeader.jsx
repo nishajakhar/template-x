@@ -29,8 +29,8 @@ export default function TabHeader(props) {
       <div className="tab__header-heading">
         <h1>{props.heading}</h1>
       </div>
-      <div className="color__circles circle__14"></div>
-      <div className="color__circles circle__15"></div>
+      <div className="circle__head-1"></div>
+      <div className="circle__head-2"></div>
     </div>
   );
 }

@@ -1,0 +1,93 @@
+@import './variables.scss';
+
+.emails {
+  position: relative;
+  overflow: hidden;
+
+  .emails__container {
+    @apply flex-col mt-16;
+    padding: $containerMargin;
+
+    .emails__filter {
+      @apply flex justify-between;
+      p {
+        font-weight: bold;
+        .social__icons {
+          padding-right: 10px;
+          color: $color2;
+        }
+      }
+    }
+
+    .emails__pagination {
+      @apply flex justify-center;
+      span {
+        padding: 5px;
+        color: $color2;
+      }
+    }
+  }
+}
+
+.email__card__outer {
+  position: relative;
+  height: 240px;
+  width: 850px;
+  background-color: $color2;
+  clip-path: $clipPath6;
+  margin: 2rem 0px;
+  .email__card {
+    @apply flex gap-5;
+    position: absolute;
+    clip-path: $clipPath6;
+    padding: 1.5rem 2rem;
+    height: 234px;
+    width: 844px;
+    top: 3px;
+    left: 3px;
+    background-color: $color3;
+    font-weight: 100;
+    .email__card-image {
+      @apply flex items-center;
+      img {
+        width: 250px;
+      }
+    }
+    .email__card-info {
+      flex: 1;
+      .email__card-heading {
+        @apply flex justify-between;
+        font-size: 22px;
+      }
+      .email__card-subheading {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .email__card-tags {
+        @apply flex gap-3 my-5;
+        color: $color2;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .email__card-actions {
+        @apply flex justify-end;
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

@@ -1,0 +1,105 @@
+@import './variables.scss';
+.modal {
+  @apply flex justify-center;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  //   overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow-y: auto;
+}
+
+.modal-container {
+  @apply relative w-full;
+  margin: $containerMargin;
+  margin-top: 5rem;
+}
+/* Modal Content */
+.modal-content {
+  @apply p-10;
+  position: absolute;
+  background: rgba(90, 47, 179, 0.3);
+  border: 3px solid rgba(207, 70, 241, 0.7);
+  backdrop-filter: blur(100px);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-open {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-close {
+  -webkit-animation-name: animateClose;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animateClose;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animateClose {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+
+@keyframes animateClose {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,112 @@
+@import './variables.scss';
+
+.templates {
+  position: relative;
+  overflow: hidden;
+
+  .templates__container {
+    @apply flex-col mt-16;
+    padding: $containerMargin;
+
+    .templates__filter {
+      @apply flex justify-between;
+      p {
+        font-weight: bold;
+        .social__icons {
+          padding-right: 10px;
+          color: $color2;
+        }
+      }
+    }
+
+    .templates__pagination {
+      @apply flex justify-center;
+      span {
+        padding: 5px;
+        color: $color2;
+      }
+    }
+  }
+}
+
+.template__card__outer {
+  position: relative;
+  height: 240px;
+  width: 850px;
+  background-color: $color2;
+  clip-path: $clipPath6;
+  margin: 2rem 0px;
+  .template__card {
+    @apply flex gap-5;
+    position: absolute;
+    clip-path: $clipPath6;
+    padding: 1.5rem 2rem;
+    height: 234px;
+    width: 844px;
+    top: 3px;
+    left: 3px;
+    background-color: $color3;
+    font-weight: 100;
+    .template__card-image {
+      @apply flex items-center;
+      img {
+        width: 250px;
+      }
+    }
+    .template__card-info {
+      flex: 1;
+      .template__card-heading {
+        font-size: 22px;
+      }
+      .template__card-subheading {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .template__card-tags {
+        @apply flex gap-3;
+        color: $color2;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .template__card-ratings {
+        p {
+          font-size: 15px;
+          font-weight: 500;
+          .social__icons {
+            @apply px-1;
+          }
+        }
+      }
+      .template__card-actions {
+        @apply flex justify-between items-end;
+        h2 {
+          font-family: $fontStyle;
+          font-weight: 700;
+          font-size: 24px;
+          color: #e98342;
+        }
+        .template__card-buttons {
+          @apply flex gap-2;
+          .tertiary__button {
+            background-color: $color3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

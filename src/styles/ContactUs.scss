@@ -7,9 +7,11 @@
   .contactus__container {
     @apply flex justify-center my-16;
     position: relative;
-    padding: $containerMargin;
-
+    margin: $containerMargin;
     z-index: 100;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
 
     .contactus__form {
       @apply text-white;
@@ -25,13 +27,23 @@
         margin-bottom: 10px;
         text-align: center;
       }
+      .contactus__form-inputs {
+        @apply flex justify-between;
+        gap: 10px;
+        @include media-breakpoint-down($tablet2) {
+          flex-wrap: wrap;
+        }
+        .contactus__form-question {
+          @include media-breakpoint-down($tablet2) {
+            flex-basis: 100%;
+          }
+        }
+        .contactus__form-email {
+          flex-basis: 100%;
+          flex-grow: 1;
+        }
+      }
 
-      label {
-        @apply py-1;
-      }
-      .contactus__form-forgot__pwd {
-        @apply text-orange-500 underline;
-      }
       .contactus__form-button {
         @apply flex justify-center pt-10;
       }

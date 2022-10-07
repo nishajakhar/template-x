@@ -15,6 +15,12 @@ const ROUTES = {
   TEAM_ACCOUNT: '/team-account',
   COMPANY_GROUPS: '/team-account/company-groups',
   COMPANY_GROUP_DETAIL: '/team-account/company-groups/company-group-detail',
+  PAYMENT_PLAN: '/payment-plan',
+  PAYMENT: '/payment-plan/payment',
+  STORAGES: '/storages',
+  STORAGE_DETAIL: '/storages/storage-detail',
+  TEMPLATES: '/templates',
+  EMAILS: '/emails',
 };
 
 export default ROUTES;

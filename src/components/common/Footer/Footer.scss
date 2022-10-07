@@ -9,13 +9,22 @@
   }
   .footer__primary {
     @apply flex justify-between pb-8;
-
+    @include media-breakpoint-down($tablet2) {
+      flex-wrap: wrap;
+    }
     .footer__primary-left {
       @apply flex-col;
       flex: 1;
+      @include media-breakpoint-down($tablet2) {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
       .footer__primary-left__logo {
         @apply flex items-center justify-start pb-3;
-
+        @include media-breakpoint-down($tablet2) {
+          justify-content: center;
+        }
         img {
           width: 30px;
           height: 30px;
@@ -38,6 +47,9 @@
       .footer__primary-left__social {
         @apply flex;
         font-size: $smallFont;
+        @include media-breakpoint-down($tablet2) {
+          justify-content: center;
+        }
         div {
           padding: 0px 20px;
           font-size: 15px;
@@ -54,6 +66,7 @@
     .footer__primary-middle {
       @apply flex-col;
       flex: 1;
+
       h1 {
         font-size: $smallFont;
         font-family: $fontStyle;
@@ -70,6 +83,7 @@
     .footer__primary-right {
       @apply flex-col;
       flex: 1;
+
       h1 {
         font-size: $smallFont;
         font-family: $fontStyle;

@@ -17,9 +17,9 @@ export default function CookieScreen() {
   return (
     <div className="cookie__screen">
       <Header />
+      <TabHeader heading="Cookie" />
       <div className="cookie">
         <div className="cookie__container">
-          <TabHeader heading="Cookie" />
           <CookieInformation />
           <CookieForm />
           <CookieHistory />

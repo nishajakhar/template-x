@@ -13,6 +13,11 @@ export default function HomeBanner() {
           <form className="banner__left-form">
             <input type="text" placeholder="Please enter your email" className="primary__input" />
             <button className="banner__left-button primary__button">SEND</button>
+            <button>
+              {' '}
+              <FontAwesomeIcon classname="social__icons" icon={faHeart} />
+            </button>
+
             <span>
               <FontAwesomeIcon classname="social__icons" icon={faMessage} />
             </span>

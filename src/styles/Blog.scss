@@ -7,6 +7,9 @@
   .blog__container {
     @apply mt-16;
     padding: $containerMargin;
+    @include media-breakpoint-down($tablet2) {
+      padding: $containerMarginMedium;
+    }
 
     .blog__items {
       display: grid;

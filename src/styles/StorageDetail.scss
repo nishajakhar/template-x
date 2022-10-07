@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+.storage-detail {
+  position: relative;
+  overflow: hidden;
+
+  .storage-detail__container {
+    @apply flex-col mt-16;
+    font-weight: 100;
+    padding: $containerMargin;
+    font-size: 15px;
+    .storage-detail__header {
+      @apply flex gap-5 mb-16;
+      .storage-detail__header-img {
+        width: 100px;
+      }
+      .storage-detail__header-info {
+        flex: 1;
+
+        .storage-detail__header-title {
+          @apply pb-3;
+          font-weight: 700;
+          font-size: 18px;
+        }
+        .storage-detail__header-description {
+        }
+      }
+      .storage-detail__header-button {
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+    .storage-detail__main {
+      @apply my-5;
+      p {
+        @apply py-2;
+      }
+    }
+    .storage-detail__properties {
+      @apply mx-24 my-5;
+      .storage-detail__property-item {
+        @apply flex justify-between py-1;
+      }
+    }
+    .storage-detail__unsubscribe {
+      @apply my-8;
+      font-weight: 500;
+      p {
+        span {
+          @apply text-orange-500 underline;
+        }
+      }
+    }
+    .storage-detail__disclaimer {
+      @apply mb-16;
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

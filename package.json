@@ -1,7 +1,6 @@
 {
   "name": "templatex",
   "version": "0.1.0",
-  "homepage": "https://nishajakhar.github.io/template-x",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
