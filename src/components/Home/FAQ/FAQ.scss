@@ -103,9 +103,12 @@
   background-color: $color3;
   opacity: 0.8;
   color: white;
+  text-align: left;
+
   p {
     padding: 20px;
     color: white;
+    z-index: 500;
   }
 }
 

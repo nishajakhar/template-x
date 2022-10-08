@@ -19,15 +19,15 @@ export default function HomeBanner() {
           <h1>LOREM IPSUM DOLAR SIT</h1>
           <form className="banner__left-form">
             <input type="text" placeholder="Please enter your email" className="primary__input" />
-            <button className="banner__left-button primary__button">SEND</button>
-            <button>
-              {' '}
-              <FontAwesomeIcon classname="social__icons" icon={faHeart} />
+            <button className="banner__left-button primary__button largeButton">
+              SEND
+              <span>
+                <FontAwesomeIcon classname="social__icons" icon={faMagicWandSparkles} />
+              </span>
             </button>
-
-            <span>
+            <button className="banner__left-button primary__button smallButton">
               <FontAwesomeIcon classname="social__icons" icon={faMagicWandSparkles} />
-            </span>
+            </button>
           </form>
           <p>Amet consectetur adipiscing elit magna odio vitae lorem</p>
         </div>

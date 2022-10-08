@@ -7,6 +7,9 @@
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
   }
+  @include media-breakpoint-down($mobile) {
+    margin: $containerMarginSmall;
+  }
   .footer__primary {
     @apply flex justify-between pb-8;
     @include media-breakpoint-down($tablet2) {
@@ -67,6 +70,10 @@
       @apply flex-col;
       flex: 1;
 
+      @include media-breakpoint-down($mobile) {
+        @apply pb-10;
+        flex-basis: 100%;
+      }
       h1 {
         font-size: $smallFont;
         font-family: $fontStyle;
@@ -105,8 +112,15 @@
   .footer__secondary {
     @apply flex justify-between;
     font-size: 13px;
+    flex-wrap: wrap-reverse;
+    @include media-breakpoint-down($mobile) {
+      justify-content: center;
+    }
     .footer__secondary-navitems {
       display: flex;
+      @include media-breakpoint-down($mobile) {
+        @apply pb-5;
+      }
       a {
         color: $color2;
       }

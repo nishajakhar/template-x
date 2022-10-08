@@ -2,7 +2,7 @@
 @import '../../../styles/variables.scss';
 
 .banner {
-  @apply flex gap-5;
+  @apply flex gap-1;
   min-height: 65vh;
   margin: $containerMargin;
   // margin: 2rem 0px;
@@ -52,6 +52,20 @@
             font-size: 20px;
           }
         }
+        .largeButton {
+          @include media-breakpoint-down($mobile) {
+            display: none;
+          }
+        }
+        .smallButton {
+          display: none;
+          width: 60px;
+          clip-path: none;
+          background-color: $linearGradient1;
+          @include media-breakpoint-down($mobile) {
+            display: block;
+          }
+        }
         .banner__left-button {
           position: absolute;
           top: 0px;
@@ -60,6 +74,7 @@
         }
         span {
           position: absolute;
+
           top: 13px;
           right: 13px;
         }

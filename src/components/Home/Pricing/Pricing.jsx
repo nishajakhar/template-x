@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Pricing.scss';
 import PricingCard from './PricingCard';
+import { pricing } from '../../../services/data';
 export default function Pricing() {
   const [active, setActive] = useState('Monthly');
   return (
@@ -20,10 +21,9 @@ export default function Pricing() {
           </div>
         </div>
         <div className="pricing__cards">
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
+          {pricing.map((item, index) => (
+            <PricingCard item={item} key={index} />
+          ))}
         </div>
       </div>
       <div className="circle__pricing-1"></div>

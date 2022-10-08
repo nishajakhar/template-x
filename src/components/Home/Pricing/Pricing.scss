@@ -131,12 +131,11 @@
     height: 500px;
   }
   .pricing__card {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col pb-5;
     position: absolute;
     clip-path: $clipPath3;
     // padding: 15px;
-    background-color: $color3;
+    background-color: #000136;
     width: 174px; /* container height - (border thickness * 2) */
     height: 544px;
     left: 3px;
@@ -146,6 +145,7 @@
       height: 494px;
     }
     .pricing__card-heading {
+      position: relative;
       h1 {
         text-align: center;
         font-size: $smallFont;
@@ -153,6 +153,8 @@
         background: $linearGradient2;
       }
       p {
+        position: absolute;
+        width: 100%;
         text-align: center;
         font-size: $extraSmallFont;
         background-color: white;
@@ -162,10 +164,17 @@
       }
     }
     .pricing__card-list {
-      height: 400px;
+      @apply mt-5;
+      flex-grow: 1;
+      // height: 400px;
       overflow: hidden;
+      font-style: 'Raleway';
+      font-weight: 400;
 
       padding: 10px 8px 15px 25px;
+      .not-available {
+        color: #5a2fb3;
+      }
       @include media-breakpoint-down($tablet2) {
         height: 300px;
       }
@@ -179,11 +188,12 @@
       }
     }
     .pricing__cards-price {
-      flex: 1;
+      @apply mb-2;
       text-align: center;
       line-height: 16px;
       padding-top: 10px;
       p {
+        @apply py-2;
         font-family: $fontStyle;
         font-weight: 400;
         font-size: 10px;
@@ -192,7 +202,7 @@
       h2 {
         font-family: $fontStyle;
         font-weight: 700;
-        font-size: $mediumFont;
+        font-size: 25px;
         color: #e98342;
         span {
           font-size: 8px;
@@ -200,7 +210,6 @@
       }
     }
     .pricing__choose {
-      flex: 1;
       text-align: center;
       //   padding: 18px 0px;
 
