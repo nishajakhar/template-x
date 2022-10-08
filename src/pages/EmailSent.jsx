@@ -6,7 +6,7 @@ import Header from '../components/common/Header/Header';
 export default function EmailSentScreen() {
   return (
     <div className="emailSent__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="emailSent">
         <div className="emailSent__container">
           <div className="emailSent__form">

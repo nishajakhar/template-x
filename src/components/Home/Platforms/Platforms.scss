@@ -9,11 +9,18 @@
     min-height: fit-content;
     padding: 2rem 0rem;
   }
+
+  @include media-breakpoint-down($mobile) {
+    margin: $containerMarginSmall;
+  }
   .platforms__heading {
     h1 {
       font-size: $extraLargeFont;
       text-align: center;
       padding: 2rem 0rem;
+      @include media-breakpoint-down($mobile) {
+        font-size: $largeFont;
+      }
     }
   }
   .platforms__items {
@@ -24,7 +31,11 @@
     padding: 2rem 0rem;
     align-items: center;
     justify-items: center;
-
+    @include media-breakpoint-down($mobile) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
     img {
       width: 90px;
       justify-content: center;

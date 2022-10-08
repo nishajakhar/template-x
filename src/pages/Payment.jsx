@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function PaymentScreen() {
   return (
     <div className="payment__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="payment">
         <TabHeader heading="Payment" />
         <div className="payment__container">
@@ -84,7 +84,7 @@ export default function PaymentScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

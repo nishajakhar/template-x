@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function TeamAccountScreen() {
   return (
     <div className="team__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="team">
         <TabHeader heading="Team Account" />
         <div className="team__container">
@@ -43,7 +43,7 @@ export default function TeamAccountScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

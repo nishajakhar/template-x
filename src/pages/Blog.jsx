@@ -15,7 +15,7 @@ config.autoAddCss = false;
 export default function BlogScreen() {
   return (
     <div className="blog__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="blog">
         <TabHeader heading="Blog" />
         <div className="blog__container">
@@ -40,7 +40,7 @@ export default function BlogScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

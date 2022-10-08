@@ -13,6 +13,10 @@
     padding: $containerMarginMedium;
   }
 
+  @include media-breakpoint-down($mobile) {
+    padding: $containerMarginSmall;
+  }
+
   .emailSent__container {
     @apply flex justify-center mt-16 mb-64;
     position: relative;

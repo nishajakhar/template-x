@@ -8,6 +8,13 @@
     @apply flex-col mt-16;
     font-weight: 100;
     padding: $containerMargin;
+    @include media-breakpoint-down($tablet2) {
+      padding: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      padding: $containerMarginSmall;
+    }
     font-size: 15px;
     .storage-detail__header {
       @apply flex gap-5 mb-16;

@@ -15,6 +15,10 @@
       margin: $containerMarginMedium;
     }
 
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
+
     div {
       padding: 5px;
     }
@@ -29,6 +33,7 @@
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
     }
+
     h1 {
       font-weight: 500;
       font-style: $fontStyle;

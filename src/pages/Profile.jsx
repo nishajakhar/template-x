@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function ProfileScreen() {
   return (
     <div className="profile__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="profile">
         <TabHeader heading="Profile" />
         <div className="profile__container">
@@ -100,7 +100,7 @@ export default function ProfileScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

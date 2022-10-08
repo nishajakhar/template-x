@@ -17,13 +17,18 @@
     margin-bottom: 5rem;
   }
   .faq__items {
-    @apply flex-col;
+    @apply flex-col justify-center content-center items-center;
     margin: $containerMargin;
+    text-align: center;
     // padding: 40px 0px;
     z-index: 50;
 
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
     }
   }
 }
@@ -67,7 +72,9 @@
   @include media-breakpoint-down($tablet2) {
     width: 740px;
   }
-
+  @include media-breakpoint-down($mobile) {
+    width: 340px;
+  }
   .faqItem {
     display: flex;
     position: absolute;
@@ -82,6 +89,9 @@
     align-items: center;
     @include media-breakpoint-down($tablet2) {
       width: 734px;
+    }
+    @include media-breakpoint-down($mobile) {
+      width: 334px;
     }
     h1 {
       text-align: center;

@@ -16,6 +16,13 @@
     margin: $containerMargin;
     min-height: 100vh;
     padding: 60px 0px;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
     .servererror__heading {
       h1 {
         font-size: 120px;

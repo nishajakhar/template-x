@@ -6,10 +6,14 @@
 }
 .pricing {
   margin: $containerMargin;
+  z-index: 50;
 
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
     padding-top: 50px;
+  }
+  @include media-breakpoint-down($mobile) {
+    margin: $containerMarginSmall;
   }
   .pricing__heading {
     padding-bottom: 40px;
@@ -19,30 +23,56 @@
       font-size: $extraLargeFont;
     }
     .pricing__heading-filter {
+      z-index: 500;
       display: flex;
       justify-content: center;
       padding-top: 3rem;
-
+      border-bottom: 1px solid $color1;
       div {
-        background: $linearGradient1;
-        padding-bottom: 2px;
-        border-bottom: 1px solid $color1;
-        font-family: $fontStyle;
+        z-index: 500;
+        color: #5a2fb3;
+        font-weight: bold;
+        @include media-breakpoint-down($mobile) {
+          flex: 1;
+          width: 100%;
+        }
+      }
+      .active {
+        button {
+          color: white;
+        }
+        div {
+          min-height: 2px;
+          width: 100%;
+          background: $linearGradient1;
+          // padding-bottom: 2px;
+          // font-family: $fontStyle;
+          // color: white;
+        }
       }
 
-      p {
+      button {
         font-size: $extraSmallFont;
-        background-color: $color4;
+        color: #5a2fb3;
+
+        // background-color: $color4;
         padding: 10px 50px;
+        @include media-breakpoint-down($mobile) {
+          width: 100%;
+        }
       }
     }
   }
 
   .pricing__cards {
+    z-index: 500;
     @apply flex justify-center;
     @include media-breakpoint-down($tablet2) {
       flex-wrap: wrap;
       padding: 0px 50px;
+    }
+    @include media-breakpoint-down($mobile) {
+      padding: 0px;
     }
   }
 }
@@ -57,7 +87,11 @@
   top: 50px;
   filter: blur(200px);
   transform: rotate(1.3deg);
-  z-index: 1;
+  // z-index: 1;
+  @include media-breakpoint-down($mobile) {
+    left: -400px;
+    filter: blur(150px);
+  }
 }
 .circle__pricing-2 {
   position: absolute;
@@ -69,7 +103,7 @@
   top: -150px;
   filter: blur(100px);
   transform: rotate(1.3deg);
-  z-index: 1;
+  // z-index: 1;
 }
 
 // .pricing__card {
@@ -85,6 +119,7 @@
 // }
 
 .pricing__card-outer {
+  z-index: 500;
   clip-path: $clipPath3;
   background: $linearGradient2;
   position: relative;

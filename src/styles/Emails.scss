@@ -7,6 +7,13 @@
   .emails__container {
     @apply flex-col mt-16;
     padding: $containerMargin;
+    @include media-breakpoint-down($tablet2) {
+      padding: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      padding: $containerMarginSmall;
+    }
 
     .emails__filter {
       @apply flex justify-between;

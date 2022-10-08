@@ -7,6 +7,13 @@
   .cgd__container {
     @apply flex-col my-16;
     padding: $containerMargin;
+    @include media-breakpoint-down($tablet2) {
+      padding: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      padding: $containerMarginSmall;
+    }
     .cgd__items {
       @apply mb-10;
       ul {

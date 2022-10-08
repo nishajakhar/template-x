@@ -2,7 +2,16 @@ import './Footer.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedinIn, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+import {
+  faHeart,
+  faMessage,
+  faAward,
+  faCaretDown,
+  faLongArrowRight,
+  faMagnifyingGlassArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function Footer() {
   return (
@@ -25,19 +34,19 @@ export default function Footer() {
           <div className="footer__primary-left__social">
             <div>
               <a href="#">
-                <FontAwesomeIcon classname="social__icons" icon={faHeart} />
+                <FontAwesomeIcon classname="social__icons" icon={faLinkedinIn} />
               </a>{' '}
             </div>
             <div>
               <a href="#">
                 {' '}
-                <FontAwesomeIcon classname="social__icons" icon={faMessage} />
+                <FontAwesomeIcon classname="social__icons" icon={faFacebookF} />
               </a>
             </div>
             <div>
               <a href="#">
                 {' '}
-                <FontAwesomeIcon classname="social__icons" icon={faAward} />
+                <FontAwesomeIcon classname="social__icons" icon={faTwitter} />
               </a>
             </div>
           </div>
@@ -62,7 +71,7 @@ export default function Footer() {
             <input type="text" placeholder="Email" className="primary__input" />
             <button>
               {' '}
-              <FontAwesomeIcon classname="social__icons" icon={faHeart} />
+              <FontAwesomeIcon classname="social__icons" icon={faLongArrowRight} />
             </button>
           </form>
         </div>

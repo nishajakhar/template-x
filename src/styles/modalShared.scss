@@ -15,6 +15,13 @@
   @apply relative w-full;
   margin: $containerMargin;
   margin-top: 5rem;
+  @include media-breakpoint-down($tablet2) {
+    margin: $containerMarginMedium;
+  }
+
+  @include media-breakpoint-down($mobile) {
+    margin: $containerMarginSmall;
+  }
 }
 /* Modal Content */
 .modal-content {

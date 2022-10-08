@@ -12,11 +12,11 @@ import Footer from '../components/common/Footer/Footer';
 export default function PricingScreen() {
   return (
     <div className="pricing__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="pricing">
         <div className="pricing__container"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

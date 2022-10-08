@@ -13,6 +13,9 @@
       margin: $containerMarginMedium;
     }
 
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
     .contactus__form {
       @apply text-white;
       font-size: $extraSmallFont;

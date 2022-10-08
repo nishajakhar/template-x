@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function StoragesScreen() {
   return (
     <div className="storages__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="storages">
         <TabHeader heading="Storages" />
         <div className="storages__container">
@@ -44,7 +44,7 @@ export default function StoragesScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

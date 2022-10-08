@@ -22,10 +22,11 @@ import PaymentFailedModal from '../Modals/PaymentFailed';
 import AddStorageModal from '../Modals/AddStorage';
 import EditStorageModal from '../Modals/EditStorage';
 import ChooseStorageModal from '../Modals/ChooseStorage';
+import { categories } from '../services/data';
 
 export default function HomeScreen() {
   const home = useRef();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     if (open) {
       home.current.style.maxHeight = '100vh';
@@ -35,10 +36,7 @@ export default function HomeScreen() {
       home.current.style.overflowX = 'hidden';
     }
   }, [open]);
-  // const cookieModal = useRef();
-  // useEffect(() => {
-  //   cookieModal.display.style = 'block';
-  // }, []);
+
   return (
     <>
       {/* <CookieModal open={setOpen} /> */}
@@ -51,15 +49,18 @@ export default function HomeScreen() {
       {/* <PaymentFailedModal open={setOpen} /> */}
       {/* <AddStorageModal open={setOpen} /> */}
       {/* <EditStorageModal open={setOpen} /> */}
-      <ChooseStorageModal open={setOpen} />
+      {/* <ChooseStorageModal open={setOpen} /> */}
 
       <div className="home__screen" ref={home}>
-        <Header />
+        {/* <Header /> */}
         <HomeBanner />
         <div className="home__screen-categories">
+          {categories.map((category, key) => (
+            <Card category={category} key={key} />
+          ))}
+          {/* <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card /> */}
         </div>
         <TemplateCatalog />
         <Description />
@@ -67,7 +68,7 @@ export default function HomeScreen() {
         <Platforms />
         <Pricing />
         <FAQ />
-        <Footer />
+        {/* <Footer /> */}
         <div className="circle__home-1"></div>
         <div className="circle__home-2"></div>
       </div>

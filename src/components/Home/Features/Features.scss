@@ -4,16 +4,25 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 5rem;
+  @include media-breakpoint-down($mobile) {
+    padding-bottom: 3rem;
+  }
   .features__heading {
     font-size: $extraLargeFont;
     // font-weight: 700;
     padding: 2rem 0rem;
     text-align: center;
+    @include media-breakpoint-down($mobile) {
+      padding: 1rem 0rem;
+    }
   }
   .features__items {
     @apply flex pt-20 pb-10;
     display: flex;
     overflow-x: scroll;
+    @include media-breakpoint-down($mobile) {
+      @apply flex py-5;
+    }
   }
 }
 
@@ -29,6 +38,10 @@
   filter: blur(170px);
   transform: rotate(1.3deg);
   z-index: 1;
+  @include media-breakpoint-down($mobile) {
+    bottom: -250px;
+    left: -350px;
+  }
 }
 
 .circle__feat-2 {

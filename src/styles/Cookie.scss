@@ -7,5 +7,9 @@
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
     }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
   }
 }

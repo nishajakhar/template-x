@@ -13,7 +13,7 @@ import TabHeader from '../components/common/TabHeader/TabHeader';
 export default function ContactUsScreen() {
   return (
     <div className="contactus__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="contactus">
         <TabHeader heading="Contact Us" />
         <div className="contactus__container">
@@ -51,7 +51,7 @@ export default function ContactUsScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

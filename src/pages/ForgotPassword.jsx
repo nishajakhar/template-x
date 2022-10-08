@@ -6,7 +6,7 @@ import Header from '../components/common/Header/Header';
 export default function ForgotPasswordScreen() {
   return (
     <div className="forgot__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="forgot">
         <div className="forgot__container">
           <div className="forgot__form">

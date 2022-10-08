@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function TemplatesScreen() {
   return (
     <div className="templates__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="templates">
         <TabHeader heading="templates" />
         <div className="templates__container">
@@ -44,7 +44,7 @@ export default function TemplatesScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -2,7 +2,14 @@ import './HomeBanner.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHeart,
+  faMessage,
+  faAward,
+  faCaretDown,
+  faMagic,
+  faMagicWandSparkles,
+} from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function HomeBanner() {
   return (
@@ -19,7 +26,7 @@ export default function HomeBanner() {
             </button>
 
             <span>
-              <FontAwesomeIcon classname="social__icons" icon={faMessage} />
+              <FontAwesomeIcon classname="social__icons" icon={faMagicWandSparkles} />
             </span>
           </form>
           <p>Amet consectetur adipiscing elit magna odio vitae lorem</p>
@@ -27,7 +34,9 @@ export default function HomeBanner() {
       </div>
 
       <div className="banner__right">
-        <img src="home1.png" />
+        <div className="banner__right-content">
+          <img src="home1.png" />
+        </div>
       </div>
     </div>
   );

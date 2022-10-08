@@ -16,7 +16,7 @@ config.autoAddCss = false;
 export default function CookieScreen() {
   return (
     <div className="cookie__screen">
-      <Header />
+      {/* <Header /> */}
       <TabHeader heading="Cookie" />
       <div className="cookie">
         <div className="cookie__container">
@@ -25,7 +25,7 @@ export default function CookieScreen() {
           <CookieHistory />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

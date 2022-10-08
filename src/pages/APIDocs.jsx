@@ -12,11 +12,11 @@ import Footer from '../components/common/Footer/Footer';
 export default function APIDocsScreen() {
   return (
     <div className="apidocs__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="apidocs">
         <div className="apidocs__container"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

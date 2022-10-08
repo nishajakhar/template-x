@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function EmailsScreen() {
   return (
     <div className="emails__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="emails">
         <TabHeader heading="Emails" />
         <div className="emails__container">
@@ -44,7 +44,7 @@ export default function EmailsScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

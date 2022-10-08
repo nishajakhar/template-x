@@ -14,7 +14,7 @@ config.autoAddCss = false;
 export default function PaymentPlanScreen() {
   return (
     <div className="payment-plan__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="payment-plan">
         <TabHeader heading="Standard Plan" />
         <div className="payment-plan__container">
@@ -54,7 +54,7 @@ export default function PaymentPlanScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -11,7 +11,7 @@ import Footer from '../components/common/Footer/Footer';
 export default function ServerErrorScreen() {
   return (
     <div className="servererror__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="servererror">
         <img src="500.png" />
         <div className="servererror__container">
@@ -22,7 +22,7 @@ export default function ServerErrorScreen() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
       <div className="color__circle circle__20"></div>
       <div className="color__circle circle__21"></div>
     </div>

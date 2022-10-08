@@ -11,6 +11,9 @@
       padding: $containerMarginMedium;
     }
 
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
     .blog__items {
       display: grid;
       padding: 30px 0px;

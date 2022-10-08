@@ -86,10 +86,24 @@
       }
     }
     .header__primary-navitems {
-      @apply flex-1 flex justify-around px-5;
+      @apply flex-1 flex justify-center px-5 items-center gap-2;
       font-size: 14px;
+      text-align: center;
+      height: 100%;
       @include media-breakpoint-down($tablet2) {
         display: none;
+      }
+      .header__primary-navitem {
+        flex: 1;
+        height: 100%;
+        // padding: 0.5rem 0rem;
+      }
+      .header__primary-navitem:hover {
+        color: $color2;
+      }
+      .item-active {
+        font-weight: bold;
+        color: $color2;
       }
     }
     .header__primary-actions {
@@ -112,6 +126,47 @@
       @include media-breakpoint-down($tablet2) {
         display: block;
       }
+    }
+  }
+
+  .header__primary-menu {
+    @apply absolute z-50 w-80;
+    margin: $containerMargin;
+    right: 0px;
+    z-index: 500;
+    box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
+    .menu-top {
+      padding: 2rem;
+      background-color: #2b1e5b;
+      border: 2px solid #2b1e5b;
+
+      text-align: center;
+      h1 {
+        font-size: $mediumFont;
+      }
+      button {
+        @apply mt-8;
+      }
+    }
+    .menu-top:hover {
+      border: 2px solid rgb(194, 187, 187);
+    }
+    .menu-bottom {
+      padding: 2rem;
+      background-color: #030d36;
+      text-align: center;
+      border: 2px solid #030d36;
+
+      h1 {
+        font-size: $mediumFont;
+      }
+      p {
+        @apply pt-5;
+        font-size: 14px;
+      }
+    }
+    .menu-bottom:hover {
+      border: 2px solid rgb(194, 187, 187);
     }
   }
 }

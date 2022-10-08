@@ -15,7 +15,7 @@ import Category from '../components/Home/FAQ/Category';
 export default function faqScreen() {
   return (
     <div className="faq__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="faq">
         <TabHeader heading="FAQ" />
 
@@ -49,7 +49,7 @@ export default function faqScreen() {
         <div className="color__circles circle__18"></div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -15,6 +15,13 @@
     margin: $containerMargin;
     min-height: 100vh;
     padding: 60px 0px;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
     .pagenotfound__heading {
       font-size: 60px;
       margin-bottom: 3rem;

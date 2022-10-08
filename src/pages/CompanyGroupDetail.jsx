@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function CompanyGroupDetailScreen() {
   return (
     <div className="cgd__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="cgd">
         <TabHeader heading="Designers" />
         <div className="cgd__container">
@@ -62,7 +62,7 @@ export default function CompanyGroupDetailScreen() {
         </div>
         <div className="color__circles circle__18"></div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

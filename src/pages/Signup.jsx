@@ -6,7 +6,7 @@ import Header from '../components/common/Header/Header';
 export default function SignupScreen() {
   return (
     <div className="signup__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="signup">
         <div className="signup__container">
           <div className="signup__form">

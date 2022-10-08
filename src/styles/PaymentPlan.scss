@@ -11,6 +11,10 @@
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
     }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
     .payment-plan__heading {
       .payment-plan__heading-text {
         @apply my-20;

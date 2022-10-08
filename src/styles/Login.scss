@@ -1,7 +1,6 @@
 @import './variables.scss';
 
 .login__screen {
-  position: relative;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -12,6 +11,10 @@
 
   @include media-breakpoint-down($tablet2) {
     padding: $containerMarginMedium;
+  }
+
+  @include media-breakpoint-down($mobile) {
+    padding: $containerMarginSmall;
   }
 
   .login__container {

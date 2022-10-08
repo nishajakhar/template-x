@@ -16,8 +16,16 @@
   .description {
     @apply flex;
     margin: $containerMargin;
+
     @include media-breakpoint-down($tablet2) {
       margin: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      @apply justify-center;
+      flex-wrap: wrap-reverse;
+      text-align: center;
+      margin: $containerMarginSmall;
     }
     .description__image {
       position: relative;
@@ -29,10 +37,15 @@
         top: -100px;
 
         height: 425px;
+
         @include media-breakpoint-down($tablet2) {
           height: 360px;
           top: -70px;
           left: 0px;
+        }
+        @include media-breakpoint-down($mobile) {
+          position: relative;
+          top: 0px;
         }
       }
     }

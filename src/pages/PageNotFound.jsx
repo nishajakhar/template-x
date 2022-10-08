@@ -12,7 +12,7 @@ import Footer from '../components/common/Footer/Footer';
 export default function PageNotFoundScreen() {
   return (
     <div className="pagenotfound__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="pagenotfound">
         <img src="404.png" />
         <div className="pagenotfound__container">
@@ -24,7 +24,7 @@ export default function PageNotFoundScreen() {
           <button className="primary__button">GO TO HOME</button>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
       <div className="color__circles circle__4"></div>
       <div className="color__circles circle__5"></div>
     </div>

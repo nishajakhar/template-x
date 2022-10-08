@@ -10,7 +10,7 @@ import Header from '../components/common/Header/Header';
 export default function LoginScreen() {
   return (
     <div className="login__screen">
-      <Header />
+      {/* <Header /> */}
       <div className="login">
         <div className="login__container">
           <div className="login__form">
