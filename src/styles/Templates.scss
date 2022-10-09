@@ -37,21 +37,13 @@
 }
 
 .template__card__outer {
-  position: relative;
-  height: 240px;
-  width: 850px;
+  padding: 3px;
   background-color: $color2;
   clip-path: $clipPath6;
   margin: 2rem 0px;
   .template__card {
     @apply flex gap-5;
-    position: absolute;
-    clip-path: $clipPath6;
-    padding: 1.5rem 2rem;
-    height: 234px;
-    width: 844px;
-    top: 3px;
-    left: 3px;
+    clip-path: inherit;
     background-color: $color3;
     font-weight: 100;
     .template__card-image {

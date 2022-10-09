@@ -1,6 +1,7 @@
 import '../styles/ForgotPassword.scss';
 import '../styles/shared.scss';
 
+import { Link } from 'react-router-dom';
 import Header from '../components/common/Header/Header';
 
 export default function ForgotPasswordScreen() {
@@ -31,7 +32,9 @@ export default function ForgotPasswordScreen() {
                 </label>
               </div>
               <div className="forgot__form-button">
-                <button className="primary__button">SEND</button>
+                <Link to="/email-sent">
+                  <button className="primary__button">SEND</button>
+                </Link>
               </div>
             </form>
           </div>

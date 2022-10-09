@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom';
 import '../styles/Login.scss';
 import '../styles/shared.scss';
+
+import { useNavigate } from 'react-router';
+import ROUTES from '../services/routes';
 
 import Header from '../components/common/Header/Header';
 // import { config } from '@fortawesome/fontawesome-svg-core';
@@ -7,7 +11,9 @@ import Header from '../components/common/Header/Header';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 // config.autoAddCss = false;
-export default function LoginScreen() {
+export default function LoginScreen({ setLogin }) {
+  const navigate = useNavigate();
+
   return (
     <div className="login__screen">
       {/* <Header /> */}
@@ -18,9 +24,9 @@ export default function LoginScreen() {
               <h1 className="login__form-heading__text">Log In</h1>
               <p className="login__form-subheading">
                 Dont have a account?{' '}
-                <a href="#" className="text-orange-500">
+                <Link to="/signup" className="text-orange-500">
                   Signup
-                </a>
+                </Link>
               </p>
             </div>
             <form>
@@ -37,12 +43,21 @@ export default function LoginScreen() {
                   <input type="checkbox" checked className="bg-pink-300 m-1" />
                   <label className="px-1">Remember for 30 days</label>
                 </div>
-                <a href="#" className="login__form-forgot__pwd">
+                <Link to="forgot-password" className="login__form-forgot__pwd">
                   Forgot password?
-                </a>
+                </Link>
               </div>
               <div className="login__form-button">
-                <button className="primary__button">LOG IN</button>
+                <button
+                  className="primary__button"
+                  onClick={e => {
+                    e.preventDefault();
+                    setLogin(true);
+                    navigate(ROUTES.HOME);
+                  }}
+                >
+                  LOG IN
+                </button>
               </div>
             </form>
           </div>

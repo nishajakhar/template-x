@@ -2,8 +2,11 @@ import '../styles/Signup.scss';
 import '../styles/shared.scss';
 
 import Header from '../components/common/Header/Header';
+import { useNavigate } from 'react-router';
+import ROUTES from '../services/routes';
 
-export default function SignupScreen() {
+export default function SignupScreen({ setLogin }) {
+  const navigate = useNavigate();
   return (
     <div className="signup__screen">
       {/* <Header /> */}
@@ -48,7 +51,16 @@ export default function SignupScreen() {
                 </div>
               </div>
               <div className="signup__form-button">
-                <button className="primary__button">CREATE ACCOUNT</button>
+                <button
+                  className="primary__button"
+                  onClick={e => {
+                    e.preventDefault();
+                    setLogin(true);
+                    navigate(ROUTES.HOME);
+                  }}
+                >
+                  CREATE ACCOUNT
+                </button>
               </div>
             </form>
           </div>

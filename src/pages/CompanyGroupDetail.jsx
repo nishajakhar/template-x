@@ -4,11 +4,11 @@ import '../styles/shared.scss';
 import Header from '../components/common/Header/Header';
 import Footer from '../components/common/Footer/Footer';
 import TabHeader from '../components/common/TabHeader/TabHeader';
-
+import { users } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMessage, faSliders, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function CompanyGroupDetailScreen() {
   return (
@@ -36,22 +36,19 @@ export default function CompanyGroupDetailScreen() {
           <div className="cgd__user-filter">
             <p>
               {' '}
-              <FontAwesomeIcon className="social__icons" icon={faHeart} />
+              <FontAwesomeIcon className="social__icons" icon={faSliders} />
               Filter
             </p>
             <p>
               {' '}
-              <FontAwesomeIcon className="social__icons" icon={faHeart} />
+              <FontAwesomeIcon className="social__icons" icon={faPlus} />
               Add a new user
             </p>
           </div>
           <div class="cgd__users">
-            <UserCard />
-            <UserCard />
-            <UserCard />
-            <UserCard />
-            <UserCard />
-            <UserCard />
+            {users.map((user, index) => (
+              <UserCard key={index} user={user} />
+            ))}
           </div>
           <div class="cgd__pagination mt-16">
             <span>1</span>
@@ -67,32 +64,34 @@ export default function CompanyGroupDetailScreen() {
   );
 }
 
-function UserCard() {
+function UserCard({ user }) {
   return (
     <div className="user__card__outer">
       <div className="user__card">
         <div className="user__card-image flex justify-center mb-3">
-          <img src="/Office.png" width="80" />
+          <img src={user.img} width="80" />
         </div>
-        <div className="user__card-heading text-center">
-          <h1>
-            <a href="">Rachel Williams</a>
-          </h1>
-        </div>
+        <div className="user__card-heading-info">
+          <div className="user__card-heading text-center">
+            <h1>
+              <a href="">{user.name}</a>
+            </h1>
+          </div>
 
-        <div className="user__card-subheading text-center">
-          <p>rachelwilliams@gmail.com</p>
+          <div className="user__card-subheading text-center">
+            <p>{user.email}</p>
+          </div>
         </div>
 
         <div className="user__card-details">
-          <div className="flex justify-between">
-            <h1>Position:</h1>
-            <p>Designer</p>
+          <div className="">
+            <h1 className="font-thin">Position:</h1>
+            <p className="font-bold">{user.position}</p>
           </div>
 
-          <div className="flex justify-between">
-            <h1>Country:</h1>
-            <p>India</p>
+          <div className="">
+            <h1 className="font-thin">Country:</h1>
+            <p className="font-bold">{user.country}</p>
           </div>
         </div>
       </div>

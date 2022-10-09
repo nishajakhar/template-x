@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+.pricing {
+  position: relative;
+  overflow: hidden;
+
+  .pricing__container {
+    position: relative;
+    margin: $containerMargin;
+    z-index: 100;
+    @include media-breakpoint-down($tablet2) {
+      margin: $containerMarginMedium;
+    }
+
+    @include media-breakpoint-down($mobile) {
+      margin: $containerMarginSmall;
+    }
+    .pricing__heading-filter {
+      @apply my-5;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      //   padding-top: 3rem;
+      border-bottom: 1px solid $color1;
+      div {
+        z-index: 500;
+        color: #5a2fb3;
+        font-weight: bold;
+        @include media-breakpoint-down($mobile) {
+          flex: 1;
+          width: 100%;
+        }
+      }
+      .active {
+        button {
+          color: white;
+        }
+        div {
+          min-height: 2px;
+          width: 100%;
+          background: $linearGradient1;
+          // padding-bottom: 2px;
+          // font-family: $fontStyle;
+          // color: white;
+        }
+      }
+
+      button {
+        font-size: $extraSmallFont;
+        color: #5a2fb3;
+
+        // background-color: $color4;
+        padding: 10px 50px;
+        @include media-breakpoint-down($mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+    .pricing__cards {
+      z-index: 500;
+      @apply flex justify-center;
+      @include media-breakpoint-down($tablet2) {
+        flex-wrap: wrap;
+        padding: 0px 50px;
+      }
+      @include media-breakpoint-down($mobile) {
+        padding: 0px;
+      }
+    }
+  }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient2;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
+}

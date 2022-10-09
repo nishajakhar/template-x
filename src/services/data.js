@@ -19,6 +19,208 @@ exports.categories = [
   },
 ];
 
+exports.teamAccounts = [
+  {
+    selected: true,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+  {
+    selected: false,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+  {
+    selected: false,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+  {
+    selected: false,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+  {
+    selected: false,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+  {
+    selected: false,
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna vel viverra fringilla eget suspendisse urna. Est massa mauris, tellus, quisque. Ac auctor scelerisque gravida maecenas molestie quam.',
+  },
+];
+
+exports.companyGroups = [
+  {
+    title: 'Designers',
+    totalUsers: 10,
+    items: [
+      'Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja ',
+      'consectetur adipiscing elit. ',
+      'Urna vel viverra fringilla ',
+      'eget suspendisse urna.',
+      'Est massa mauris, tellus, quisque. ',
+      'Ac auctor scelerisque gravida ',
+      'maecenas molestie quam.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+    ],
+  },
+  {
+    title: 'Developers',
+    totalUsers: 25,
+    items: [
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+    ],
+  },
+  {
+    title: 'Managers',
+    totalUsers: 10,
+    items: [
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+    ],
+  },
+  {
+    title: 'Team Leads',
+    totalUsers: 12,
+    items: [
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+      'Lorem ipsum dolor sit amet consecteturadi piscing elit.',
+    ],
+  },
+];
+
+exports.users = [
+  {
+    img: '/user1.png',
+    name: 'Tom Williams',
+    email: 'Tom william@gmai.com',
+    position: 'Manager',
+    country: 'India',
+  },
+  {
+    img: '/user2.png',
+    name: 'Genelia Albert',
+    email: 'geneliad@gmai.com',
+    position: 'Developer',
+    country: 'USA',
+  },
+  {
+    img: '/user3.png',
+    name: 'Christina Johnson',
+    email: 'christina@gmai.com',
+    position: 'Designer',
+    country: 'UK',
+  },
+  {
+    img: '/user1.png',
+    name: 'Tom Williams',
+    email: 'Tom william@gmai.com',
+    position: 'Manager',
+    country: 'India',
+  },
+  {
+    img: '/user2.png',
+    name: 'Genelia Albert',
+    email: 'geneliad@gmai.com',
+    position: 'Developer',
+    country: 'USA',
+  },
+  {
+    img: '/user3.png',
+    name: 'Christina Johnson',
+    email: 'christina@gmai.com',
+    position: 'Designer',
+    country: 'UK',
+  },
+];
+exports.features = [
+  {
+    img: '/rocket.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/editor.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/thumbsup.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/rocket.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/editor.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/thumbsup.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/rocket.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/editor.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+  {
+    img: '/thumbsup.png',
+    title: 'Lorem ipsum dolor',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus in lectus massa non in donec ultrices arcu habitant. Faucibus nisl massa urna in id neque.',
+  },
+];
+
 exports.faq = [
   {
     question: 'Lorem ipsum dolor sit amet?',
@@ -134,5 +336,71 @@ exports.pricing = [
 
     secondaryPrice: '',
     primaryPrice: '',
+  },
+];
+
+exports.blogs = [
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
+  },
+  {
+    img: '/Blog.png',
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, felis urna, dignissim vitae dolor, ac nulla quis.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi in id donec aliquam. Enim, egestas varius eget eget et. Enim hac nisl in lorem sit diam lacinia nulla. Lectus ultricies sit tempus a lacus egestas rhoncus et neque.',
+    date: 'June 24, 2022',
+    tags: ['lorem', 'ipsum', 'sit', 'amet'],
   },
 ];

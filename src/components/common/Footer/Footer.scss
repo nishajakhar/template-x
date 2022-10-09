@@ -23,6 +23,9 @@
         text-align: center;
         padding: 4rem 2rem;
       }
+      @include media-breakpoint-down($mobile) {
+        padding: 2rem 0rem;
+      }
       .footer__primary-left__logo {
         @apply flex items-center justify-start pb-3;
         @include media-breakpoint-down($tablet2) {

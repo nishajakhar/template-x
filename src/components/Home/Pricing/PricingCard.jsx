@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Pricing.scss';
 export default function PricingCard({ item }) {
   return (
@@ -30,7 +31,9 @@ export default function PricingCard({ item }) {
           )}
         </div>
         <div class="pricing__choose">
-          <button className="primary__button">CHOOSE</button>
+          <Link to="/payment-plan">
+            <button className="primary__button">CHOOSE</button>
+          </Link>
         </div>
       </div>
     </div>

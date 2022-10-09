@@ -36,20 +36,15 @@
   @apply mx-2 my-6;
   clip-path: $clipPath4;
   background: $linearGradient2;
-  position: relative;
+  padding: 3px;
   width: 180px;
-  height: 50px;
-
   .category {
+    @apply px-10 py-2;
     display: flex;
-    position: absolute;
-    clip-path: $clipPath4;
-    // padding: 15px;
+    width: 174px;
+
+    clip-path: inherit;
     background-color: $color3;
-    width: 174px; /* container height - (border thickness * 2) */
-    height: 44px;
-    left: 3px;
-    top: 3px;
     justify-content: center;
     align-items: center;
 
@@ -64,37 +59,27 @@
   @apply mx-2 my-6;
   clip-path: $clipPath5;
   background: $linearGradient1;
-  position: relative;
-  width: 825px;
-  height: 50px;
+  padding: 3px;
   z-index: 50;
 
   @include media-breakpoint-down($tablet2) {
-    width: 740px;
   }
   @include media-breakpoint-down($mobile) {
-    width: 340px;
   }
   .faqItem {
     display: flex;
-    position: absolute;
-    clip-path: $clipPath5;
+    clip-path: inherit;
     padding: 15px;
     background-color: $color3;
-    width: 819px; /* container height - (border thickness * 2) */
-    height: 44px;
-    left: 3px;
-    top: 3px;
+
     justify-content: space-between;
     align-items: center;
     @include media-breakpoint-down($tablet2) {
-      width: 734px;
     }
     @include media-breakpoint-down($mobile) {
-      width: 334px;
     }
     h1 {
-      text-align: center;
+      text-align: left;
       font-size: $smallFont;
     }
   }

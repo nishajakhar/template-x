@@ -56,7 +56,7 @@ export default function HomeScreen() {
         <HomeBanner />
         <div className="home__screen-categories">
           {categories.map((category, key) => (
-            <Card category={category} key={key} />
+            <Card item={category} key={key} />
           ))}
           {/* <Card />
           <Card />
@@ -68,6 +68,7 @@ export default function HomeScreen() {
         <Platforms />
         <Pricing />
         <FAQ />
+
         {/* <Footer /> */}
         <div className="circle__home-1"></div>
         <div className="circle__home-2"></div>

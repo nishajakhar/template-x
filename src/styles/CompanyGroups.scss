@@ -37,25 +37,23 @@
 }
 
 .company__card__outer {
-  position: relative;
-  height: 210px;
-  width: 850px;
   background-color: $color2;
   clip-path: $clipPath6;
   margin: 2rem 0px;
+  padding: 3px;
   .company__card {
-    position: absolute;
-    clip-path: $clipPath6;
+    clip-path: inherit;
     padding: 1.5rem 2.5rem;
-    height: 204px;
-    width: 844px;
-    top: 3px;
-    left: 3px;
     background-color: $color3;
-
+    @include media-breakpoint-down($mobile) {
+      padding: 1.5rem 1.5rem;
+    }
     .company__card-subheading {
       font-size: 12px;
       padding-bottom: 15px;
+      @include media-breakpoint-down($mobile) {
+        font-size: 14px;
+      }
     }
     .company__card-heading {
       @apply flex justify-between;
@@ -66,16 +64,45 @@
         font-size: $extraSmallFont;
         text-decoration: underline;
         color: orange;
+        @include media-breakpoint-down($mobile) {
+          display: none;
+        }
       }
     }
     .company__card-items {
       font-size: 13px;
+      @include media-breakpoint-down($mobile) {
+        font-size: 14px;
+      }
       ul {
         columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
         list-style-type: circle;
         margin: 0rem 2rem;
+        @include media-breakpoint-down($mobile) {
+          margin: 0rem 1rem;
+        }
+        li {
+          @include media-breakpoint-down($mobile) {
+            line-height: 30px;
+          }
+        }
+
+        @include media-breakpoint-down($mobile) {
+          columns: 1;
+        }
+      }
+    }
+    .company__card-more-2 {
+      display: none;
+
+      @include media-breakpoint-down($mobile) {
+        @apply pt-5 text-center;
+        display: block;
+        font-size: $smallFont;
+        text-decoration: underline;
+        color: orange;
       }
     }
   }

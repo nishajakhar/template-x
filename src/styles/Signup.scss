@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .signup__screen {
-  min-height: 100vh;
+  // min-height: 100vh;
   overflow: hidden;
 }
 .signup {
@@ -27,6 +27,13 @@
       background: $gradient3;
       backdrop-filter: blur(100px);
       font-size: $extraSmallFont;
+      @include media-breakpoint-down($tablet2) {
+        width: 100%;
+      }
+      @include media-breakpoint-down($mobile) {
+        @apply px-2 py-10;
+        width: 100%;
+      }
       div {
         padding-bottom: 15px;
       }
@@ -37,6 +44,10 @@
         line-height: 60px;
         margin-bottom: 10px;
         text-align: center;
+        @include media-breakpoint-down($mobile) {
+          font-size: $largeFont;
+          line-height: 40px;
+        }
       }
       .signup__form-subheading {
         @apply py-2 text-center;
@@ -67,6 +78,18 @@
   top: -51px;
   transform: rotate(1.3deg);
   z-index: -10;
+  @include media-breakpoint-down($tablet2) {
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    top: -50px;
+  }
+  @include media-breakpoint-down($mobile) {
+    width: 100px;
+    height: 100px;
+    left: -30px;
+    top: -30px;
+  }
 }
 
 .circle__signup-2 {
@@ -79,6 +102,18 @@
   bottom: 30px;
   z-index: -1;
   transform: matrix(-1, 0.02, 0.02, 1, 0, 0);
+  @include media-breakpoint-down($tablet2) {
+    width: 100px;
+    height: 100px;
+    right: -50px;
+    bottom: 10px;
+  }
+  @include media-breakpoint-down($mobile) {
+    width: 70px;
+    height: 70px;
+    right: -20px;
+    bottom: 10px;
+  }
 }
 .circle__signup-3 {
   position: absolute;
@@ -91,6 +126,18 @@
   background: $linearGradient1;
   transform: rotate(1.3deg);
   z-index: -10;
+  @include media-breakpoint-down($tablet2) {
+    width: 150px;
+    height: 150px;
+    right: -30px;
+    bottom: -70px;
+  }
+  @include media-breakpoint-down($mobile) {
+    width: 100px;
+    height: 100px;
+    right: -20px;
+    bottom: -50px;
+  }
 }
 
 .circle__signup-4 {
@@ -104,6 +151,9 @@
   filter: blur(200px);
   transform: rotate(1.3deg);
   z-index: 1;
+  @include media-breakpoint-down($mobile) {
+    display: none;
+  }
 }
 
 .circle__signup-5 {
@@ -117,6 +167,13 @@
   filter: blur(200px);
   transform: rotate(1.3deg);
   z-index: 1;
+  @include media-breakpoint-down($tablet2) {
+    bottom: -100px;
+    filter: blur(150px);
+  }
+  @include media-breakpoint-down($mobile) {
+    display: none;
+  }
 }
 
 .circle__signup-6 {
@@ -130,6 +187,13 @@
   background: $linearGradient2;
   transform: rotate(1.3deg);
   z-index: 1;
+  @include media-breakpoint-down($tablet2) {
+    // display: none;
+    top: 900px;
+  }
+  @include media-breakpoint-down($mobile) {
+    display: none;
+  }
 }
 .circle__signup-7 {
   position: absolute;
@@ -142,6 +206,12 @@
   background: $linearGradient2;
   transform: rotate(1.3deg);
   z-index: 1;
+  @include media-breakpoint-down($tablet2) {
+    display: none;
+  }
+  @include media-breakpoint-down($mobile) {
+    display: none;
+  }
 }
 .circle__signup-8 {
   position: absolute;
@@ -154,4 +224,10 @@
   background: linear-gradient(91.66deg, #cf46f1 -0.64%, #e98342 101.06%);
   transform: rotate(1.3deg);
   z-index: 2;
+  @include media-breakpoint-down($tablet2) {
+    display: none;
+  }
+  @include media-breakpoint-down($mobile) {
+    display: none;
+  }
 }

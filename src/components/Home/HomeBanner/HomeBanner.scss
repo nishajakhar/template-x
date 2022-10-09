@@ -5,23 +5,29 @@
   @apply flex gap-1;
   min-height: 65vh;
   margin: $containerMargin;
-  // margin: 2rem 0px;
+  padding: 2rem 0px;
   position: relative;
-  flex-wrap: wrap;
+
+  @include media-breakpoint-down(900px) {
+    flex-wrap: wrap;
+  }
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
+    flex-wrap: wrap;
   }
   @include media-breakpoint-down($mobile) {
     margin: $containerMarginSmall;
   }
   .banner__left {
     flex: 1;
+    @include media-breakpoint-down(950px) {
+      flex-basis: 100%;
+    }
     @include media-breakpoint-down($tablet2) {
       width: 100%;
     }
     .banner__left-content {
       @apply flex-col;
-
       h1 {
         font-size: $jumboFont;
         font-weight: 700;
@@ -31,7 +37,7 @@
         font-family: $fontStyle;
         @include media-breakpoint-down($tablet2) {
           text-align: center;
-          font-size: 75px;
+          font-size: 70px;
         }
         @include media-breakpoint-down($mobile) {
           text-align: center;
@@ -101,7 +107,14 @@
 
     z-index: 5;
     position: relative;
+
+    @include media-breakpoint-down(950px) {
+      @apply py-20;
+      display: flex;
+      justify-content: center;
+    }
     @include media-breakpoint-down($tablet2) {
+      @apply py-0;
       display: flex;
       justify-content: center;
     }
@@ -110,6 +123,9 @@
       left: 0px;
       top: 1.5rem;
       width: 35rem;
+      @include media-breakpoint-down(950px) {
+        flex: 1;
+      }
       @include media-breakpoint-down($tablet2) {
         width: 25rem;
         padding-bottom: 3rem;
@@ -120,6 +136,7 @@
       img {
         width: 100%;
         // height: 20rem;
+
         @include media-breakpoint-down($tablet2) {
         }
       }

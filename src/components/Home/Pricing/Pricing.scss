@@ -5,6 +5,7 @@
   overflow: hidden;
 }
 .pricing {
+  @apply py-12;
   margin: $containerMargin;
   z-index: 50;
 
@@ -122,26 +123,26 @@
   z-index: 500;
   clip-path: $clipPath3;
   background: $linearGradient2;
-  position: relative;
-  width: 180px;
+  padding: 3px;
+  // height: 550px;
+  max-width: 200px;
   height: 550px;
   margin: 10px;
   @include media-breakpoint-down($tablet2) {
-    width: 250px;
     height: 500px;
+  }
+  @include media-breakpoint-down($mobile) {
+    max-width: 240px;
+    // height: 400px;
   }
   .pricing__card {
     @apply flex flex-col pb-5;
-    position: absolute;
-    clip-path: $clipPath3;
+    clip-path: inherit;
     // padding: 15px;
     background-color: #000136;
-    width: 174px; /* container height - (border thickness * 2) */
     height: 544px;
-    left: 3px;
-    top: 3px;
+
     @include media-breakpoint-down($tablet2) {
-      width: 244px;
       height: 494px;
     }
     .pricing__card-heading {
@@ -164,19 +165,21 @@
       }
     }
     .pricing__card-list {
-      @apply mt-5;
+      @apply mt-5 px-8;
       flex-grow: 1;
       // height: 400px;
       overflow: hidden;
       font-style: 'Raleway';
       font-weight: 400;
 
-      padding: 10px 8px 15px 25px;
       .not-available {
         color: #5a2fb3;
       }
       @include media-breakpoint-down($tablet2) {
-        height: 300px;
+        // height: 300px;
+      }
+      @include media-breakpoint-down($mobile) {
+        // height: fit-content;
       }
       ul {
         list-style-type: circle;

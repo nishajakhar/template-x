@@ -1,9 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .platforms {
-  min-height: 80vh;
+  @apply py-12;
   margin: $containerMargin;
-  padding: 80px 0px;
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
     min-height: fit-content;

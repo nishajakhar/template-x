@@ -1,14 +1,14 @@
 import '../styles/CompanyGroups.scss';
 import '../styles/shared.scss';
-
+import { Link } from 'react-router-dom';
 import Header from '../components/common/Header/Header';
 import Footer from '../components/common/Footer/Footer';
 import TabHeader from '../components/common/TabHeader/TabHeader';
-
+import { companyGroups } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMessage, faSliders, faMusic, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function CompanyGroupsScreen() {
   return (
@@ -20,7 +20,7 @@ export default function CompanyGroupsScreen() {
           <div className="company__filter">
             <p>
               {' '}
-              <FontAwesomeIcon className="social__icons" icon={faHeart} />
+              <FontAwesomeIcon className="social__icons" icon={faSliders} />
               Filter
             </p>
             <p>
@@ -30,10 +30,9 @@ export default function CompanyGroupsScreen() {
             </p>
           </div>
           <div class="company__groups">
-            <CompanyCard />
-            <CompanyCard />
-            <CompanyCard />
-            <CompanyCard />
+            {companyGroups.map((group, index) => (
+              <CompanyCard key={index} group={group} />
+            ))}
           </div>
           <div class="company__pagination">
             <span>1</span>
@@ -49,14 +48,14 @@ export default function CompanyGroupsScreen() {
   );
 }
 
-function CompanyCard() {
+function CompanyCard({ group }) {
   return (
     <div className="company__card__outer">
       <div className="company__card">
         <div className="company__card-heading">
-          <h1>Company Name One</h1>
+          <h1>{group.title}</h1>
           <div className="company__card-more">
-            <a href="">See Details</a>
+            <Link to="/team-account/company-groups/company-group-detail">See Details</Link>
           </div>
         </div>
         <div className="company__card-subheading">
@@ -67,14 +66,13 @@ function CompanyCard() {
         <div className="company__card-items">
           {' '}
           <ul>
-            <li>Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja </li>
-            <li>consectetur adipiscing elit. </li>
-            <li>Urna vel viverra fringilla </li>
-            <li>eget suspendisse urna.</li>
-            <li>Est massa mauris, tellus, quisque. </li>
-            <li>Ac auctor scelerisque gravida </li>
-            <li>maecenas molestie quam.</li>
+            {group.items.map((item, index) => (
+              <li>{item}</li>
+            ))}
           </ul>
+        </div>
+        <div className="company__card-more-2 ">
+          <Link to="/team-account/company-groups/company-group-detail">See Details</Link>
         </div>
       </div>
     </div>

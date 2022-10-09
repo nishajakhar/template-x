@@ -24,6 +24,7 @@ export default function CookieScreen() {
           <CookieForm />
           <CookieHistory />
         </div>
+        <div className="color__circles circle__18"></div>
       </div>
       {/* <Footer /> */}
     </div>

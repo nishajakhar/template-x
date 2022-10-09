@@ -13,12 +13,14 @@ export default function ServerErrorScreen() {
     <div className="servererror__screen">
       {/* <Header /> */}
       <div className="servererror">
-        <img src="500.png" />
         <div className="servererror__container">
           <div className="servererror__heading">
             <h1>500</h1>
             <p>Oops..</p>
             <p>Internal Server Error...</p>
+          </div>
+          <div className="servererror__image">
+            <img src="500.png" />
           </div>
         </div>
       </div>

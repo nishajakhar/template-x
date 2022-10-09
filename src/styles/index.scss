@@ -35,6 +35,11 @@ body {
 ::-webkit-scrollbar-track:horizontal {
   margin: $containerMargin;
 }
+@include media-breakpoint-down($tablet2) {
+  ::-webkit-scrollbar-track:horizontal {
+    margin: $containerMarginMedium;
+  }
+}
 
 /* Handle */
 ::-webkit-scrollbar-thumb:horizontal {

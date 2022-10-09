@@ -10,10 +10,13 @@
     margin: $containerMargin;
     z-index: 100;
     @include media-breakpoint-down($tablet2) {
+      @apply py-10;
+
       margin: $containerMarginMedium;
     }
 
     @include media-breakpoint-down($mobile) {
+      @apply py-10;
       margin: $containerMarginSmall;
     }
     .contactus__form {

@@ -1,19 +1,32 @@
 import { useRef, useState } from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSignOut, faUser, faCaretDown, faCancel } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedinIn, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
-export default function Header() {
+export default function Header({ login, setLogin }) {
+  const navigate = useNavigate();
   const [active, setActive] = useState(0);
   const menu = useRef();
+  const mobilemenu = useRef();
+
+  const profilemenu = useRef();
+
   const handleGetStarted = () => {
     menu.current.classList.toggle('hidden');
   };
+  const handleGetProfile = () => {
+    profilemenu.current.classList.toggle('hidden');
+  };
+  const handleMobileMenu = () => {
+    console.log('I am cliked.....');
+    mobilemenu.current.classList.toggle('hidden');
+  };
+
   return (
     <div className="header">
       <div className="header__secondary">
@@ -71,48 +84,299 @@ export default function Header() {
             <Link to="/contact-us">Contact</Link>
           </div>
         </div>
-        <div className="header__primary-actions">
-          <button className="primary__button" onClick={handleGetStarted}>
-            GET STARTED
-          </button>
-        </div>
+        {login && (
+          <div onClick={handleGetProfile} className="header__primary-username">
+            <p>
+              {' '}
+              <FontAwesomeIcon icon={faUser} classname="social__icons" className="text-pink-500" />
+              Cornelia S.
+            </p>
+          </div>
+        )}
+        {!login && (
+          <div className="header__primary-actions">
+            <button className="primary__button" onClick={handleGetStarted}>
+              GET STARTED
+            </button>
+          </div>
+        )}
         <div className="header__primary-collapse">
-          <a href="#">
+          <div onClick={handleMobileMenu}>
             {' '}
             <FontAwesomeIcon className="social__icons" icon={faBars} />
-          </a>
+          </div>
         </div>
       </div>
-      <div className="header__primary-menu hidden" ref={menu}>
-        <div>
-          <div className="menu-top">
-            <h1>Are you Registered?</h1>
-            <Link to="/login">
-              <button
-                className="primary__button"
-                onClick={() => {
-                  menu.current.classList.toggle('hidden');
-                }}
-              >
-                LOGIN
-              </button>
+      {!login && (
+        <div className="header__primary-menu hidden" ref={menu}>
+          <div>
+            <div className="menu-top">
+              <h1>Are you Registered?</h1>
+              <Link to="/login">
+                <button
+                  className="primary__button"
+                  onClick={() => {
+                    menu.current.classList.toggle('hidden');
+                  }}
+                >
+                  LOGIN
+                </button>
+              </Link>
+            </div>
+            <div className="menu-bottom">
+              <h1>First time on the site?</h1>
+              <p>After a quick registration, you will get access to many features and additional benefits.</p>
+              <div className="mt-5 flex justify-center">
+                <div className="tertiary__button-outer">
+                  <Link to="/signup">
+                    <button
+                      className="tertiary__button"
+                      onClick={() => {
+                        menu.current.classList.toggle('hidden');
+                      }}
+                    >
+                      CONFIGURE
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {login && (
+        <div className="header__primary-login-menu hidden" ref={profilemenu}>
+          <div className="header__primary-login-menu-navitem">
+            <Link to="/profile" className="">
+              Profile
             </Link>
           </div>
-          <div className="menu-bottom">
-            <h1>First time on the site?</h1>
-            <p>After a quick registration, you will get access to many features and additional benefits.</p>
-            <div className="mt-5 flex justify-center">
-              <div className="tertiary__button-outer">
-                <Link to="/signup">
-                  <button
-                    className="tertiary__button"
-                    onClick={() => {
-                      menu.current.classList.toggle('hidden');
-                    }}
-                  >
-                    CONFIGURE
-                  </button>
+          <div
+            className="header__primary-login-menu-navitem"
+            onClick={() => {
+              profilemenu.current.classList.toggle('hidden');
+            }}
+          >
+            <Link
+              to="/team-account"
+              className=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+              }}
+            >
+              Team Account
+            </Link>
+          </div>
+          <div
+            className="header__primary-login-menu-navitem"
+            onClick={() => {
+              profilemenu.current.classList.toggle('hidden');
+            }}
+          >
+            <Link to="/templates" className="">
+              Templates
+            </Link>
+          </div>
+          <div
+            className="header__primary-login-menu-navitem"
+            onClick={() => {
+              profilemenu.current.classList.toggle('hidden');
+            }}
+          >
+            <Link to="/emails" className="">
+              Emails
+            </Link>
+          </div>
+          <div
+            className="header__primary-login-menu-navitem"
+            onClick={() => {
+              profilemenu.current.classList.toggle('hidden');
+            }}
+          >
+            <Link to="/contact-us" className="">
+              Help
+            </Link>
+          </div>
+          <div
+            className="header__primary-login-menu-logout"
+            onClick={() => {
+              profilemenu.current.classList.toggle('hidden');
+            }}
+          >
+            <div classname="">
+              <FontAwesomeIcon
+                icon={faSignOut}
+                classname="social__icons"
+                className="pr-1"
+                onClick={() => {
+                  profilemenu.current.classList.toggle('hidden');
+                  setLogin(false);
+                  navigate('/');
+                }}
+              />
+              Logout
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="mobile__navigation-menu hidden" ref={mobilemenu}>
+        <div className="mobile__navigation-overlay">
+          <div className="mobile__navigation-overlay-content">
+            <div className="mobile__navigation-header flex justify-between">
+              <div className="mobile__navigation-header-left flex">
+                <img src="logoX.png" width="50" />
+                <div className="mobile__navigation-header-left__text">
+                  Templates <span>X</span>
+                </div>
+              </div>
+              <div className="mobile__navigation-header-right">
+                <FontAwesomeIcon
+                  icon={faCancel}
+                  classname="social__icons"
+                  className="text-pink-500"
+                  onClick={handleMobileMenu}
+                />
+              </div>
+            </div>
+            <div className="mobile__navigation-navitems">
+              <div className={'mobile__navigation-navitem ' + (active == 0 ? 'item-active' : '')}>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    setActive(0);
+                    handleMobileMenu();
+                  }}
+                >
+                  Home
                 </Link>
+              </div>
+              <div className={'mobile__navigation-navitem ' + (active == 1 ? 'item-active' : '')}>
+                <Link
+                  to="/faqs"
+                  onClick={() => {
+                    setActive(1);
+                    handleMobileMenu();
+                  }}
+                >
+                  FAQs
+                </Link>
+              </div>
+              <div className={'mobile__navigation-navitem ' + (active == 2 ? 'item-active' : '')}>
+                <Link
+                  to="/team-account"
+                  onClick={() => {
+                    setActive(2);
+                    handleMobileMenu();
+                  }}
+                >
+                  API Docs
+                </Link>
+              </div>
+              <div className={'mobile__navigation-navitem ' + (active == 3 ? 'item-active' : '')}>
+                <Link
+                  to="/pricing"
+                  onClick={() => {
+                    setActive(3);
+                    handleMobileMenu();
+                  }}
+                >
+                  Pricing
+                </Link>
+              </div>
+              <div className={'mobile__navigation-navitem ' + (active == 4 ? 'item-active' : '')}>
+                <Link
+                  to="/blog"
+                  onClick={() => {
+                    setActive(4);
+                    handleMobileMenu();
+                  }}
+                >
+                  Blog
+                </Link>
+              </div>
+              <div className={'mobile__navigation-navitem ' + (active == 5 ? 'item-active' : '')}>
+                <Link
+                  to="/contact-us"
+                  onClick={() => {
+                    setActive(5);
+                    handleMobileMenu();
+                  }}
+                >
+                  Contact
+                </Link>
+              </div>
+
+              {!login && (
+                <div className="mobile__navigation-menu" ref={menu}>
+                  <div>
+                    <div className="menu-top">
+                      <h1>Are you Registered?</h1>
+                      <Link to="/login">
+                        <button
+                          className="primary__button"
+                          onClick={() => {
+                            mobilemenu.current.classList.toggle('hidden');
+                          }}
+                        >
+                          LOGIN
+                        </button>
+                      </Link>
+                    </div>
+                    <div className="menu-bottom">
+                      <h1>First time on the site?</h1>
+                      <div className="mt-5 flex justify-center">
+                        <div className="tertiary__button-outer">
+                          <Link to="/signup">
+                            <button
+                              className="tertiary__button"
+                              onClick={() => {
+                                mobilemenu.current.classList.toggle('hidden');
+                              }}
+                            >
+                              CONFIGURE
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {login && (
+                <div onClick={handleGetProfile} className="mobile__navigation-username">
+                  <p>
+                    {' '}
+                    <FontAwesomeIcon icon={faUser} classname="social__icons" className="pr-2" />
+                    Cornelia S.
+                  </p>
+                </div>
+              )}
+              <div className="mobile__navigation-footer">
+                <div className="mobile__navigation-social">
+                  <div>
+                    <a href="#">
+                      <FontAwesomeIcon className="social__icons" icon={faLinkedinIn} />
+                    </a>{' '}
+                  </div>
+                  <div>
+                    <a href="#">
+                      {' '}
+                      <FontAwesomeIcon className="social__icons" icon={faFacebookF} />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">
+                      {' '}
+                      <FontAwesomeIcon className="social__icons" icon={faTwitter} />
+                    </a>
+                  </div>
+                </div>
+                <div className="mobile__navigation-translate">
+                  {' '}
+                  <p className="px-1">ENG</p>
+                  <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
+                </div>
               </div>
             </div>
           </div>

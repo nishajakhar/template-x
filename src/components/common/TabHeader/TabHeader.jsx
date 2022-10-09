@@ -1,34 +1,45 @@
 import './TabHeader.scss';
 import '../../../styles/shared.scss';
+import { Link } from 'react-router-dom';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function TabHeader(props) {
   return (
     <div className="tab__header">
       <div className="tab__header-route">
         <div>
-          <a href="#">
-            <FontAwesomeIcon classname="social__icons" icon={faHeart} />
-          </a>
+          <Link to="/">
+            <FontAwesomeIcon classname="social__icons" icon={faHouse} />
+          </Link>
         </div>
         <div>
-          <a href="#">
-            <FontAwesomeIcon classname="social__icons" icon={faHeart} />
-          </a>
+          <FontAwesomeIcon classname="social__icons" icon={faCaretRight} />
         </div>
         <div>
-          <a href="#" className="text-orange-400">
-            Cookie
-          </a>
+          <Link to="/blog" className="text-orange-400">
+            {props.heading}
+          </Link>
         </div>
       </div>
-      <div className="tab__header-heading">
-        <h1>{props.heading}</h1>
-      </div>
+
+      {!props.children && (
+        <div className="tab__header-heading py-20">
+          <h1>{props.heading}</h1>
+        </div>
+      )}
+      {props.children && (
+        <div className="py-10">
+          <div className="tab__header-heading">
+            <h1>{props.heading}</h1>
+          </div>
+          <div className="tab__form">{props.children}</div>{' '}
+        </div>
+      )}
+
       <div className="circle__head-1"></div>
       <div className="circle__head-2"></div>
     </div>

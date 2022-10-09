@@ -37,21 +37,15 @@
 }
 
 .storage__card__outer {
-  position: relative;
-  height: 260px;
-  width: 850px;
+  padding: 3px;
   background-color: $color2;
   clip-path: $clipPath6;
   margin: 2rem 0px;
   .storage__card {
     @apply flex gap-10;
-    position: absolute;
-    clip-path: $clipPath6;
+    clip-path: inherit;
     padding: 1.5rem 2.5rem;
-    height: 254px;
-    width: 844px;
-    top: 3px;
-    left: 3px;
+
     background-color: $color3;
     .storage__card-image {
       @apply flex items-center;

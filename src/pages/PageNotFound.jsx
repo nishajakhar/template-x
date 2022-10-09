@@ -1,6 +1,7 @@
 import '../styles/PageNotFound.scss';
 import '../styles/shared.scss';
 
+import { Link } from 'react-router-dom';
 import Header from '../components/common/Header/Header';
 import Footer from '../components/common/Footer/Footer';
 
@@ -14,14 +15,22 @@ export default function PageNotFoundScreen() {
     <div className="pagenotfound__screen">
       {/* <Header /> */}
       <div className="pagenotfound">
-        <img src="404.png" />
         <div className="pagenotfound__container">
           <div className="pagenotfound__heading">
             <h1>Oops...</h1>
             <h1>Page Not Found...</h1>
+            <div>
+              <Link to="/">
+                <button className="primary__button">GO TO HOME</button>
+              </Link>
+            </div>
           </div>
 
-          <button className="primary__button">GO TO HOME</button>
+          <div className="pagenotfound__image">
+            <div className="pagenotfound__image-container">
+              <img src="404.png" />
+            </div>
+          </div>
         </div>
       </div>
       {/* <Footer /> */}

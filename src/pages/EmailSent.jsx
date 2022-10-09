@@ -1,6 +1,7 @@
 import '../styles/EmailSent.scss';
 import '../styles/shared.scss';
 
+import { Link } from 'react-router-dom';
 import Header from '../components/common/Header/Header';
 
 export default function EmailSentScreen() {
@@ -17,7 +18,9 @@ export default function EmailSentScreen() {
               </p>
             </div>
             <div className="emailSent__form-button">
-              <button className="primary__button">LOGIN</button>
+              <Link to="/login">
+                <button className="primary__button">LOGIN</button>
+              </Link>
             </div>
             <div className="emailSent__login-link text-center">
               <label className="">

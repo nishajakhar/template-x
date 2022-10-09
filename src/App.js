@@ -1,5 +1,6 @@
 import './styles/index.scss';
 
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ROUTES from './services/routes';
 import LoginScreen from './pages/Login';
@@ -29,13 +30,15 @@ import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
 
 function App() {
+  const [login, setLogin] = useState(false);
+  console.log('I am login.....', login);
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header login={login} setLogin={setLogin} />
         <Routes>
-          <Route path={ROUTES.LOGIN} element={<LoginScreen />} />
-          <Route path={ROUTES.SIGNUP} element={<SignupScreen />} />
+          <Route path={ROUTES.LOGIN} element={<LoginScreen setLogin={setLogin} />} />
+          <Route path={ROUTES.SIGNUP} element={<SignupScreen setLogin={setLogin} />} />
           <Route path={ROUTES.HOME} element={<HomeScreen />} />
           <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPasswordScreen />} />
           <Route path={ROUTES.EMAIL_SENT} element={<EmailSentScreen />} />

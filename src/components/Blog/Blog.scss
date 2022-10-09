@@ -4,10 +4,14 @@
   // margin: $containerMargin;
 
   .bloghead__card {
-    @apply flex justify-center content-center;
+    @apply flex justify-center content-center gap-5;
+    flex-wrap: wrap;
+
     .bloghead__card-image {
       flex: 1;
-      padding: 0px 20px 0px 0px;
+      @include media-breakpoint-down($mobile) {
+        flex-basis: 100%;
+      }
     }
   }
 }
