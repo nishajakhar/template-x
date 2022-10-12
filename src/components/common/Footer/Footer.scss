@@ -4,6 +4,9 @@
   @apply flex-col;
   margin: $containerMargin;
   padding: 20px 0px;
+  @include media-breakpoint-down(1025px) {
+    margin: 0rem 8rem;
+  }
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
   }
@@ -11,7 +14,7 @@
     margin: $containerMarginSmall;
   }
   .footer__primary {
-    @apply flex justify-between pb-8;
+    @apply flex justify-between pb-8 gap-8;
     @include media-breakpoint-down($tablet2) {
       flex-wrap: wrap;
     }

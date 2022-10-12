@@ -68,6 +68,9 @@
   .pricing__cards {
     z-index: 500;
     @apply flex justify-center;
+    @include media-breakpoint-down(900px) {
+      // flex-wrap: wrap;
+    }
     @include media-breakpoint-down($tablet2) {
       flex-wrap: wrap;
       padding: 0px 50px;

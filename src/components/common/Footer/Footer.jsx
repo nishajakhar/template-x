@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -19,7 +20,7 @@ export default function Footer() {
       <div className="footer__primary">
         <div className="footer__primary-left">
           <div className="footer__primary-left__logo">
-            <img src="logo.png" width="50" height="50" />
+            <img src="logoX.png" width="50" height="50" className="mr-1" />
             <div className="footer__primary-left__text">
               Templates <span>X</span>
             </div>
@@ -55,12 +56,12 @@ export default function Footer() {
         <div className="footer__primary-middle">
           <h1>Quick Links</h1>
           <div className="footer__primary-middle__navitems">
-            <a href="#">Home</a>
-            <a href="#">FAQs</a>
-            <a href="#">API Documentation</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="/faqs">FAQs</Link>
+            <Link to="/team-account">API Docs</Link>
+            <Link to="/pricing">Pricing</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contact-us">Contact</Link>
           </div>
         </div>
 

@@ -12,11 +12,12 @@ export default function Header({ login, setLogin }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
   const menu = useRef();
-  const mobilemenu = useRef();
+  const mobile = useRef();
 
   const profilemenu = useRef();
 
   const handleGetStarted = () => {
+    console.log('I am handle get started...', menu.current);
     menu.current.classList.toggle('hidden');
   };
   const handleGetProfile = () => {
@@ -24,103 +25,120 @@ export default function Header({ login, setLogin }) {
   };
   const handleMobileMenu = () => {
     console.log('I am cliked.....');
-    mobilemenu.current.classList.toggle('hidden');
+    mobile.current.classList.toggle('hidden');
   };
 
   return (
-    <div className="header">
-      <div className="header__secondary">
-        <div className="header__secondary-container">
-          <div className="header__secondary-social">
-            <div>
-              <a href="#">
-                <FontAwesomeIcon className="social__icons" icon={faLinkedinIn} />
-              </a>{' '}
+    <>
+      <div className="header">
+        <div className="header__secondary">
+          <div className="header__secondary-container">
+            <div className="header__secondary-social">
+              <div>
+                <a href="#">
+                  <FontAwesomeIcon className="social__icons" icon={faLinkedinIn} />
+                </a>{' '}
+              </div>
+              <div>
+                <a href="#">
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faFacebookF} />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faTwitter} />
+                </a>
+              </div>
             </div>
-            <div>
-              <a href="#">
-                {' '}
-                <FontAwesomeIcon className="social__icons" icon={faFacebookF} />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                {' '}
-                <FontAwesomeIcon className="social__icons" icon={faTwitter} />
-              </a>
-            </div>
-          </div>
-          <div className="header__secondary-translate">
-            {' '}
-            <p className="px-1">ENG</p>
-            <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
-          </div>
-        </div>
-      </div>
-      <div className="header__primary">
-        <div className="header__primary-left">
-          <img src="logoX.png" width="50" />
-          <div className="header__primary-left__text">
-            Templates <span>X</span>
-          </div>
-        </div>
-        <div className="header__primary-navitems">
-          <div className={'header__primary-navitem ' + (active == 0 ? 'item-active' : '')} onClick={() => setActive(0)}>
-            <Link to="/">Home</Link>
-          </div>
-          <div className={'header__primary-navitem ' + (active == 1 ? 'item-active' : '')} onClick={() => setActive(1)}>
-            <Link to="/faqs">FAQs</Link>
-          </div>
-          <div className={'header__primary-navitem ' + (active == 2 ? 'item-active' : '')} onClick={() => setActive(2)}>
-            <Link to="/team-account">API Docs</Link>
-          </div>
-          <div className={'header__primary-navitem ' + (active == 3 ? 'item-active' : '')} onClick={() => setActive(3)}>
-            <Link to="/pricing">Pricing</Link>
-          </div>
-          <div className={'header__primary-navitem ' + (active == 4 ? 'item-active' : '')} onClick={() => setActive(4)}>
-            <Link to="/blog">Blog</Link>
-          </div>
-          <div className={'header__primary-navitem ' + (active == 5 ? 'item-active' : '')} onClick={() => setActive(5)}>
-            <Link to="/contact-us">Contact</Link>
-          </div>
-        </div>
-        {login && (
-          <div onClick={handleGetProfile} className="header__primary-username">
-            <p>
+            <div className="header__secondary-translate">
               {' '}
-              <FontAwesomeIcon icon={faUser} classname="social__icons" className="text-pink-500" />
-              Cornelia S.
-            </p>
-          </div>
-        )}
-        {!login && (
-          <div className="header__primary-actions">
-            <button className="primary__button" onClick={handleGetStarted}>
-              GET STARTED
-            </button>
-          </div>
-        )}
-        <div className="header__primary-collapse">
-          <div onClick={handleMobileMenu}>
-            {' '}
-            <FontAwesomeIcon className="social__icons" icon={faBars} />
+              <p className="px-1">ENG</p>
+              <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
+            </div>
           </div>
         </div>
-      </div>
-      {!login && (
+        <div className="header__primary">
+          <div className="header__primary-left">
+            <img src="logoX.png" width="50" />
+            <div className="header__primary-left__text">
+              Templates <span>X</span>
+            </div>
+          </div>
+          <div className="header__primary-navitems">
+            <div
+              className={'header__primary-navitem ' + (active == 0 ? 'item-active' : '')}
+              onClick={() => setActive(0)}
+            >
+              <Link to="/">Home</Link>
+            </div>
+            <div
+              className={'header__primary-navitem ' + (active == 1 ? 'item-active' : '')}
+              onClick={() => setActive(1)}
+            >
+              <Link to="/faqs">FAQs</Link>
+            </div>
+            <div
+              className={'header__primary-navitem ' + (active == 2 ? 'item-active' : '')}
+              onClick={() => setActive(2)}
+            >
+              <Link to="/team-account">API Docs</Link>
+            </div>
+            <div
+              className={'header__primary-navitem ' + (active == 3 ? 'item-active' : '')}
+              onClick={() => setActive(3)}
+            >
+              <Link to="/pricing">Pricing</Link>
+            </div>
+            <div
+              className={'header__primary-navitem ' + (active == 4 ? 'item-active' : '')}
+              onClick={() => setActive(4)}
+            >
+              <Link to="/blog">Blog</Link>
+            </div>
+            <div
+              className={'header__primary-navitem ' + (active == 5 ? 'item-active' : '')}
+              onClick={() => setActive(5)}
+            >
+              <Link to="/contact-us">Contact</Link>
+            </div>
+          </div>
+          {login && (
+            <div onClick={handleGetProfile} className="header__primary-username">
+              <p>
+                {' '}
+                <FontAwesomeIcon icon={faUser} classname="social__icons" className="text-pink-500" />
+                Cornelia S.
+              </p>
+            </div>
+          )}
+          {!login && (
+            <div className="header__primary-actions">
+              <button className="primary__button" onClick={handleGetStarted}>
+                GET STARTED
+              </button>
+            </div>
+          )}
+          <div className="header__primary-collapse">
+            <div onClick={handleMobileMenu}>
+              {' '}
+              <FontAwesomeIcon className="social__icons" icon={faBars} />
+            </div>
+          </div>
+        </div>
+
         <div className="header__primary-menu hidden" ref={menu}>
           <div>
             <div className="menu-top">
               <h1>Are you Registered?</h1>
-              <Link to="/login">
-                <button
-                  className="primary__button"
-                  onClick={() => {
-                    menu.current.classList.toggle('hidden');
-                  }}
-                >
-                  LOGIN
-                </button>
+              <Link
+                to="/login"
+                onClick={() => {
+                  menu.current.classList.toggle('hidden');
+                }}
+              >
+                <button className="primary__button">LOGIN</button>
               </Link>
             </div>
             <div className="menu-bottom">
@@ -143,8 +161,7 @@ export default function Header({ login, setLogin }) {
             </div>
           </div>
         </div>
-      )}
-      {login && (
+
         <div className="header__primary-login-menu hidden" ref={profilemenu}>
           <div className="header__primary-login-menu-navitem">
             <Link to="/profile" className="">
@@ -218,9 +235,8 @@ export default function Header({ login, setLogin }) {
             </div>
           </div>
         </div>
-      )}
-
-      <div className="mobile__navigation-menu hidden" ref={mobilemenu}>
+      </div>
+      <div className="mobile__navigation-menu hidden" ref={mobile}>
         <div className="mobile__navigation-overlay">
           <div className="mobile__navigation-overlay-content">
             <div className="mobile__navigation-header flex justify-between">
@@ -308,7 +324,7 @@ export default function Header({ login, setLogin }) {
               </div>
 
               {!login && (
-                <div className="mobile__navigation-menu" ref={menu}>
+                <div className="mobile__navigation-submenu" ref={mobile}>
                   <div>
                     <div className="menu-top">
                       <h1>Are you Registered?</h1>
@@ -316,7 +332,7 @@ export default function Header({ login, setLogin }) {
                         <button
                           className="primary__button"
                           onClick={() => {
-                            mobilemenu.current.classList.toggle('hidden');
+                            mobile.current.classList.toggle('hidden');
                           }}
                         >
                           LOGIN
@@ -331,7 +347,7 @@ export default function Header({ login, setLogin }) {
                             <button
                               className="tertiary__button"
                               onClick={() => {
-                                mobilemenu.current.classList.toggle('hidden');
+                                mobile.current.classList.toggle('hidden');
                               }}
                             >
                               CONFIGURE
@@ -382,6 +398,6 @@ export default function Header({ login, setLogin }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
