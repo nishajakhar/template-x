@@ -39,10 +39,9 @@ export default function HomeScreen() {
 
   return (
     <>
-      {/* <CookieModal open={setOpen} className="hidden" /> */}
       <div className={open ? '' : 'hidden'}>
         {/* <CookieConfigModal open={setOpen} /> */}
-
+        <CookieModal open={setOpen} className="hidden" />
         {/* <DisableAdBlockModal open={setOpen} /> */}
         {/* <CompanyGroupConfigModal open={setOpen} /> */}
         {/* <InviteUserModal open={setOpen} /> */}
@@ -50,7 +49,7 @@ export default function HomeScreen() {
         {/* <PaymentFailedModal open={setOpen} /> */}
         {/* <AddStorageModal open={setOpen} /> */}
         {/* <EditStorageModal open={setOpen} /> */}
-        <ChooseStorageModal open={setOpen} />
+        {/* <ChooseStorageModal open={setOpen} /> */}
       </div>
       <div className="home__screen" ref={home}>
         {/* <Header /> */}
