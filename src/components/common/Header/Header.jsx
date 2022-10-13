@@ -170,16 +170,17 @@ export default function Header({ login, setLogin }) {
 
         <div className="header__primary-login-menu hidden" ref={profilemenu}>
           <div className="header__primary-login-menu-navitem">
-            <Link to="/profile" className="">
+            <Link
+              to="/profile"
+              className=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+              }}
+            >
               Profile
             </Link>
           </div>
-          <div
-            className="header__primary-login-menu-navitem"
-            onClick={() => {
-              profilemenu.current.classList.toggle('hidden');
-            }}
-          >
+          <div className="header__primary-login-menu-navitem">
             <Link
               to="/team-account"
               className=""
@@ -190,53 +191,51 @@ export default function Header({ login, setLogin }) {
               Team Account
             </Link>
           </div>
-          <div
-            className="header__primary-login-menu-navitem"
-            onClick={() => {
-              profilemenu.current.classList.toggle('hidden');
-            }}
-          >
-            <Link to="/templates" className="">
+          <div className="header__primary-login-menu-navitem">
+            <Link
+              to="/templates"
+              className=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+              }}
+            >
               Templates
             </Link>
           </div>
-          <div
-            className="header__primary-login-menu-navitem"
-            onClick={() => {
-              profilemenu.current.classList.toggle('hidden');
-            }}
-          >
-            <Link to="/emails" className="">
+          <div className="header__primary-login-menu-navitem">
+            <Link
+              to="/emails"
+              className=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+              }}
+            >
+              {' '}
               Emails
             </Link>
           </div>
-          <div
-            className="header__primary-login-menu-navitem"
-            onClick={() => {
-              profilemenu.current.classList.toggle('hidden');
-            }}
-          >
-            <Link to="/contact-us" className="">
+          <div className="header__primary-login-menu-navitem">
+            <Link
+              to="/contact-us"
+              className=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+              }}
+            >
+              {' '}
               Help
             </Link>
           </div>
-          <div
-            className="header__primary-login-menu-logout"
-            onClick={() => {
-              profilemenu.current.classList.toggle('hidden');
-            }}
-          >
-            <div classname="">
-              <FontAwesomeIcon
-                icon={faSignOut}
-                classname="social__icons"
-                className="pr-1"
-                onClick={() => {
-                  profilemenu.current.classList.toggle('hidden');
-                  setLogin(false);
-                  navigate('/');
-                }}
-              />
+          <div className="header__primary-login-menu-logout">
+            <div
+              classname=""
+              onClick={() => {
+                profilemenu.current.classList.toggle('hidden');
+                setLogin(false);
+                navigate('/login');
+              }}
+            >
+              <FontAwesomeIcon icon={faSignOut} classname="social__icons" className="pr-1" />
               Logout
             </div>
           </div>
