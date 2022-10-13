@@ -7,6 +7,7 @@
   .templates__container {
     @apply flex-col mt-16;
     padding: $containerMargin;
+    position: relative;
     @include media-breakpoint-down($tablet2) {
       padding: $containerMarginMedium;
     }
@@ -39,13 +40,19 @@
 .template__card__outer {
   padding: 3px;
   background-color: $color2;
+
   clip-path: $clipPath6;
   margin: 2rem 0px;
   .template__card {
-    @apply flex gap-5;
+    @apply flex gap-5 py-8 px-5;
     clip-path: inherit;
     background-color: $color3;
     font-weight: 100;
+    flex-wrap: wrap;
+    @include media-breakpoint-down($mobile) {
+      justify-content: center;
+      width: 100%;
+    }
     .template__card-image {
       @apply flex items-center;
       img {
@@ -61,35 +68,88 @@
         font-size: 12px;
         font-weight: 500;
       }
-      .template__card-tags {
-        @apply flex gap-3;
-        color: $color2;
-        font-size: 15px;
-        font-weight: 500;
-      }
-      .template__card-ratings {
-        p {
+      .template__card-extrainfo {
+        @apply flex justify-between my-5;
+
+        flex-wrap: wrap;
+        @include media-breakpoint-down($tablet2) {
+          display: block;
+        }
+        @include media-breakpoint-down($mobile) {
+        }
+        .template__card-tags {
+          @apply flex gap-3;
+
+          color: $color2;
           font-size: 15px;
           font-weight: 500;
-          .social__icons {
-            @apply px-1;
+          @include media-breakpoint-down($tablet2) {
+            @apply py-2;
+          }
+          @include media-breakpoint-down($mobile) {
+            @apply py-2;
+          }
+        }
+        .template__card-ratings {
+          p {
+            font-size: 15px;
+            font-weight: 500;
+            .social__icons {
+              @apply px-1;
+              @include media-breakpoint-down($mobile) {
+                @apply px-2;
+              }
+            }
           }
         }
       }
       .template__card-actions {
         @apply flex justify-between items-end;
+        flex-wrap: wrap;
+        position: relative;
+
         h2 {
           font-family: $fontStyle;
           font-weight: 700;
           font-size: 24px;
           color: #e98342;
+          @include media-breakpoint-down($tablet2) {
+            position: absolute;
+            top: -60px;
+            right: 30px;
+          }
+          @include media-breakpoint-down($mobile) {
+            position: absolute;
+            top: -50px;
+            right: 0;
+          }
         }
         .template__card-buttons {
           @apply flex gap-2;
+          flex-wrap: wrap-reverse;
           .tertiary__button {
             background-color: $color3;
           }
+          @include media-breakpoint-down($tablet2) {
+            display: none;
+          }
+          @include media-breakpoint-down($mobile) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
         }
+      }
+    }
+
+    .template__card-buttons-2 {
+      display: none;
+      @include media-breakpoint-down($tablet2) {
+        @apply flex justify-center gap-x-10 pt-2;
+        flex-basis: 100%;
+      }
+      @include media-breakpoint-down($mobile) {
+        display: none;
       }
     }
   }
@@ -108,4 +168,53 @@
   filter: blur(150px);
   transform: rotate(1.3deg);
   z-index: 1;
+}
+
+.mobile__filter__navigation-menu {
+  .mobile__navigation-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    left: 0;
+
+    // background-color: $color4;
+    // opacity: 0.9;
+
+    background-color: rgba(5, 16, 58, 0.9);
+
+    // overflow-x: hidden;
+    transition: 0.5s;
+
+    .mobile__navigation-overlay-content {
+      @apply p-5;
+      overflow: scroll;
+      position: relative;
+      // top: 25%;
+      max-width: 380px;
+      height: 100%;
+      text-align: center;
+
+      background: rgba(90, 47, 179, 0.3);
+      border: 2px solid rgba(207, 70, 241, 0.7);
+
+      @include media-breakpoint-down($mobile) {
+        max-width: 100%;
+      }
+      .filter__form-types,
+      .filter__form-topics {
+        @apply flex-col justify-start text-left py-5;
+        .filter__form-type,
+        .filter__form-topic {
+          @apply flex items-center;
+          input {
+            @apply mr-2 my-2;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
 }

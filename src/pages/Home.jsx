@@ -15,12 +15,7 @@ import FAQ from '../components/Home/FAQ/FAQ';
 import Footer from '../components/common/Footer/Footer';
 import CookieConfigModal from '../Modals/CookieConfig';
 import DisableAdBlockModal from '../Modals/DisableAdBlock';
-import CompanyGroupConfigModal from '../Modals/CompanyGroupConfig';
-import InviteUserModal from '../Modals/InviteUser';
-import PaymentFailedModal from '../Modals/PaymentFailed';
-import AddStorageModal from '../Modals/AddStorage';
-import EditStorageModal from '../Modals/EditStorage';
-import ChooseStorageModal from '../Modals/ChooseStorage';
+
 import { categories } from '../services/data';
 
 export default function HomeScreen() {
@@ -39,18 +34,19 @@ export default function HomeScreen() {
 
   return (
     <>
-      <div className={open ? '' : 'hidden'}>
-        {/* <CookieConfigModal open={setOpen} /> */}
-        <CookieModal open={setOpen} className="hidden" />
-        {/* <DisableAdBlockModal open={setOpen} /> */}
-        {/* <CompanyGroupConfigModal open={setOpen} /> */}
-        {/* <InviteUserModal open={setOpen} /> */}
-        {/* <PaymentSuccessModal open={setOpen} /> */}
-        {/* <PaymentFailedModal open={setOpen} /> */}
-        {/* <AddStorageModal open={setOpen} /> */}
-        {/* <EditStorageModal open={setOpen} /> */}
-        {/* <ChooseStorageModal open={setOpen} /> */}
-      </div>
+      {/* <div className={open ? '' : 'hidden'}> */}
+      {/* <CookieConfigModal open={setOpen} /> */}
+      {/* <CookieModal open={setOpen} className="hidden" /> */}
+      {/* <DisableAdBlockModal open={setOpen} /> */}
+      {/* <CompanyGroupConfigModal open={setOpen} /> */}
+      {/* <InviteUserModal open={setOpen} /> */}
+      {/* <PaymentSuccessModal open={setOpen} /> */}
+      {/* <PaymentFailedModal open={setOpen} /> */}
+      {/* <AddStorageModal open={setOpen} /> */}
+      {/* <EditStorageModal open={setOpen} /> */}
+      {/* <ChooseStorageModal open={setOpen} /> */}
+      {/* <SettingsModal open={setOpen} /> */}
+      {/* </div> */}
       <div className="home__screen" ref={home}>
         {/* <Header /> */}
         <HomeBanner />

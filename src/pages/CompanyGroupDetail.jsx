@@ -4,63 +4,80 @@ import '../styles/shared.scss';
 import Header from '../components/common/Header/Header';
 import Footer from '../components/common/Footer/Footer';
 import TabHeader from '../components/common/TabHeader/TabHeader';
+import InviteUserModal from '../Modals/InviteUser';
+import CompanyGroupConfigModal from '../Modals/CompanyGroupConfig';
+
+import { useState, useEffect } from 'react';
+
 import { users } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faHeart, faMessage, faSliders, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function CompanyGroupDetailScreen() {
+  const [open, setOpen] = useState(false);
+  const [openConfig, setOpenConfig] = useState(false);
+
   return (
-    <div className="cgd__screen">
-      {/* <Header /> */}
-      <div className="cgd">
-        <TabHeader heading="Designers" />
-        <div className="cgd__container">
-          <div className="cgd__items">
-            {' '}
-            <ul>
-              <li>Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja </li>
-              <li>consectetur adipiscing elit. </li>
-              <li>Urna vel viverra fringilla </li>
-              <li>eget suspendisse urna.</li>
-              <li>Est massa mauris, tellus, quisque. </li>
-              <li>Ac auctor scelerisque gravida </li>
-              <li>maecenas molestie quam ja skask ahsakas ak ksjksjka aksjkasj akjksaja.</li>
-            </ul>
-            <div className="cgd__items-configure">
-              <button className="primary__button">CONFIGURE</button>
+    <>
+      <div className={open ? '' : 'hidden'}>
+        <InviteUserModal open={setOpen} />
+      </div>
+      <div className={openConfig ? '' : 'hidden'}>
+        <CompanyGroupConfigModal open={setOpenConfig} />
+      </div>
+      <div className="cgd__screen">
+        {/* <Header /> */}
+        <div className="cgd">
+          <TabHeader heading="Designers" />
+          <div className="cgd__container">
+            <div className="cgd__items">
+              {' '}
+              <ul>
+                <li>Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja </li>
+                <li>consectetur adipiscing elit. </li>
+                <li>Urna vel viverra fringilla </li>
+                <li>eget suspendisse urna.</li>
+                <li>Est massa mauris, tellus, quisque. </li>
+                <li>Ac auctor scelerisque gravida </li>
+                <li>maecenas molestie quam ja skask ahsakas ak ksjksjka aksjkasj akjksaja.</li>
+              </ul>
+              <div className="cgd__items-configure" onClick={() => setOpenConfig(true)}>
+                <button className="primary__button">CONFIGURE</button>
+              </div>
+            </div>
+
+            <div className="cgd__user-filter">
+              <p>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSliders} />
+                Filter
+              </p>
+              <p onClick={() => setOpen(true)}>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faPlus} />
+                Add a new user
+              </p>
+            </div>
+            <div class="cgd__users">
+              {users.map((user, index) => (
+                <UserCard key={index} user={user} />
+              ))}
+            </div>
+            <div class="cgd__pagination mt-16">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
             </div>
           </div>
-
-          <div className="cgd__user-filter">
-            <p>
-              {' '}
-              <FontAwesomeIcon className="social__icons" icon={faSliders} />
-              Filter
-            </p>
-            <p>
-              {' '}
-              <FontAwesomeIcon className="social__icons" icon={faPlus} />
-              Add a new user
-            </p>
-          </div>
-          <div class="cgd__users">
-            {users.map((user, index) => (
-              <UserCard key={index} user={user} />
-            ))}
-          </div>
-          <div class="cgd__pagination mt-16">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-          </div>
+          <div className="color__circles circle__18"></div>
         </div>
-        <div className="color__circles circle__18"></div>
+        {/* <Footer /> */}
       </div>
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 }
 

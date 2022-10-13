@@ -3,15 +3,10 @@ import { NavLink } from 'react-router-dom';
 import './menu.scss';
 
 export const Menu = ({ menu }) => {
+  console.log('I am menu......', menu);
   return (
     <div className="api-docs-menu">
-      {[
-        ...menu.sectionGroups,
-        ...menu.sectionGroups,
-        ...menu.sectionGroups,
-        ...menu.sectionGroups,
-        ...menu.sectionGroups,
-      ].map((group, i) => {
+      {[...menu, ...menu, ...menu, ...menu, ...menu].map((group, i) => {
         return (
           <Fragment key={i}>
             <h4> {group.title} </h4>

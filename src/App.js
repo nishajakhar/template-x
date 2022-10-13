@@ -36,11 +36,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div>
-          <div>
-            <Header login={login} setLogin={setLogin} />
-          </div>
-        </div>
+        <Header login={login} setLogin={setLogin} />
+
         <Routes>
           <Route path={ROUTES.LOGIN} element={<LoginScreen setLogin={setLogin} />} />
           <Route path={ROUTES.SIGNUP} element={<SignupScreen setLogin={setLogin} />} />

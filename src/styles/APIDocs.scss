@@ -1,7 +1,13 @@
 @import './variables.scss';
 
+.apidocs__screen {
+  position: relative;
+  overflow: hidden;
+}
 .apidocs {
+  @apply pb-20;
   margin: $containerMargin;
+
   @include media-breakpoint-down($tablet2) {
     margin: $containerMarginMedium;
   }
@@ -105,4 +111,19 @@
     height: 100%;
     overflow-y: scroll;
   }
+}
+
+.color__circles {
+  position: absolute;
+  background: $linearGradient1;
+  border-radius: 50%;
+}
+.circle__18 {
+  width: 230px;
+  height: 230px;
+  bottom: -70px;
+  right: -70px;
+  filter: blur(150px);
+  transform: rotate(1.3deg);
+  z-index: 1;
 }

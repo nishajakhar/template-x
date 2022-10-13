@@ -10,17 +10,12 @@
 
   h4 {
     font-weight: 600;
-    font-size: $mediumFont;
+    font-size: 15px;
     line-height: 22px;
     margin-bottom: 12.5px;
     @include media-breakpoint-up($tablet) {
       font-size: 22px;
       line-height: 27px;
-    }
-    @include media-breakpoint-up($desktop) {
-      font-size: 24px;
-      line-height: 29px;
-      margin-bottom: 15px;
     }
   }
 

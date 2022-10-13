@@ -22,6 +22,12 @@ body {
   height: 100%;
   min-height: 100vh;
 }
+a {
+  cursor: pointer;
+}
+.social__icons {
+  cursor: pointer;
+}
 
 /* width */
 ::-webkit-scrollbar {

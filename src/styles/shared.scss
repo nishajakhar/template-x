@@ -88,7 +88,7 @@ input[type='checkbox']:checked {
   clip-path: $clipPath6;
   padding: 2px;
   .tertiary__button {
-    clip-path: inherit;
+    clip-path: $clipPath6;
     color: white;
     background: $color4;
     font-family: $fontStyle;

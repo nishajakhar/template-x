@@ -28,9 +28,7 @@ export default function APIDocsScreen() {
     mobile.current.classList.toggle('hidden');
   };
   useEffect(() => {
-    setLoading(true);
-    setMenu(MOCK_MENU);
-    setLoading(false);
+    setMenu(MOCK_MENU.sectionGroups);
   }, []);
 
   const [open, setOpen] = useState(false);
@@ -49,7 +47,7 @@ export default function APIDocsScreen() {
       {/* <Header /> */}
       <div className="apidocs">
         <div className="apidocs__container">
-          {!loading && !!menu.sectionGroups && (
+          {!loading && menu && (
             <div className="container">
               {/* oofcanvas menu */}
               <MenuOffcanvas menu={menu} isOpen={open} close={closeMenu} />
@@ -92,6 +90,8 @@ export default function APIDocsScreen() {
           </div>
         </div>
       </div>
+      <div className="color__circles circle__18"></div>
+
       {/* <Footer /> */}
     </div>
   );

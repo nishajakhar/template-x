@@ -43,12 +43,21 @@
   margin: 2rem 0px;
   .email__card {
     @apply flex gap-5;
-
+    position: relative;
     clip-path: inherit;
     padding: 1.5rem 2rem;
 
     background-color: $color3;
     font-weight: 100;
+    .select-emails {
+      position: absolute;
+      top: 26px;
+      left: 10px;
+      input {
+        height: 17px;
+        width: 17px;
+      }
+    }
     .email__card-image {
       @apply flex items-center;
       img {
@@ -60,6 +69,7 @@
       .email__card-heading {
         @apply flex justify-between;
         font-size: 22px;
+        position: relative;
       }
       .email__card-subheading {
         font-size: 12px;
@@ -92,4 +102,17 @@
   filter: blur(150px);
   transform: rotate(1.3deg);
   z-index: 1;
+}
+
+.collapse-menu {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
+  p {
+    cursor: pointer;
+  }
+  p:hover {
+    background-color: $color1;
+  }
 }

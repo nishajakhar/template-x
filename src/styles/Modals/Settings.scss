@@ -1,0 +1,66 @@
+@import '../variables.scss';
+
+.settings-modal {
+  .modal-container {
+    @apply flex justify-center;
+    margin-top: 5rem;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .settings-modal__heading {
+    @apply flex justify-center py-5;
+    font-size: 30px;
+  }
+  .settings__form-info {
+    @apply flex gap-5;
+    .settings__form-left {
+      .settings__form-view-items {
+        @apply py-5;
+        h1 {
+          color: $color2;
+          font-size: 18px;
+        }
+        .settings__form-view-item {
+          @apply my-3 py-3 px-3 flex justify-between;
+          background: $color5;
+          span {
+            color: $color2;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .settings__form-input {
+    @apply my-2;
+    label {
+      font-size: 15px;
+      font-weight: 350;
+    }
+    select {
+      @apply w-full px-3 py-2;
+      margin-bottom: 20px;
+      background: $color1;
+      border-radius: 3px;
+      opacity: 0.3;
+    }
+  }
+  .settings__form-right {
+    .settings__form-input {
+      @apply flex items-center;
+      input {
+        @apply mr-2 my-2;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .settings__form-action {
+    @apply flex justify-center pt-5 pb-2 gap-5;
+    flex-wrap: wrap-reverse;
+    button {
+      font-weight: 300;
+    }
+  }
+}

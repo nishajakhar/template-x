@@ -66,30 +66,34 @@ function TeamCard({ account }) {
   return (
     <div className="team__card__outer">
       <div className="team__card">
-        <div className="team__card-heading">
-          <div className="team__card-title">
-            <div className="team__card-subheading">
-              <p> {account.selected && 'Selected'} &nbsp;</p>
+        <div className="team__card-left">
+          <div className="team__card-heading">
+            <div className="team__card-title">
+              <div className="team__card-subheading">
+                <p> {account.selected && 'Selected'} &nbsp;</p>
+              </div>
+
+              <h1>{account.title}</h1>
             </div>
 
-            <h1>{account.title}</h1>
-          </div>
-
-          <div className="team__card-description">
-            {' '}
-            <p>{account.description} </p>
+            <div className="team__card-description">
+              {' '}
+              <p>{account.description} </p>
+            </div>
           </div>
         </div>
-        <div className="team__card-info">
-          <div className="team__card-more">
-            <Link to="/team-account/company-groups">See Details</Link>
-          </div>
+        <div className="team__card-right">
+          <div className="team__card-info">
+            <div className="team__card-more">
+              <Link to="/team-account/company-groups">See Details</Link>
+            </div>
 
-          <div className="team__card-button">
-            {' '}
-            <button type="button" className={'primary__button ' + (account.selected ? 'disabled:opacity-25' : '')}>
-              SELECT
-            </button>
+            <div className="team__card-button">
+              {' '}
+              <button type="button" className={'primary__button ' + (account.selected ? 'disabled:opacity-25' : '')}>
+                SELECT
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function Footer() {
             <Link to="/faqs" className="footer__primary-middle__navitem">
               FAQs
             </Link>
-            <Link to="/team-account" className="footer__primary-middle__navitem">
+            <Link to="/api-docs" className="footer__primary-middle__navitem">
               API Docs
             </Link>
             <Link to="/pricing" className="footer__primary-middle__navitem">

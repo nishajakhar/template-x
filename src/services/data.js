@@ -447,6 +447,41 @@ exports.storages = [
   },
 ];
 
+exports.templates = [
+  {
+    stars: 3,
+    img: '/Blog.png',
+    title: 'Multipurpose technology website template',
+    by: 'Company Name one',
+    price: 150,
+    tags: ['lorem', 'ipsum', 'tuit'],
+  },
+  {
+    stars: 4,
+    img: '/Blog.png',
+    title: 'Multipurpose technology website template',
+    by: 'Company Name two',
+    price: 250,
+    tags: ['lorem', 'ipsum', 'tuit'],
+  },
+  {
+    stars: 1,
+    img: '/Blog.png',
+    title: 'Multipurpose technology website template',
+    by: 'Company Name three',
+    price: 50,
+    tags: ['lorem', 'ipsum', 'tuit'],
+  },
+  {
+    stars: 5,
+    img: '/Blog.png',
+    title: 'Multipurpose technology website template',
+    by: 'Company Name one',
+    price: 450,
+    tags: ['lorem', 'ipsum', 'tuit'],
+  },
+];
+
 exports.MOCK_MENU = {
   sectionGroups: [
     {
@@ -487,7 +522,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ipsum diam, mattis 
 </p>`;
 
 exports.MOCK_CONTENT = `
-<h4>Welcome to the ConverterX developer documentation!</h4>
+<h4>Welcome to the TemplateX developer documentation!</h4>
 ${[para, para, para, para, para].join(' ')}
 <h4> Lorem Ipsum</h4>
 ${[para, para, para, para, para].join(' ')}

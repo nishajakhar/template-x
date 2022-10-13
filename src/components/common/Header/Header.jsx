@@ -25,7 +25,13 @@ export default function Header({ login, setLogin }) {
   };
   const handleMobileMenu = () => {
     console.log('I am cliked.....');
+
     mobile.current.classList.toggle('hidden');
+    if (mobile.current.classList.contains('hidden')) {
+      document.body.style.maxHeight = 'unset';
+    } else {
+      document.body.style.maxHeight = '100vh';
+    }
   };
 
   return (
@@ -83,7 +89,7 @@ export default function Header({ login, setLogin }) {
               className={'header__primary-navitem ' + (active == 2 ? 'item-active' : '')}
               onClick={() => setActive(2)}
             >
-              <Link to="/team-account">API Docs</Link>
+              <Link to="/api-docs">API Docs</Link>
             </div>
             <div
               className={'header__primary-navitem ' + (active == 3 ? 'item-active' : '')}
@@ -280,7 +286,7 @@ export default function Header({ login, setLogin }) {
               </div>
               <div className={'mobile__navigation-navitem ' + (active == 2 ? 'item-active' : '')}>
                 <Link
-                  to="/team-account"
+                  to="/api-docs"
                   onClick={() => {
                     setActive(2);
                     handleMobileMenu();
@@ -322,77 +328,76 @@ export default function Header({ login, setLogin }) {
                   Contact
                 </Link>
               </div>
-
-              {!login && (
-                <div className="mobile__navigation-submenu" ref={mobile}>
-                  <div>
-                    <div className="menu-top">
-                      <h1>Are you Registered?</h1>
-                      <Link to="/login">
-                        <button
-                          className="primary__button"
-                          onClick={() => {
-                            mobile.current.classList.toggle('hidden');
-                          }}
-                        >
-                          LOGIN
-                        </button>
-                      </Link>
-                    </div>
-                    <div className="menu-bottom">
-                      <h1>First time on the site?</h1>
-                      <div className="mt-5 flex justify-center">
-                        <div className="tertiary__button-outer">
-                          <Link to="/signup">
-                            <button
-                              className="tertiary__button"
-                              onClick={() => {
-                                mobile.current.classList.toggle('hidden');
-                              }}
-                            >
-                              CONFIGURE
-                            </button>
-                          </Link>
-                        </div>
+            </div>
+            {!login && (
+              <div className="mobile__navigation-submenu" ref={mobile}>
+                <div>
+                  <div className="menu-top">
+                    <h1>Are you Registered?</h1>
+                    <Link to="/login">
+                      <button
+                        className="primary__button"
+                        onClick={() => {
+                          mobile.current.classList.toggle('hidden');
+                        }}
+                      >
+                        LOGIN
+                      </button>
+                    </Link>
+                  </div>
+                  <div className="menu-bottom">
+                    <h1>First time on the site?</h1>
+                    <div className="mt-5 flex justify-center">
+                      <div className="tertiary__button-outer">
+                        <Link to="/signup">
+                          <button
+                            className="tertiary__button"
+                            onClick={() => {
+                              mobile.current.classList.toggle('hidden');
+                            }}
+                          >
+                            CONFIGURE
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
-              )}
-              {login && (
-                <div onClick={handleGetProfile} className="mobile__navigation-username">
-                  <p>
-                    {' '}
-                    <FontAwesomeIcon icon={faUser} classname="social__icons" className="pr-2" />
-                    Cornelia S.
-                  </p>
-                </div>
-              )}
-              <div className="mobile__navigation-footer">
-                <div className="mobile__navigation-social">
-                  <div>
-                    <a href="#">
-                      <FontAwesomeIcon className="social__icons" icon={faLinkedinIn} />
-                    </a>{' '}
-                  </div>
-                  <div>
-                    <a href="#">
-                      {' '}
-                      <FontAwesomeIcon className="social__icons" icon={faFacebookF} />
-                    </a>
-                  </div>
-                  <div>
-                    <a href="#">
-                      {' '}
-                      <FontAwesomeIcon className="social__icons" icon={faTwitter} />
-                    </a>
-                  </div>
-                </div>
-                <div className="mobile__navigation-translate">
+              </div>
+            )}
+            {login && (
+              <div onClick={handleGetProfile} className="mobile__navigation-username">
+                <p>
                   {' '}
-                  <p className="px-1">ENG</p>
-                  <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
+                  <FontAwesomeIcon icon={faUser} classname="social__icons" className="pr-2" />
+                  Cornelia S.
+                </p>
+              </div>
+            )}
+            <div className="mobile__navigation-footer">
+              <div className="mobile__navigation-social">
+                <div>
+                  <a href="#">
+                    <FontAwesomeIcon className="social__icons" icon={faLinkedinIn} />
+                  </a>{' '}
                 </div>
+                <div>
+                  <a href="#">
+                    {' '}
+                    <FontAwesomeIcon className="social__icons" icon={faFacebookF} />
+                  </a>
+                </div>
+                <div>
+                  <a href="#">
+                    {' '}
+                    <FontAwesomeIcon className="social__icons" icon={faTwitter} />
+                  </a>
+                </div>
+              </div>
+              <div className="mobile__navigation-translate">
+                {' '}
+                <p className="px-1">ENG</p>
+                <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
               </div>
             </div>
           </div>

@@ -79,11 +79,14 @@
         -webkit-columns: 2;
         -moz-columns: 2;
         list-style-type: circle;
-        margin: 0rem 2rem;
+        margin: 0rem 1rem;
+        // padding: 0px 30px;
         @include media-breakpoint-down($mobile) {
           margin: 0rem 1rem;
         }
         li {
+          margin: 0rem 0.5rem;
+          padding: 0px 10px;
           @include media-breakpoint-down($mobile) {
             line-height: 30px;
           }

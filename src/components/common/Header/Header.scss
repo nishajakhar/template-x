@@ -218,7 +218,7 @@
 
   background-color: rgba(5, 16, 58, 0.9);
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
   transition: 0.5s;
 
   .mobile__navigation-overlay-content {
@@ -230,11 +230,15 @@
 
     background: rgba(90, 47, 179, 0.3);
     border: 2px solid rgba(207, 70, 241, 0.7);
+
     @include media-breakpoint-down($mobile) {
       max-width: 100%;
     }
     .mobile__navigation-header {
       @apply flex items-center content-center px-5 my-8;
+      @include media-breakpoint-down($mobile) {
+        @apply my-4;
+      }
       img {
         height: 40px;
         width: auto;
@@ -253,23 +257,31 @@
 
     .mobile__navigation-navitems {
       .mobile__navigation-navitem {
-        @apply py-6 pl-5;
+        @apply py-5 pl-5;
         text-align: left;
         font-size: 25px;
+        @include media-breakpoint-down($mobile) {
+          @apply py-2;
+          font-size: 20px;
+        }
       }
     }
     .mobile__navigation-submenu {
       .menu-top {
-        padding: 0.5rem;
+        padding: 1rem;
         background-color: #2b1e5b;
         border: 2px solid #2b1e5b;
 
         text-align: center;
+
         h1 {
           font-size: $mediumFont;
         }
         button {
           @apply mt-8;
+          @include media-breakpoint-down($mobile) {
+            @apply mt-3;
+          }
         }
       }
       .menu-top:hover {
@@ -280,7 +292,9 @@
         background-color: rgb(5, 16, 58);
         text-align: center;
         border: 2px solid #030d36;
-
+        @include media-breakpoint-down($mobile) {
+          padding: 1rem;
+        }
         h1 {
           font-size: $mediumFont;
         }
@@ -300,11 +314,19 @@
     }
     .mobile__navigation-footer {
       @apply flex justify-between mt-10;
-
+      @include media-breakpoint-down($mobile) {
+        @apply mt-6;
+        font-size: 15px;
+      }
       .mobile__navigation-social {
         @apply flex;
-        font-size: $extraSmallFont;
 
+        .social__icons {
+          font-size: $extraSmallFont;
+          @include media-breakpoint-down($mobile) {
+            font-size: $extraSmallFont;
+          }
+        }
         div {
           padding: 0px 15px;
           font-size: 10px;
@@ -314,7 +336,10 @@
         }
       }
       .mobile__navigation-translate {
-        @apply flex text-xs items-center;
+        @apply flex text-xs items-center pr-2;
+        @include media-breakpoint-down($mobile) {
+          font-size: $extraSmallFont;
+        }
       }
     }
   }
