@@ -5,7 +5,6 @@
   overflow: hidden;
 
   .contactus__container {
-    @apply flex justify-center my-16;
     position: relative;
     margin: $containerMargin;
     z-index: 100;
@@ -40,13 +39,10 @@
           flex-wrap: wrap;
         }
         .contactus__form-question {
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
+          width: 100%;
         }
         .contactus__form-email {
-          flex-basis: 100%;
-          flex-grow: 1;
+          width: 100%;
         }
       }
 

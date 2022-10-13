@@ -20,6 +20,7 @@
     @include media-breakpoint-down($tablet2) {
       @apply py-24;
       margin: $containerMarginMedium;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
     }
 
     @include media-breakpoint-down($mobile) {
@@ -65,97 +66,4 @@
     width: 400px;
     height: 400px;
   }
-}
-
-.arrowBg {
-  filter: drop-shadow(1px 0px 0px $color1) drop-shadow(-1px 0px 0px $color2) drop-shadow(0px 1px 0px $color1)
-    drop-shadow(0px -1px 0px $color1) drop-shadow(1px 1px 0px $color4) drop-shadow(-1px -1px 0px $color2)
-    drop-shadow(-1px 1px 0px $color1) drop-shadow(1px -1px 0px $color2);
-}
-.arrow {
-  width: fit-content;
-  background: $color3;
-  margin: 20px;
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
-.arrowRight {
-  padding: 20px;
-  clip-path: polygon(100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0 calc(100% - 36px), 20px 0%);
-  // polygon(calc(100% - 40px) 0%, 0 0, 0 100%, calc(100% - 40px) 100%, 100% 50%);
-}
-
-#wrapper {
-  width: fit-content;
-  margin: auto;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 90%, 50% 100%, 40% 90%, 0 100%);
-  background: white;
-  border: 2px solid white;
-}
-#test {
-  width: 500px;
-  height: 300px;
-  margin: auto;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 90%, 50% 100%, 40% 90%, 0 100%);
-  background: red;
-}
-
-.screenshot {
-  mask: url('../../public/Blog.png') center center no-repeat;
-  background: white;
-  padding: 10px;
-
-  img {
-    mask: url(../../public/Blog.png) center center no-repeat;
-  }
-}
-
-.top-angle-left {
-  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
-  clip-path: polygon(100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0 calc(100% - 36px), 20px 0%);
-  position: relative;
-  min-height: 510px;
-}
-
-.top-angle-left:after {
-  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-  clip-path: polygon(100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0 calc(100% - 36px), 20px 0%);
-  background: #e99d15;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -82%;
-  right: 0;
-  height: 100%;
-  display: block;
-  z-index: 9;
-}
-
-:root {
-  --indent: 15%;
-  --button-shape: polygon(
-    100% 0,
-    100% calc(100% - 24px),
-    calc(100% - 24px) 100%,
-    0% 100%,
-    0 calc(100% - 36px),
-    20px 0%
-  );
-
-  --arrow-shape: polygon(var(--indent) 0, 0 50%, var(--indent) 100%, 100% 100%, calc(100% - var(--indent)) 50%, 100% 0);
-}
-
-.parallelogram-outline {
-  display: inline-block;
-  background: $linearGradient1;
-  padding: 3px;
-  clip-path: $clipPath1;
-}
-
-.parallelogram {
-  font-family: sans-serif;
-  background-color: white;
-  padding: 0.25rem 0.75rem 0.25rem 0.5rem;
-  clip-path: $clipPath1;
 }

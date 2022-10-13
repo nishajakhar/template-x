@@ -29,6 +29,7 @@
       justify-content: center;
       padding-top: 3rem;
       border-bottom: 1px solid $color1;
+
       div {
         z-index: 500;
         color: #5a2fb3;
@@ -46,6 +47,7 @@
           min-height: 2px;
           width: 100%;
           background: $linearGradient1;
+
           // padding-bottom: 2px;
           // font-family: $fontStyle;
           // color: white;
@@ -53,7 +55,7 @@
       }
 
       button {
-        font-size: $extraSmallFont;
+        font-size: 14px;
         color: #5a2fb3;
 
         // background-color: $color4;
@@ -124,18 +126,18 @@
 
 .pricing__card-outer {
   z-index: 500;
-  clip-path: $clipPath3;
+  clip-path: $clipPath6;
   background: $linearGradient2;
   padding: 3px;
   // height: 550px;
-  max-width: 200px;
+  max-width: 250px;
   height: 550px;
   margin: 10px;
   @include media-breakpoint-down($tablet2) {
     height: 500px;
   }
   @include media-breakpoint-down($mobile) {
-    max-width: 240px;
+    max-width: 250px;
     // height: 400px;
   }
   .pricing__card {
@@ -197,13 +199,13 @@
       @apply mb-2;
       text-align: center;
       line-height: 16px;
-      padding-top: 10px;
       p {
         @apply py-2;
         font-family: $fontStyle;
         font-weight: 400;
         font-size: 10px;
         color: #5a2fb3;
+        text-decoration: line-through;
       }
       h2 {
         font-family: $fontStyle;
@@ -220,8 +222,8 @@
       //   padding: 18px 0px;
 
       button {
-        width: 7rem;
-        height: 2rem;
+        // width: 7rem;
+        // height: 2rem;
         font-size: $extraSmallFont;
       }
     }

@@ -404,3 +404,93 @@ exports.blogs = [
     tags: ['lorem', 'ipsum', 'sit', 'amet'],
   },
 ];
+exports.storages = [
+  {
+    selected: true,
+    img: '/Blog.png',
+    title: 'Lorem ipsum',
+    description: ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ullamcorper aenean placerat sit nisl semper facilisis. Suspendisse in scelerisque massa est sed rhoncus. Enim nulla consequat euismod ut gravida aliquam lorem. </p>
+      <p>Non, viverra pellentesque nisl lobortis ultrices urna dignissim cras. Ipsum auctor a tincidunt quam id consectetur enim amet amet. </p>`,
+    price: 150,
+  },
+  {
+    selected: false,
+    img: '/Blog.png',
+    title: 'Lorem ipsum',
+    description: ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ullamcorper aenean placerat sit nisl semper facilisis. Suspendisse in scelerisque massa est sed rhoncus. Enim nulla consequat euismod ut gravida aliquam lorem. </p>
+      <p>Non, viverra pellentesque nisl lobortis ultrices urna dignissim cras. Ipsum auctor a tincidunt quam id consectetur enim amet amet. </p>`,
+    price: 70,
+  },
+  {
+    selected: false,
+    img: '/Blog.png',
+    title: 'Lorem ipsum',
+    description: ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ullamcorper aenean placerat sit nisl semper facilisis. Suspendisse in scelerisque massa est sed rhoncus. Enim nulla consequat euismod ut gravida aliquam lorem. </p>
+      <p>Non, viverra pellentesque nisl lobortis ultrices urna dignissim cras. Ipsum auctor a tincidunt quam id consectetur enim amet amet. </p>`,
+    price: 50,
+  },
+  {
+    selected: false,
+    img: '/Blog.png',
+    title: 'Lorem ipsum',
+    description: ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ullamcorper aenean placerat sit nisl semper facilisis. Suspendisse in scelerisque massa est sed rhoncus. Enim nulla consequat euismod ut gravida aliquam lorem. </p>
+      <p>Non, viverra pellentesque nisl lobortis ultrices urna dignissim cras. Ipsum auctor a tincidunt quam id consectetur enim amet amet. </p>`,
+    price: 200,
+  },
+  {
+    selected: false,
+    img: '/Blog.png',
+    title: 'Lorem ipsum',
+    description: ` <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ullamcorper aenean placerat sit nisl semper facilisis. Suspendisse in scelerisque massa est sed rhoncus. Enim nulla consequat euismod ut gravida aliquam lorem. </p>
+      <p>Non, viverra pellentesque nisl lobortis ultrices urna dignissim cras. Ipsum auctor a tincidunt quam id consectetur enim amet amet. </p>`,
+    price: 50,
+  },
+];
+
+exports.MOCK_MENU = {
+  sectionGroups: [
+    {
+      id: 1,
+      title: 'Getting Started',
+      sections: [
+        { id: 1, slug: 'introduction', title: 'Introduction' },
+        { id: 2, slug: 'quick-start-guide', title: 'Quick Start Guide' },
+        { id: 3, slug: 'frequently-asked-questions', title: 'Frequently Asked Questions' },
+        { id: 4, slug: 'usage-information', title: 'Usage Information' },
+      ],
+    },
+    {
+      id: 2,
+      title: 'Setup & Deployment',
+      sections: [
+        { id: 5, slug: 'installation', title: 'Installation' },
+        { id: 6, slug: 'project-structure', title: 'Project Structure' },
+        { id: 7, slug: 'configurations', title: 'Configurations' },
+        { id: 8, slug: 'deployment', title: 'Deployment' },
+      ],
+    },
+    {
+      id: 3,
+      title: 'Development',
+      sections: [
+        { id: 9, slug: 'backend-customization', title: 'Backend Customization' },
+        { id: 10, slug: 'admin-panel-customization', title: 'Admin Panel Customization' },
+        { id: 11, slug: 'strapi-plugins', title: 'Strapi Plugins' },
+        { id: 12, slug: 'local-plugins', title: 'Local Plugins' },
+      ],
+    },
+  ],
+};
+
+let para = `<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ipsum diam, mattis felis, eget volutpat leo scelerisque. Nisl dictum proin nisi nisl. Pulvinar quis nulla sit amet, donec risus sed auctor. Tristique ullamcorper augue nisi dictum eu morbi suscipit eu. Felis fermentum ornare fermentum, ullamcorper pretium sed. Eu lorem mauris et, elit in condimentum dictumst. Consequat interdum facilisis ac felis. Mi consectetur vitae sed pharetra ullamcorper iaculis sit at mauris. Dignissim non turpis nulla amet sit ipsum sed ultrices dignissim. Tristique consequat volutpat diam libero etiam nunc. Neque, neque id curabitur dui et semper convallis. A pharetra mi sed malesuada amet ultricies. Quis nunc lacinia quis pellentesque tincidunt nec fermentum suspendisse nibh. Posuere et tincidunt vitae eget fermentum porta.
+</p>`;
+
+exports.MOCK_CONTENT = `
+<h4>Welcome to the ConverterX developer documentation!</h4>
+${[para, para, para, para, para].join(' ')}
+<h4> Lorem Ipsum</h4>
+${[para, para, para, para, para].join(' ')}
+${[para, para, para, para, para].join(' ')}
+${[para, para, para, para, para].join(' ')}
+`;

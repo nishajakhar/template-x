@@ -6,6 +6,7 @@
 
   .payment__container {
     @apply flex py-24 gap-4;
+    flex-wrap: wrap;
     position: relative;
     margin: $containerMargin;
     z-index: 100;

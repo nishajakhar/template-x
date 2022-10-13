@@ -1,29 +1,27 @@
 @import './variables.scss';
 
-.faq {
+.faq-screen {
   position: relative;
   overflow: hidden;
 
-  .faq__filters {
+  .faq-screen__filters {
     @apply flex mt-16;
     overflow-x: scroll;
     @include media-breakpoint-down($mobile) {
       @apply my-5;
     }
   }
-  .faq__container {
-    @apply flex justify-center mb-10;
+  .faq-screen__container {
+    @apply py-12;
     position: relative;
-    padding: $containerMargin;
+    margin: $containerMargin;
     z-index: 100;
     @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
+      margin: $containerMarginMedium;
     }
 
     @include media-breakpoint-down($mobile) {
-      @apply mb-5;
-
-      padding: $containerMarginSmall;
+      margin: $containerMarginSmall;
     }
   }
 }

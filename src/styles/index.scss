@@ -2,6 +2,11 @@
 @import url('../../node_modules/tailwindcss/components.css');
 @import url('../../node_modules/tailwindcss/utilities.css');
 @import './variables.scss';
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/mixins';
+@import 'variables.scss';
+@import 'bootstrap/scss/variables';
 html,
 body {
   margin: 0;

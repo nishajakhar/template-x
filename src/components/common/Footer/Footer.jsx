@@ -56,12 +56,24 @@ export default function Footer() {
         <div className="footer__primary-middle">
           <h1>Quick Links</h1>
           <div className="footer__primary-middle__navitems">
-            <Link to="/">Home</Link>
-            <Link to="/faqs">FAQs</Link>
-            <Link to="/team-account">API Docs</Link>
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/contact-us">Contact</Link>
+            <Link to="/" className="footer__primary-middle__navitem">
+              Home
+            </Link>
+            <Link to="/faqs" className="footer__primary-middle__navitem">
+              FAQs
+            </Link>
+            <Link to="/team-account" className="footer__primary-middle__navitem">
+              API Docs
+            </Link>
+            <Link to="/pricing" className="footer__primary-middle__navitem">
+              Pricing
+            </Link>
+            <Link to="/blog" className="footer__primary-middle__navitem">
+              Blog
+            </Link>
+            <Link to="/contact-us" className="footer__primary-middle__navitem">
+              Contact
+            </Link>
           </div>
         </div>
 
@@ -84,7 +96,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__secondary-navitems">
-          <a href="#">Cookies</a>
+          <Link to="/cookie-settings">Cookies</Link>
           <a href="#">Privacy Policy</a>
         </div>
       </div>

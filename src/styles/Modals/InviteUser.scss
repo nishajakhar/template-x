@@ -3,10 +3,10 @@
 .invite-user-modal {
   .modal-container {
     @apply flex justify-center;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
   .modal-content {
-    @apply py-20 px-10;
+    @apply py-20 px-5;
     width: 90%;
   }
 
@@ -33,6 +33,7 @@
   }
   .invite-user__form-action {
     @apply flex justify-center pt-10 gap-5;
+    flex-wrap: wrap-reverse;
     .tertiary__button {
       background-color: $color3;
     }

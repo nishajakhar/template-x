@@ -7,7 +7,9 @@ import CookieForm from '../components/Cookie/CookieForm/CookieForm';
 export default function CookieConfigModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
+    console.log('I am handle close......');
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -37,7 +39,7 @@ export default function CookieConfigModal(props) {
             </p>
           </div>
           <CookieInformation />
-          <CookieForm />
+          <CookieForm handleClose={handleClose} isModal={true} />
         </div>
       </div>
     </div>

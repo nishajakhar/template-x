@@ -6,7 +6,8 @@ export default function AddStorageModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -86,9 +87,13 @@ export default function AddStorageModal(props) {
             </div>
             <div className="add-storage__form-action flex justify-center my-5">
               <div className="tertiary__button-outer">
-                <button className="tertiary__button">CLOSE</button>
+                <button className="tertiary__button" onClick={handleClose}>
+                  CLOSE
+                </button>
               </div>
-              <button className="primary__button">CREATE</button>
+              <button className="primary__button" onClick={handleClose}>
+                CREATE
+              </button>
             </div>
           </form>
         </div>

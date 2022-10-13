@@ -1,11 +1,11 @@
 import '../styles/PaymentPlan.scss';
 import '../styles/shared.scss';
-
+import { Link } from 'react-router-dom';
 import Header from '../components/common/Header/Header';
 import Footer from '../components/common/Footer/Footer';
 import TabHeader from '../components/common/TabHeader/TabHeader';
 import Card from '../components/Home/Card/Card';
-
+import { categories } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,9 +22,9 @@ export default function PaymentPlanScreen() {
             <h1 className="payment-plan__heading-text">Main Advantages</h1>
           </div>
           <div className="payment-plan__advantages">
-            <Card />
-            <Card />
-            <Card />
+            {categories.map((category, key) => (
+              <Card item={category} key={key} />
+            ))}
           </div>
           <div className="payment-plan__subheading">
             <h1 className="payment-plan__subheading-text">After subscribing you will receive:</h1>
@@ -49,7 +49,9 @@ export default function PaymentPlanScreen() {
                 <p>70$/monthly</p>
               </div>
             </div>
-            <button className="primary__button">CONFIGURE</button>
+            <Link to="/payment-plan/payment" className="next-button">
+              <button className="primary__button">CONTINUE</button>
+            </Link>
           </div>
         </div>
         <div className="color__circles circle__18"></div>

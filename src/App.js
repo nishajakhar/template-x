@@ -28,6 +28,7 @@ import TemplatesScreen from './pages/Templates';
 import EmailsScreen from './pages/Emails';
 import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
+import ApiDocsSection from './pages/ApiDocsSection';
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -35,7 +36,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header login={login} setLogin={setLogin} />
+        <div>
+          <div>
+            <Header login={login} setLogin={setLogin} />
+          </div>
+        </div>
         <Routes>
           <Route path={ROUTES.LOGIN} element={<LoginScreen setLogin={setLogin} />} />
           <Route path={ROUTES.SIGNUP} element={<SignupScreen setLogin={setLogin} />} />
@@ -50,6 +55,10 @@ function App() {
           <Route path={ROUTES.SERVER_ERROR} element={<ServerErrorScreen />} />
           <Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFoundScreen />} />
           <Route path={ROUTES.API_DOCS} element={<APIDocsScreen />} />
+          <Route path={ROUTES.API_DOCS} element={<APIDocsScreen />}>
+            <Route path=":sectionSlug" element={<ApiDocsSection />} />
+            <Route index element={<ApiDocsSection />} />
+          </Route>
           <Route path={ROUTES.PROFILE} element={<ProfileScreen />} />
           <Route path={ROUTES.TEAM_ACCOUNT} element={<TeamAccountScreen />} />
           <Route path={ROUTES.COMPANY_GROUPS} element={<CompanyGroupsScreen />} />

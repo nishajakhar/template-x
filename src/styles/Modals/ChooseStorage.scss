@@ -5,6 +5,7 @@
     @apply flex justify-center items-center;
   }
   .modal-content {
+    @apply py-14;
     width: 90%;
   }
 
@@ -13,7 +14,7 @@
     font-size: 30px;
   }
   .choose-storage-modal__subheading {
-    @apply flex justify-center text-center py-2;
+    @apply text-center py-2;
     font-size: 14px;
     font-weight: 300;
     span {
@@ -24,6 +25,7 @@
 
   .choose-storage-modal__actions {
     @apply flex justify-center pt-10 pb-2 gap-5;
+    flex-wrap: wrap-reverse;
     .tertiary__button {
       background-color: $color3;
     }

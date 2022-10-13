@@ -13,21 +13,28 @@ import { faq, faqCategories } from '../services/data';
 // import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 // config.autoAddCss = false;
 export default function FaqScreen() {
+  const [activeCategory, setActiveCategory] = useState(0);
   const [expand, setExpand] = useState(0);
 
   return (
     <div className="faq__screen">
       {/* <Header /> */}
-      <div className="faq">
-        <TabHeader heading="FAQ" />
+      <TabHeader heading="FAQ" />
 
-        <div className="faq__filters">
-          {faqCategories.map(item => (
-            <Category title={item} />
+      <div className="faq-screen">
+        <div className="faq-screen__filters">
+          {faqCategories.map((item, index) => (
+            <Category
+              title={item}
+              key={index}
+              index={index}
+              activeCategory={activeCategory}
+              setActiveCategory={setActiveCategory}
+            />
           ))}
         </div>
-        <div className="faq__container">
-          <div className="faq__items">
+        <div className="faq-screen__container">
+          <div className="faq-screen__items">
             {faq.map((faqItem, index) => {
               console.log('I a key...', index);
               return <FaqItem key={index} index={index} faqItem={faqItem} expand={expand} setExpand={setExpand} />;

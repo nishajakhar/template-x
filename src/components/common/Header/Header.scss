@@ -224,18 +224,24 @@
   .mobile__navigation-overlay-content {
     position: relative;
     // top: 25%;
-    width: 100%;
+    max-width: 380px;
+    height: 100%;
     text-align: center;
-    margin-top: 30px;
+
+    background: rgba(90, 47, 179, 0.3);
+    border: 2px solid rgba(207, 70, 241, 0.7);
+    @include media-breakpoint-down($mobile) {
+      max-width: 100%;
+    }
     .mobile__navigation-header {
-      @apply flex items-center px-5 my-5;
+      @apply flex items-center content-center px-5 my-8;
       img {
         height: 40px;
         width: auto;
         padding-right: 5px;
       }
       .mobile__navigation-header-left__text {
-        font-size: 28px;
+        font-size: 32px;
         font-family: $fontStyle;
         color: $color1;
 
@@ -247,11 +253,12 @@
 
     .mobile__navigation-navitems {
       .mobile__navigation-navitem {
-        @apply py-2 pl-5;
+        @apply py-6 pl-5;
         text-align: left;
+        font-size: 25px;
       }
     }
-    .mobile__navigation-menu {
+    .mobile__navigation-submenu {
       .menu-top {
         padding: 0.5rem;
         background-color: #2b1e5b;

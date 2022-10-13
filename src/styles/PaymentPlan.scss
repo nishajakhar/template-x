@@ -26,7 +26,11 @@
       }
     }
     .payment-plan__advantages {
-      @apply flex;
+      display: grid;
+      // padding: 30px 0px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+      row-gap: 40px;
+      column-gap: 20px;
     }
     .payment-plan__subheading {
       .payment-plan__subheading-text {
@@ -45,10 +49,14 @@
         -moz-columns: 2;
         list-style-type: circle;
         font-size: 15px;
+        @include media-breakpoint-down($mobile) {
+          columns: 1;
+        }
       }
     }
     .payment-plan__actions {
       @apply flex justify-between items-end mb-24 mt-10;
+      flex-wrap: wrap;
       .payment-plan__price {
         @apply flex items-end;
         .payment-plan__price-main {
@@ -76,7 +84,14 @@
             font-weight: 300;
             font-size: $mediumFont;
             color: #5a2fb3;
+            text-decoration: line-through;
           }
+        }
+      }
+      .next-button {
+        @include media-breakpoint-down($mobile) {
+          @apply pt-20;
+          margin: auto;
         }
       }
     }

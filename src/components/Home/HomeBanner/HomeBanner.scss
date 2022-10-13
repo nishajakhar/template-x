@@ -2,10 +2,10 @@
 @import '../../../styles/variables.scss';
 
 .banner {
-  @apply flex gap-1;
+  @apply flex gap-4;
   min-height: 65vh;
   margin: $containerMargin;
-  padding: 2rem 0px;
+  padding: 3rem 0px;
   position: relative;
 
   // @include media-breakpoint-down(1025px) {

@@ -3,6 +3,45 @@
 h1 {
   font-family: $fontStyle;
 }
+
+// li::marker {
+//   content: '';
+//   font-size: 2rem;
+//   width: 2px;
+//   height: 2px;
+//   padding: 2px;
+//   color: $color2;
+// }
+// li {
+//   list-style-type: square;
+//   // margin: 0px 20px;
+//   margin-left: 5em;
+//   color: $color2;
+// }
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+  position: relative;
+}
+
+li::before {
+  content: '\25AA';
+  font-size: 1.5rem;
+  color: $color2; /* or whatever color you prefer */
+  position: absolute;
+  left: -20px;
+}
+input[type='checkbox'] {
+  accent-color: $color2;
+}
+
+input[type='checkbox']:checked {
+}
+
 .primary__button {
   background: $linearGradient3;
   width: 160px;
@@ -11,7 +50,26 @@ h1 {
   font-family: $fontStyle;
   font-weight: 700;
   font-size: $smallFont;
-  clip-path: $clipPath1;
+  clip-path: $clipPath6;
+}
+.primary__button-disabled {
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-family: $fontStyle;
+  font-weight: 700;
+  font-size: $smallFont;
+  clip-path: $clipPath6;
+}
+.primary__button__small {
+  background: $linearGradient3;
+  width: 120px;
+  height: 30px;
+  color: white;
+  font-family: $fontStyle;
+  font-weight: 700;
+  font-size: $smallFont;
+  clip-path: $clipPath6s;
 }
 
 .secondary__button {
@@ -22,18 +80,15 @@ h1 {
   font-family: $fontStyle;
   font-weight: 700;
   font-size: $smallFont;
-  clip-path: $clipPath1;
+  clip-path: $clipPath6;
 }
 
 .tertiary__button-outer {
   background: $linearGradient3;
-  width: 160px;
-  height: 50px;
-  clip-path: $clipPath1;
-  position: relative;
+  clip-path: $clipPath6;
+  padding: 2px;
   .tertiary__button {
-    position: absolute;
-    clip-path: $clipPath1;
+    clip-path: inherit;
     color: white;
     background: $color4;
     font-family: $fontStyle;
@@ -41,8 +96,6 @@ h1 {
     font-size: $smallFont;
     width: 154px;
     height: 44px;
-    top: 3px;
-    left: 3px;
   }
 }
 

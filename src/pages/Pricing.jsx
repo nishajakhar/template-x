@@ -20,8 +20,8 @@ export default function PricingScreen() {
       {/* <Header /> */}
       <TabHeader heading="Pricing" />
 
-      <div className="pricing">
-        <div className="pricing__container">
+      <div className="pricing-screen">
+        <div className="pricing-screen__container">
           <div className="pricing__heading-filter">
             <div className={active == 'Monthly' ? 'active' : ''}>
               <button onClick={() => setActive('Monthly')}>MONTHLY</button>

@@ -4,8 +4,12 @@
   .modal-container {
     @apply flex justify-center;
     margin-top: 10rem;
+    @include media-breakpoint-down($mobile) {
+      margin-top: 5rem;
+    }
   }
   .modal-content {
+    @apply py-14;
     width: 90%;
   }
 

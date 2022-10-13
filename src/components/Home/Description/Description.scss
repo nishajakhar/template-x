@@ -5,13 +5,15 @@
   overflow: hidden;
 }
 .description__outer {
-  min-height: 250px;
+  @apply my-24;
+
+  min-height: 260px;
   background: $linearGradient1;
   z-index: 5;
 
   @include media-breakpoint-down($tablet2) {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    @apply my-16;
+    min-height: 280px;
   }
   .description {
     @apply flex;
@@ -57,7 +59,7 @@
         padding: 2rem 0rem;
       }
       p {
-        font-size: $extraSmallFont;
+        font-size: 15px;
       }
       button {
         margin-top: 30px;

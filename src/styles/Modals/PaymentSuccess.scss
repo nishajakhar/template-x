@@ -11,6 +11,7 @@
   .payment-success-modal__heading {
     @apply flex justify-center py-2;
     font-size: 30px;
+    text-align: center;
   }
   .payment-success-modal__subheading,
   .payment-success-modal__transaction-id {
@@ -27,6 +28,7 @@
   }
   .payment-success-modal__actions {
     @apply flex justify-center pt-4 pb-2 gap-5;
+    flex-wrap: wrap-reverse;
     .tertiary__button {
       background-color: $color3;
     }

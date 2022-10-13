@@ -1,12 +1,14 @@
 import '../styles/Modals/PaymentSuccess.scss';
 import '../styles/modalShared.scss';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 
 export default function PaymentSuccessModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -44,10 +46,14 @@ export default function PaymentSuccessModal(props) {
           </div>
 
           <div className="payment-success-modal__actions">
-            <div className="tertiary__button-outer">
-              <button className="tertiary__button">HOME</button>
-            </div>
-            <button className="primary__button">CHOOSE</button>
+            <Link to="/">
+              <div className="tertiary__button-outer">
+                <button className="tertiary__button">HOME</button>
+              </div>
+            </Link>
+            <Link to="/storages">
+              <button className="primary__button">CHOOSE</button>
+            </Link>
           </div>
         </div>
       </div>

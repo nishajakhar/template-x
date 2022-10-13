@@ -17,7 +17,6 @@ import CookieConfigModal from '../Modals/CookieConfig';
 import DisableAdBlockModal from '../Modals/DisableAdBlock';
 import CompanyGroupConfigModal from '../Modals/CompanyGroupConfig';
 import InviteUserModal from '../Modals/InviteUser';
-import PaymentSuccessModal from '../Modals/PaymentSuccess';
 import PaymentFailedModal from '../Modals/PaymentFailed';
 import AddStorageModal from '../Modals/AddStorage';
 import EditStorageModal from '../Modals/EditStorage';
@@ -26,31 +25,33 @@ import { categories } from '../services/data';
 
 export default function HomeScreen() {
   const home = useRef();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   useEffect(() => {
     if (open) {
-      home.current.style.maxHeight = '100vh';
-      home.current.style.overflow = 'hidden';
+      // home.current.style.maxHeight = '100vh';
+      // home.current.style.overflow = 'hidden';
     } else {
-      home.current.style.overflow = 'unset';
-      home.current.style.overflowX = 'hidden';
+      // modalref.current.style.display = 'none';
+      // home.current.style.overflow = 'unset';
+      // home.current.style.overflowX = 'hidden';
     }
   }, [open]);
 
   return (
     <>
-      {/* <CookieModal open={setOpen} /> */}
+      {/* <CookieModal open={setOpen} className="hidden" /> */}
+      <div className={open ? '' : 'hidden'}>
+        {/* <CookieConfigModal open={setOpen} /> */}
 
-      {/* <CookieConfigModal open={setOpen} /> */}
-      {/* <DisableAdBlockModal open={setOpen} /> */}
-      {/* <CompanyGroupConfigModal open={setOpen} /> */}
-      {/* <InviteUserModal open={setOpen} /> */}
-      {/* <PaymentSuccessModal open={setOpen} /> */}
-      {/* <PaymentFailedModal open={setOpen} /> */}
-      {/* <AddStorageModal open={setOpen} /> */}
-      {/* <EditStorageModal open={setOpen} /> */}
-      {/* <ChooseStorageModal open={setOpen} /> */}
-
+        {/* <DisableAdBlockModal open={setOpen} /> */}
+        {/* <CompanyGroupConfigModal open={setOpen} /> */}
+        {/* <InviteUserModal open={setOpen} /> */}
+        {/* <PaymentSuccessModal open={setOpen} /> */}
+        {/* <PaymentFailedModal open={setOpen} /> */}
+        {/* <AddStorageModal open={setOpen} /> */}
+        {/* <EditStorageModal open={setOpen} /> */}
+        <ChooseStorageModal open={setOpen} />
+      </div>
       <div className="home__screen" ref={home}>
         {/* <Header /> */}
         <HomeBanner />

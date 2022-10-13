@@ -6,7 +6,8 @@ export default function DisableAdBlockModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -33,7 +34,9 @@ export default function DisableAdBlockModal(props) {
           </div>
 
           <div className="adblock-modal__actions">
-            <button className="primary__button">ACCEPT</button>
+            <button className="primary__button" onClick={handleClose}>
+              ACCEPT
+            </button>
           </div>
         </div>
       </div>

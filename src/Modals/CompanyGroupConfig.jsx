@@ -6,7 +6,8 @@ export default function CompanyGroupConfigModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -78,7 +79,9 @@ export default function CompanyGroupConfigModal(props) {
               </div>
             </div>
             <div className="company-group-config__form-action flex justify-center my-5">
-              <button className="primary__button">SAVE</button>
+              <button className="primary__button" onClick={handleClose}>
+                SAVE
+              </button>
             </div>
           </form>
         </div>

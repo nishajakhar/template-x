@@ -38,6 +38,9 @@
   background: $linearGradient2;
   padding: 3px;
   width: 180px;
+  .cat-active {
+    background: $linearGradient2;
+  }
   .category {
     @apply px-10 py-2;
     display: flex;
@@ -56,10 +59,10 @@
 }
 
 .faqItem__outer {
-  @apply mx-2 my-6;
+  @apply my-6;
   clip-path: $clipPath5;
   background: $linearGradient1;
-  padding: 3px;
+  padding: 2px;
   z-index: 50;
 
   @include media-breakpoint-down($tablet2) {

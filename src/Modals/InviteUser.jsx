@@ -6,7 +6,8 @@ export default function InviteUserModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -55,9 +56,13 @@ export default function InviteUserModal(props) {
             </div>
             <div className="invite-user__form-action flex justify-center mt-5">
               <div className="tertiary__button-outer">
-                <button className="tertiary__button">CLOSE</button>
+                <button className="tertiary__button" onClick={handleClose}>
+                  CLOSE
+                </button>
               </div>
-              <button className="primary__button">SAVE</button>
+              <button className="primary__button" onClick={handleClose}>
+                SAVE
+              </button>
             </div>
           </form>
         </div>

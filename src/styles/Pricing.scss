@@ -1,10 +1,11 @@
 @import './variables.scss';
 
-.pricing {
+.pricing-screen {
   position: relative;
   overflow: hidden;
 
-  .pricing__container {
+  .pricing-screen__container {
+    @apply py-20;
     position: relative;
     margin: $containerMargin;
     z-index: 100;

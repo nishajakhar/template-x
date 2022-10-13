@@ -32,7 +32,7 @@ export default function PricingCard({ item }) {
         </div>
         <div class="pricing__choose">
           <Link to="/payment-plan">
-            <button className="primary__button">CHOOSE</button>
+            <button className="primary__button__small">CHOOSE</button>
           </Link>
         </div>
       </div>

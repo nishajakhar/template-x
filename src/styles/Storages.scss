@@ -43,14 +43,18 @@
   margin: 2rem 0px;
   .storage__card {
     @apply flex gap-10;
+    flex-wrap: wrap;
     clip-path: inherit;
     padding: 1.5rem 2.5rem;
 
     background-color: $color3;
     .storage__card-image {
-      @apply flex items-center;
+      @apply flex  justify-center text-center items-center;
+
+      @include media-breakpoint-down($mobile) {
+        flex-basis: 100%;
+      }
       img {
-        width: 100%;
       }
     }
     .storage__card-info {
@@ -73,6 +77,10 @@
       }
       .storage__card-actions {
         @apply flex justify-between items-end;
+        flex-wrap: wrap;
+        @include media-breakpoint-down($mobile) {
+          justify-content: center;
+        }
         h2 {
           font-family: $fontStyle;
           font-weight: 700;

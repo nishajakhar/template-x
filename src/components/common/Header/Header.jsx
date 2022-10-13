@@ -4,21 +4,21 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSignOut, faUser, faCaretDown, faCancel } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSignOut, faTimes, faUser, faCaretDown, faCancel } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedinIn, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 export default function Header({ login, setLogin }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
-  const menu = useRef();
+  const loginmenu = useRef();
   const mobile = useRef();
 
   const profilemenu = useRef();
 
   const handleGetStarted = () => {
-    console.log('I am handle get started...', menu.current);
-    menu.current.classList.toggle('hidden');
+    console.log('I am handle get started...', loginmenu.current);
+    loginmenu.current.classList.toggle('hidden');
   };
   const handleGetProfile = () => {
     profilemenu.current.classList.toggle('hidden');
@@ -128,14 +128,14 @@ export default function Header({ login, setLogin }) {
           </div>
         </div>
 
-        <div className="header__primary-menu hidden" ref={menu}>
+        <div className="header__primary-menu hidden" ref={loginmenu}>
           <div>
             <div className="menu-top">
               <h1>Are you Registered?</h1>
               <Link
                 to="/login"
                 onClick={() => {
-                  menu.current.classList.toggle('hidden');
+                  loginmenu.current.classList.toggle('hidden');
                 }}
               >
                 <button className="primary__button">LOGIN</button>
@@ -150,7 +150,7 @@ export default function Header({ login, setLogin }) {
                     <button
                       className="tertiary__button"
                       onClick={() => {
-                        menu.current.classList.toggle('hidden');
+                        loginmenu.current.classList.toggle('hidden');
                       }}
                     >
                       CONFIGURE
@@ -248,9 +248,9 @@ export default function Header({ login, setLogin }) {
               </div>
               <div className="mobile__navigation-header-right">
                 <FontAwesomeIcon
-                  icon={faCancel}
+                  icon={faTimes}
                   classname="social__icons"
-                  className="text-pink-500"
+                  className="text-pink-500 text-5xl"
                   onClick={handleMobileMenu}
                 />
               </div>

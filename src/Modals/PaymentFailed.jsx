@@ -6,7 +6,8 @@ export default function PaymentFailedModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -33,9 +34,13 @@ export default function PaymentFailedModal(props) {
 
           <div className="payment-fail-modal__actions">
             <div className="tertiary__button-outer">
-              <button className="tertiary__button">CLOSE</button>
+              <button className="tertiary__button" onClick={handleClose}>
+                CLOSE
+              </button>
             </div>
-            <button className="primary__button">TRY AGAIN</button>
+            <button className="primary__button" onClick={handleClose}>
+              TRY AGAIN
+            </button>
           </div>
         </div>
       </div>

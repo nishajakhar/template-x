@@ -14,12 +14,12 @@ $gradient2: rgba(207, 70, 241, 0.7);
 $gradient3: rgba(90, 47, 179, 0.3);
 $fontStyle: 'Quantico';
 $fontStyle2: 'Raleway';
-$clipPath1: polygon(100% 0, 100% 64%, 89% 100%, 0% 100%, 0 32%, 11% 0);
-$clipPath2: polygon(100% 0, 100% 88%, 86% 100%, 0% 100%, 0 12%, 14% 0);
 $clipPath3: polygon(100% 0, 100% 97%, 90% 100%, 0% 100%, 0 3%, 10% 0);
-$clipPath4: polygon(100% 0, 100% 97%, 100% 100%, 0% 100%, 0 23%, 10% 0);
-$clipPath5: polygon(100% 0, 100% 98%, 92% 100%, 0% 100%, 0 27%, 2% 0);
+$clipPath4: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%, 0 18px, 18px 0);
+$clipPath5: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%, 0 20px, 20px 0);
 $clipPath6: polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px, 20px 0);
+$clipPath6s: polygon(100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px, 10px 0);
+
 $clipPath7: polygon(100% 0, 100% 92%, 89% 100%, 0 100%, 0 8%, 11% 0);
 $clipPath8: polygon(100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%, 0 24px, 24px 0%);
 

@@ -1,12 +1,14 @@
 import '../styles/Modals/Cookie.scss';
 import '../styles/modalShared.scss';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CookieModal(props) {
   const modal = useRef(0);
   const modalContent = useRef(0);
 
-  const handleClose = async () => {
+  const handleClose = async e => {
+    e.preventDefault();
     modalContent.current.classList.remove('modal-open');
     modalContent.current.classList.add('modal-close');
     await new Promise(r => setTimeout(r, 300));
@@ -37,10 +39,15 @@ export default function CookieModal(props) {
           </div>
 
           <div className="cookie-modal__actions">
-            <div className="tertiary__button-outer">
-              <button className="tertiary__button">CONFIGURE</button>
-            </div>
-            <button className="primary__button">ADD TO CART</button>
+            <Link to="/cookie-setting">
+              <div className="tertiary__button-outer">
+                <button className="tertiary__button">CONFIGURE</button>
+              </div>
+            </Link>
+
+            <button className="primary__button" onClick={handleClose}>
+              ACCEPT
+            </button>
           </div>
         </div>
       </div>

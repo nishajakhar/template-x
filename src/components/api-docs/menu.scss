@@ -1,0 +1,78 @@
+@import '../../styles/variables.scss';
+
+.api-docs-menu {
+  @include media-breakpoint-up($tablet) {
+    padding-bottom: 150px;
+  }
+  @include media-breakpoint-up($mobile) {
+    padding-bottom: 150px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: $mediumFont;
+    line-height: 22px;
+    margin-bottom: 12.5px;
+    @include media-breakpoint-up($tablet) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+    @include media-breakpoint-up($desktop) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 17.5px;
+
+    @include media-breakpoint-down($mobile) {
+      padding-left: 20px;
+    }
+    li::before {
+      content: '';
+    }
+    li:hover a {
+      color: $color2;
+    }
+    li {
+      padding: 0;
+
+      a {
+        @apply py-2;
+        font-size: 16px;
+        display: inline-block;
+        padding: 12.5px 0;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgb(172, 161, 161);
+        @include media-breakpoint-up($tablet) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @include media-breakpoint-up($desktop) {
+          font-size: 18px;
+          line-height: 22px;
+          padding: 15px 0;
+        }
+      }
+      a.active {
+        font-weight: 600;
+        color: $color2;
+      }
+    }
+  }
+  .api-doc-menu-ad-unit {
+    width: 100%;
+    height: 125px;
+    margin-top: 30px;
+    @include media-breakpoint-up($tablet) {
+      width: calc(100% - 20px);
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Category from './Category';
 import FaqItem from './FaqItem';
 import { faq, faqCategories } from '../../../services/data';
 export default function FAQ() {
+  const [activeCategory, setActiveCategory] = useState(0);
   const [expand, setExpand] = useState(0);
   console.log('I am FAQ main.....', expand);
 
@@ -13,8 +14,14 @@ export default function FAQ() {
         <h1>FAQ</h1>
       </div>
       <div className="faq__filters">
-        {faqCategories.map(item => (
-          <Category title={item} />
+        {faqCategories.map((item, index) => (
+          <Category
+            title={item}
+            key={index}
+            index={index}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
         ))}
       </div>
 

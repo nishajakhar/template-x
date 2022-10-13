@@ -20,6 +20,7 @@
 
   .payment-fail-modal__actions {
     @apply flex justify-center pt-10 pb-2 gap-5;
+    flex-wrap: wrap-reverse;
     .tertiary__button {
       background-color: $color3;
     }
