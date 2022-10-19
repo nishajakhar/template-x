@@ -37,7 +37,7 @@ export default function ContactUsScreen() {
                 <textarea placeholder="Please enter your message" rows="5" className="primary__input" />
               </div>
               <div className="contactus__form-policy">
-                <input type="checkbox" checked className="bg-pink-300 m-1" />
+                <input type="checkbox" className="bg-pink-300 m-1" />
                 <label className="px-1">
                   I agree to <span className="text-orange-400 underline">Privacy Policy</span>
                 </label>

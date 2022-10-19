@@ -47,8 +47,14 @@
         columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
-        list-style-type: circle;
+        // list-style-type: circle;
         font-size: 15px;
+        li {
+          @apply px-2;
+          .social__icons {
+            left: -10px;
+          }
+        }
         @include media-breakpoint-down($mobile) {
           columns: 1;
         }

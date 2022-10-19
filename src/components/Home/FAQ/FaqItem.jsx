@@ -17,7 +17,7 @@ export default function FaqItem({ index, faqItem, expand, setExpand }) {
   return (
     <div>
       <div className="faqItem__outer">
-        <div className="faqItem" onClick={() => handleClick(index)}>
+        <div className="faqItem cursor-pointer" onClick={() => handleClick(index)}>
           <h1>{faqItem.question}</h1>
           <div>
             <FontAwesomeIcon classname="social__icons" icon={expand == index ? faMinus : faPlus} />

@@ -1,14 +1,14 @@
 @import '../../../styles/variables.scss';
 
 .catalog {
-  min-height: 70vh;
+  // min-height: 70vh;
   @include media-breakpoint-down($tablet2) {
     min-height: fit-content;
     padding-bottom: 50px;
   }
   @include media-breakpoint-down($mobile) {
     min-height: fit-content;
-    padding-bottom: 0px;
+    padding-bottom: 50px;
   }
   .catalog__heading {
     @apply flex justify-between pb-10;

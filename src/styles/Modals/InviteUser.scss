@@ -21,8 +21,13 @@
     }
     @apply my-5;
     .invite-user__form-role {
+      @apply flex items-center;
       input {
         @apply my-3 mr-2;
+        background: rgba(90, 47, 179, 0.3);
+      }
+      input[type='checkbox']:checked {
+        background: $color2;
       }
       label {
         display: inline-block;
@@ -35,7 +40,9 @@
     @apply flex justify-center pt-10 gap-5;
     flex-wrap: wrap-reverse;
     .tertiary__button {
-      background-color: $color3;
+      // background-color: $color3;
+
+      background: #292368;
     }
     button {
       font-weight: 500;

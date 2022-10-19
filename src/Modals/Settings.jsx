@@ -27,7 +27,7 @@ export default function SettingsModal(props) {
 
           <form>
             <div className="settings__form-info">
-              <div className="settings__form-left">
+              <div className="settings__form-left flex-1">
                 <div className="settings__form-input flex justify-between">
                   <label className="">Enable Search</label>
                   <input type="checkbox" className="" />
@@ -40,17 +40,17 @@ export default function SettingsModal(props) {
                   <label className="">Enable bulk actions</label>
                   <input type="checkbox" className="" />
                 </div>
-                <div className="settings__form-sort">
-                  <p>Default sort attribute</p>
-                  <div className="flex">
-                    <div className="title-sort">
+                <div className="settings__form-sort py-5">
+                  <p className="text-sm">Default sort attribute</p>
+                  <div className="flex gap-2">
+                    <div className="title-sort flex-1">
                       <select>
                         <option>Title</option>
                         <option>Company</option>
                         <option>Ratings</option>
                       </select>
                     </div>
-                    <div className="order-sort">
+                    <div className="order-sort flex-1">
                       <select>
                         <option>ASC</option>
                         <option>DESC</option>
@@ -65,7 +65,7 @@ export default function SettingsModal(props) {
                 <div className="settings__form-input-socials"></div>
                 <div className="settings__form-input">
                   <label className="">Items Per Page</label>
-                  <input type="number" placeholder="Please enter name storage" className="primary__input my-2" />
+                  <input type="number" min="1" max="500" className="primary__input my-2" />
                 </div>
 
                 <div className="settings__form-view-items">
@@ -87,10 +87,10 @@ export default function SettingsModal(props) {
                   </div>
                 </div>
               </div>
-              <div className="settings__form-right">
+              <div className="settings__form-right flex-1">
                 <div className="settings__form-right-header flex justify-between py-2">
-                  <p className="text-lg text-pink-700">Displayed Fields</p>
-                  <span className="text-lg text-orange-500 underline">Reset</span>
+                  <p className="text-lg">Displayed Fields</p>
+                  <h1 className="text-lg text-orange-500 underline">Reset</h1>
                 </div>
 
                 <div className="settings__form-input">

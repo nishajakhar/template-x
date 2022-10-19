@@ -9,7 +9,7 @@ const ROUTES = {
   PRICING: '/pricing',
   CONTACT_US: '/contact-us',
   BLOG: '/blog',
-  API_DOCS: 'api-docs',
+  API_DOCS: '/api-docs',
   SERVER_ERROR: '/error',
   PAGE_NOT_FOUND: '/page-not-found',
   PROFILE: '/profile',

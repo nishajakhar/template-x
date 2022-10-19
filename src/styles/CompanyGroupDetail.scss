@@ -21,9 +21,13 @@
         columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
-        list-style-type: circle;
+        // list-style-type: circle;
         font-size: 15px;
         li {
+          @apply px-3;
+          .social__icons {
+            top: 6px;
+          }
           @include media-breakpoint-down($mobile) {
             @apply py-1;
             font-family: Raleway;
@@ -83,7 +87,8 @@
     clip-path: inherit;
     padding: 1.5rem 2.5rem;
     // height: 264px;
-
+    height: 100%;
+    width: 100%;
     background-color: $color3;
 
     @include media-breakpoint-down($tablet2) {

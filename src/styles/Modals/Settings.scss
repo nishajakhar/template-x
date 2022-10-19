@@ -30,29 +30,50 @@
           }
         }
       }
-    }
-  }
-  .settings__form-input {
-    @apply my-2;
-    label {
-      font-size: 15px;
-      font-weight: 350;
-    }
-    select {
-      @apply w-full px-3 py-2;
-      margin-bottom: 20px;
-      background: $color1;
-      border-radius: 3px;
-      opacity: 0.3;
+
+      .settings__form-input {
+        @apply my-2;
+
+        input {
+          background: rgba(90, 47, 179, 0.3);
+        }
+        input[type='checkbox']:checked {
+          background: $color2;
+        }
+        label {
+          font-size: 15px;
+          font-weight: 350;
+        }
+      }
+      .settings__form-sort {
+        @apply my-2;
+        select {
+          @apply w-full px-3 py-2;
+          margin-bottom: 20px;
+          background: $color1;
+          border-radius: 3px;
+          opacity: 0.3;
+        }
+      }
     }
   }
   .settings__form-right {
+    .settings__form-right-header {
+      p {
+        color: $color2;
+      }
+    }
     .settings__form-input {
       @apply flex items-center;
       input {
         @apply mr-2 my-2;
         width: 20px;
         height: 20px;
+
+        background: rgba(90, 47, 179, 0.3);
+      }
+      input[type='checkbox']:checked {
+        background: $color2;
       }
     }
   }

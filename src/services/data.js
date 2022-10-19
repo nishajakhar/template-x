@@ -482,6 +482,45 @@ exports.templates = [
   },
 ];
 
+exports.invoices = [
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+  {
+    description: 'Standard Pricing Plan',
+    date: '27/06/2022',
+    price: 50,
+    paymentMethod: 4811,
+  },
+];
+
 exports.MOCK_MENU = {
   sectionGroups: [
     {

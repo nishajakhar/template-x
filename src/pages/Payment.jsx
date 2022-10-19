@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMessage, faAward, faPencil } from '@fortawesome/free-solid-svg-icons';
 import PaymentSuccessModal from '../Modals/PaymentSuccess';
 
 config.autoAddCss = false;
@@ -37,7 +37,9 @@ export default function PaymentScreen() {
               <div className="payment__info-billing">
                 <div className="payment__info-billing__heading">
                   <h1>Billing Information:</h1>
-                  <p>Edit</p>
+                  <p className="cursor-pointer">
+                    <FontAwesomeIcon className="social__icons" style={{ color: '#cf46f1' }} icon={faPencil} /> Edit
+                  </p>
                 </div>
                 <div className="payment__info-billing__item">
                   <h1>Company Name</h1>
@@ -63,14 +65,14 @@ export default function PaymentScreen() {
                 <label className="">Card Information</label>
                 <input type="text" placeholder="Please enter card number" className="primary__input" />
               </div>
-              <div>
+              <div className="flex gap-2">
                 <div className="payment__form-input">
                   <label className="">MM/YY</label>
-                  <input type="text" placeholder="Please enter mm / yy" className="primary__input" />
+                  <input type="text" placeholder="MM/YY" className="primary__input" />
                 </div>
                 <div className="payment__form-input">
                   <label className="">CVV</label>
-                  <input type="text" placeholder="Please enter cvv" className="primary__input" />
+                  <input type="text" placeholder="CVV" className="primary__input" />
                 </div>
               </div>
               <div className="payment__form-input">

@@ -26,8 +26,14 @@
   .company-group-config__form-properties {
     @apply my-5;
     .company-group-config__form-property-item {
+      @apply flex items-center;
       input {
         @apply my-3 mr-2;
+
+        background: rgba(90, 47, 179, 0.3);
+      }
+      input[type='checkbox']:checked {
+        background: $color2;
       }
       label {
         font-size: 15px;

@@ -179,6 +179,15 @@
 
       .not-available {
         color: #5a2fb3;
+        .social__icons {
+          color: #5a2fb3;
+          left: -15px;
+        }
+      }
+      .available {
+        .social__icons {
+          left: -15px;
+        }
       }
       @include media-breakpoint-down($tablet2) {
         // height: 300px;
@@ -213,7 +222,8 @@
         font-size: 25px;
         color: #e98342;
         span {
-          font-size: 8px;
+          font-size: 12px;
+          font-weight: 100;
         }
       }
     }

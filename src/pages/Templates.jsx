@@ -30,15 +30,15 @@ export default function TemplatesScreen() {
         <TabHeader heading="Templates" />
         <div className="templates__container" ref={temp}>
           <div className="templates__filter">
-            <p onClick={handleFilterChange}>
+            <p onClick={handleFilterChange} className="cursor-pointer">
               {' '}
               <FontAwesomeIcon className="social__icons" icon={faSliders} />
               Filter
             </p>
-            <p>
+            <p className="cursor-pointer">
               {' '}
               <FontAwesomeIcon className="social__icons" icon={faPlus} />
-              Add a new group
+              Add a new template
             </p>
           </div>
           <div class="templates__groups">

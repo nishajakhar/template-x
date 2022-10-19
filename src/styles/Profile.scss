@@ -17,18 +17,17 @@
     }
     .profile__form {
       @apply text-white;
-      font-size: $extraSmallFont;
+
+      .profile__form-heading__text {
+        font-family: $fontStyle;
+        font-weight: 400;
+        font-size: $mediumFont;
+      }
       .profile__form-inputs {
         gap: 3rem;
         @include media-breakpoint-down($tablet2) {
           flex-wrap: wrap;
           gap: 0rem;
-        }
-
-        .profile__form-heading__text {
-          font-family: $fontStyle;
-          font-weight: 400;
-          font-size: $mediumFont;
         }
 
         h5 {
@@ -41,6 +40,7 @@
         .profile__form-company {
           flex: 1;
           padding: 10px 0px;
+          font-size: $extraSmallFont;
           @include media-breakpoint-down($tablet2) {
             flex-basis: 100%;
           }
@@ -53,8 +53,10 @@
             flex-basis: 100%;
           }
           flex: 1;
-          span {
-            font-size: 11px;
+          div {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
           }
         }
         .profile__form-birthday {
@@ -91,6 +93,58 @@
           }
           button {
             font-size: $extraSmallFont;
+          }
+        }
+      }
+    }
+    .profile__invoices {
+      h1 {
+        @apply py-5;
+        font-family: $fontStyle;
+        font-weight: 400;
+        font-size: $mediumFont;
+      }
+      table {
+        width: 100%;
+        text-align: left;
+        border-spacing: 0rem 0.5rem;
+        border-collapse: separate;
+        thead {
+          th {
+            @apply px-5;
+            font-family: $fontStyle;
+            font-weight: 100;
+            font-size: 15px;
+          }
+        }
+
+        tbody {
+          tr {
+            width: 100%;
+            border: 2px solid #5a2fb2;
+            font-size: 15px;
+            td {
+              @apply py-3 px-5;
+              border-top: 2px solid #5a2fb2;
+              border-bottom: 2px solid #5a2fb2;
+            }
+            td:first-child {
+              border-left: 2px solid #5a2fb2;
+            }
+            td:last-child {
+              border-right: 2px solid #5a2fb2;
+            }
+          }
+          .invoice__outer {
+            margin: 5px;
+            padding: 2px;
+            background: $linearGradient2;
+            width: 100%;
+            .invoice__inner {
+              @apply py-3 px-5;
+              width: 100%;
+              background-color: #010239;
+            }
           }
         }
       }

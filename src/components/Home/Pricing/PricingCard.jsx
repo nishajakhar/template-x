@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Pricing.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquare } from '@fortawesome/free-solid-svg-icons';
 export default function PricingCard({ item }) {
   return (
     <div className="pricing__card-outer">
@@ -11,12 +13,20 @@ export default function PricingCard({ item }) {
         <div className="pricing__card-list">
           <ul className="available">
             {item.available.map((val, index) => (
-              <li key={index}>{val}</li>
+              <li key={index}>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                {val}
+              </li>
             ))}
           </ul>
           <ul className="not-available">
             {item.notAvailable.map((val, index) => (
-              <li key={index}>{val}</li>
+              <li key={index}>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                {val}
+              </li>
             ))}
           </ul>
         </div>

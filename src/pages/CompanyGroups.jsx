@@ -8,7 +8,15 @@ import { companyGroups } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faSliders, faMusic, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHeart,
+  faSquare,
+  faMessage,
+  faSliders,
+  faPlus,
+  faAward,
+  faCaretDown,
+} from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function CompanyGroupsScreen() {
   return (
@@ -18,14 +26,14 @@ export default function CompanyGroupsScreen() {
         <TabHeader heading="Company One" />
         <div className="company__container">
           <div className="company__filter">
-            <p>
+            <p className="cursor-pointer">
               {' '}
               <FontAwesomeIcon className="social__icons" icon={faSliders} />
               Filter
             </p>
-            <p>
+            <p className="cursor-pointer">
               {' '}
-              <FontAwesomeIcon className="social__icons" icon={faHeart} />
+              <FontAwesomeIcon className="social__icons" icon={faPlus} />
               Add a new group
             </p>
           </div>
@@ -67,7 +75,11 @@ function CompanyCard({ group }) {
           {' '}
           <ul>
             {group.items.map((item, index) => (
-              <li>{item}</li>
+              <li>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                {item}
+              </li>
             ))}
           </ul>
         </div>

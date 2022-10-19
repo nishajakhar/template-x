@@ -9,7 +9,7 @@ import { categories } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faSquare, faMessage, faAward, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function PaymentPlanScreen() {
   return (
@@ -31,10 +31,26 @@ export default function PaymentPlanScreen() {
           </div>
           <div className="payment-plan__items">
             <ul>
-              <li>Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja </li>
-              <li>consectetur adipiscing elit. </li>
-              <li>Urna vel viverra fringilla jksdks ksjdskjds sjdjsdj sjdjsd djsdjslj dljsdlld sljdl</li>
-              <li>eget suspendisse urna.</li>
+              <li>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja{' '}
+              </li>
+              <li>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                consectetur adipiscing elit.{' '}
+              </li>
+              <li>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                Urna vel viverra fringilla jksdks ksjdskjds sjdjsdj sjdjsd djsdjslj dljsdlld sljdl
+              </li>
+              <li>
+                {' '}
+                <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                eget suspendisse urna.
+              </li>
             </ul>
           </div>
           <div className="payment-plan__actions">

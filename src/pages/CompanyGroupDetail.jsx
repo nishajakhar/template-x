@@ -14,7 +14,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faHeart, faMessage, faSliders, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faSquare, faMessage, faSliders, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function CompanyGroupDetailScreen() {
   const [open, setOpen] = useState(false);
@@ -36,13 +36,41 @@ export default function CompanyGroupDetailScreen() {
             <div className="cgd__items">
               {' '}
               <ul>
-                <li>Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja </li>
-                <li>consectetur adipiscing elit. </li>
-                <li>Urna vel viverra fringilla </li>
-                <li>eget suspendisse urna.</li>
-                <li>Est massa mauris, tellus, quisque. </li>
-                <li>Ac auctor scelerisque gravida </li>
-                <li>maecenas molestie quam ja skask ahsakas ak ksjksjka aksjkasj akjksaja.</li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  Lorem ipsum dolor sit amet ghgh dksasid usyd ydias isj sjijs jajaj jasja{' '}
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  consectetur adipiscing elit.{' '}
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  Urna vel viverra fringilla{' '}
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  eget suspendisse urna.
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  Est massa mauris, tellus, quisque.{' '}
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  Ac auctor scelerisque gravida{' '}
+                </li>
+                <li>
+                  {' '}
+                  <FontAwesomeIcon className="social__icons" icon={faSquare} />
+                  maecenas molestie quam ja skask ahsakas ak ksjksjka aksjkasj akjksaja.
+                </li>
               </ul>
               <div className="cgd__items-configure" onClick={() => setOpenConfig(true)}>
                 <button className="primary__button">CONFIGURE</button>

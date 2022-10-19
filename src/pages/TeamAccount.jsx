@@ -90,7 +90,10 @@ function TeamCard({ account }) {
 
             <div className="team__card-button">
               {' '}
-              <button type="button" className={'primary__button ' + (account.selected ? 'disabled:opacity-25' : '')}>
+              <button
+                type="button"
+                className={account.selected ? 'primary__button-disabled bg-gray-300' : 'primary__button'}
+              >
                 SELECT
               </button>
             </div>

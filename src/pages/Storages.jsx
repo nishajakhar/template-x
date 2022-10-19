@@ -27,12 +27,12 @@ export default function StoragesScreen() {
           <TabHeader heading="Storages" />
           <div className="storages__container">
             <div className="storages__filter">
-              <p>
+              <p className="cursor-pointer">
                 {' '}
                 <FontAwesomeIcon className="social__icons" icon={faSliders} />
                 Filter
               </p>
-              <p onClick={() => setOpen(true)}>
+              <p onClick={() => setOpen(true)} className="cursor-pointer">
                 {' '}
                 <FontAwesomeIcon className="social__icons" icon={faPlus} />
                 Add new storage

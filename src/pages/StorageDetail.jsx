@@ -38,12 +38,9 @@ export default function StorageDetailScreen() {
                   <p>Individual Subscription to lorem ipsum for 1 month USD 150</p>
                 </div>
               </div>
-              <div className="storage-detail__header-button">
-                <FontAwesomeIcon
-                  className="social__icons text-pink-500"
-                  icon={faPencil}
-                  onClick={() => setOpen(true)}
-                />
+              <div className="storage-detail__header-button flex gap-2 cursor-pointer" onClick={() => setOpen(true)}>
+                <FontAwesomeIcon className="social__icons" style={{ color: '#cf46f1' }} icon={faPencil} />
+                <p className="text-sm">Edit Storage</p>
               </div>
             </div>
 
