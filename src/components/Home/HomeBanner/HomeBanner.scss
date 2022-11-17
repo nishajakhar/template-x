@@ -2,156 +2,156 @@
 @import '../../../styles/variables.scss';
 
 .banner {
-  @apply flex gap-4;
-  min-height: 65vh;
-  margin: $containerMargin;
-  padding: 3rem 0px;
-  position: relative;
-
-  // @include media-breakpoint-down(1025px) {
-  //   margin: 0rem 8rem;
-  // }
-  @include media-breakpoint-down(900px) {
-    flex-wrap: wrap;
-  }
-  @include media-breakpoint-down($tablet2) {
-    margin: $containerMarginMedium;
-    flex-wrap: wrap;
-  }
-  @include media-breakpoint-down($mobile) {
-    margin: $containerMarginSmall;
-  }
-  .banner__left {
-    flex: 1;
-    // @include media-breakpoint-down(1025px) {
-    //   flex-basis: 100%;
-    // }
-    @include media-breakpoint-down($tablet2) {
-      flex-basis: 100%;
-    }
-    .banner__left-content {
-      @apply flex-col;
-      h1 {
-        font-size: $jumboFont;
-        font-weight: 700;
-        background: $linearGradient1;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: $fontStyle;
-        // @include media-breakpoint-down(1025px) {
-        //   font-size: $extraLargeFont;
-        // }
-        @include media-breakpoint-down($tablet2) {
-          text-align: center;
-          font-size: 70px;
-        }
-        @include media-breakpoint-down($mobile) {
-          text-align: center;
-          font-size: 45px;
-        }
-      }
-
-      .banner__left-form {
-        position: relative;
-        height: 50px;
-        @apply my-7;
-
-        input {
-          width: 72%;
-          height: 100%;
-          @include media-breakpoint-down($tablet2) {
-            width: 90%;
-            font-size: 20px;
-          }
-        }
-        .largeButton {
-          @include media-breakpoint-down($mobile) {
-            display: none;
-          }
-        }
-        .smallButton {
-          display: none;
-          width: 60px;
-          clip-path: none;
-          background-color: $linearGradient1;
-          @include media-breakpoint-down($mobile) {
-            display: block;
-          }
-        }
-        .banner__left-button {
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          height: 100%;
-        }
-        span {
-          position: absolute;
-
-          top: 13px;
-          right: 13px;
-        }
-      }
-      p {
-        color: white;
-        font-size: $mediumFont;
-        @include media-breakpoint-down($tablet2) {
-          text-align: center;
-          font-size: 24px;
-          padding-bottom: 5rem;
-          padding-top: 1rem;
-        }
-        @include media-breakpoint-down($mobile) {
-          padding-bottom: 2rem;
-        }
-      }
-    }
-  }
-
-  .banner__right {
-    flex: 1;
-    // min-width: 500px;
-
-    z-index: 5;
+    @apply flex gap-4;
+    min-height: 65vh;
+    margin: $containerMargin;
+    padding: 3rem 0px;
     position: relative;
 
-    @include media-breakpoint-down(950px) {
-      @apply py-20;
-      display: flex;
-      justify-content: center;
+    // @include media-breakpoint-down(1025px) {
+    //   margin: 0rem 8rem;
+    // }
+    @include media-breakpoint-down(900px) {
+        flex-wrap: wrap;
     }
     @include media-breakpoint-down($tablet2) {
-      @apply py-0;
-      display: flex;
-      justify-content: center;
+        margin: $containerMarginMedium;
+        flex-wrap: wrap;
     }
-    .banner__right-content {
-      position: absolute;
-      left: 0px;
-      top: 1.5rem;
-      width: 35rem;
-      @include media-breakpoint-down(950px) {
+    @include media-breakpoint-down($mobile) {
+        margin: $containerMarginSmall;
+    }
+    .banner__left {
         flex: 1;
-      }
-      @include media-breakpoint-down($tablet2) {
-        width: 25rem;
-        padding-bottom: 3rem;
-      }
-      @include media-breakpoint-down($mobile) {
-        width: 20rem;
-      }
-      img {
-        width: 100%;
-        // height: 20rem;
-
+        // @include media-breakpoint-down(1025px) {
+        //   flex-basis: 100%;
+        // }
         @include media-breakpoint-down($tablet2) {
+            flex-basis: 100%;
         }
-      }
-      @include media-breakpoint-down($tablet2) {
-        @apply flex justify-center;
-        position: relative;
-        right: 0px;
-        top: 0px;
-      }
+        .banner__left-content {
+            @apply flex-col;
+            h1 {
+                font-size: $jumboFont;
+                font-weight: 700;
+                background: $linearGradient1;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-family: $fontStyle;
+                // @include media-breakpoint-down(1025px) {
+                //   font-size: $extraLargeFont;
+                // }
+                @include media-breakpoint-down($tablet2) {
+                    text-align: center;
+                    font-size: 70px;
+                }
+                @include media-breakpoint-down($mobile) {
+                    text-align: center;
+                    font-size: 45px;
+                }
+            }
+
+            .banner__left-form {
+                position: relative;
+                height: 50px;
+                @apply my-7;
+
+                input {
+                    width: 90%;
+                    height: 100%;
+                    @include media-breakpoint-down($tablet2) {
+                        width: 90%;
+                        font-size: 20px;
+                    }
+                }
+                .largeButton {
+                    @include media-breakpoint-down($mobile) {
+                        display: none;
+                    }
+                }
+                .smallButton {
+                    display: none;
+                    width: 60px;
+                    clip-path: none;
+                    background-color: $linearGradient1;
+                    @include media-breakpoint-down($mobile) {
+                        display: block;
+                    }
+                }
+                .banner__left-button {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    height: 100%;
+                }
+                span {
+                    position: absolute;
+
+                    top: 13px;
+                    right: 13px;
+                }
+            }
+            p {
+                color: white;
+                font-size: $mediumFont;
+                @include media-breakpoint-down($tablet2) {
+                    text-align: center;
+                    font-size: 24px;
+                    padding-bottom: 5rem;
+                    padding-top: 1rem;
+                }
+                @include media-breakpoint-down($mobile) {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
     }
-  }
+
+    .banner__right {
+        flex: 1;
+        // min-width: 500px;
+
+        z-index: 5;
+        position: relative;
+
+        @include media-breakpoint-down(950px) {
+            @apply py-20;
+            display: flex;
+            justify-content: center;
+        }
+        @include media-breakpoint-down($tablet2) {
+            @apply py-0;
+            display: flex;
+            justify-content: center;
+        }
+        .banner__right-content {
+            position: absolute;
+            left: 0px;
+            top: 1.5rem;
+            width: 35rem;
+            @include media-breakpoint-down(950px) {
+                flex: 1;
+            }
+            @include media-breakpoint-down($tablet2) {
+                width: 25rem;
+                padding-bottom: 3rem;
+            }
+            @include media-breakpoint-down($mobile) {
+                width: 20rem;
+            }
+            img {
+                width: 100%;
+                // height: 20rem;
+
+                @include media-breakpoint-down($tablet2) {
+                }
+            }
+            @include media-breakpoint-down($tablet2) {
+                @apply flex justify-center;
+                position: relative;
+                right: 0px;
+                top: 0px;
+            }
+        }
+    }
 }

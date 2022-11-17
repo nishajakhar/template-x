@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faPlus, faTimes, faSliders, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlus, faTimes, faSliders, faStar, faRotateForward } from '@fortawesome/free-solid-svg-icons';
 import { templates } from '../services/data';
 config.autoAddCss = false;
 export default function TemplatesScreen() {
@@ -47,10 +47,9 @@ export default function TemplatesScreen() {
             ))}
           </div>
           <div class="templates__pagination">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
+          <p><FontAwesomeIcon icon={faRotateForward} classname="social__icons" /><span className="">Show more </span></p>
+           
+
           </div>
           <div className="mobile__filter__navigation-menu hidden" ref={mobilefilter}>
             <div className="mobile__navigation-overlay">
@@ -90,12 +89,12 @@ export default function TemplatesScreen() {
                   </div>
 
                   <div class="filter__form-slide">
-                    <p>Default range slider:</p>
+                    <p className="text-left">Choose Price:</p>
                     <input type="range" min="1" max="100" value="50" />
                   </div>
 
                   <div className="filter__form-topics">
-                    <p className="my-2 font-bold">Choose Topic</p>
+                    <p className="my-2">Choose Topic:</p>
 
                     <div className="filter__form-topic">
                       <input type="checkbox" className="" />

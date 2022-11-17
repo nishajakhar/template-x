@@ -1,28 +1,28 @@
 @import '../variables.scss';
 
 .adblock-modal {
-  .modal-container {
-    @apply flex justify-center;
-    margin-top: 10rem;
-  }
-  .modal-content {
-    width: 90%;
-  }
-
-  .adblock-modal__heading {
-    @apply flex justify-center py-2;
-    font-size: 30px;
-  }
-  .adblock-modal__subheading {
-    @apply flex justify-center text-center py-2;
-    font-size: 14px;
-    font-weight: 300;
-  }
-  .adblock-modal__actions {
-    @apply flex justify-center pt-10 pb-2 gap-5;
-
-    button {
-      font-weight: 500;
+    .modal-container {
+        @apply flex justify-center;
+        margin-top: 5rem;
     }
-  }
+    .modal-content {
+        width: 90%;
+    }
+
+    .adblock-modal__heading {
+        @apply flex justify-center py-2;
+        font-size: 30px;
+    }
+    .adblock-modal__subheading {
+        @apply flex justify-center text-center py-2;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .adblock-modal__actions {
+        @apply flex justify-center pt-10 pb-2 gap-5;
+
+        button {
+            font-weight: 500;
+        }
+    }
 }

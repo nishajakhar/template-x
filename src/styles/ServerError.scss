@@ -1,124 +1,126 @@
 @import './variables.scss';
 
 .servererror__screen {
-  // position: relative;
-  overflow: hidden;
+    // position: relative;
+    overflow: hidden;
 }
 .servererror {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .servererror__container {
-    @apply flex gap-y-10;
+    .servererror__container {
+        @apply flex gap-y-10;
 
-    margin: $containerMargin;
-    // min-height: 100vh;
-    padding: 60px 0px;
-    flex-wrap: wrap;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-      padding: 30px 0px;
-    }
-
-    .servererror__image {
-      flex: 1;
-      height: 500px;
-      @include media-breakpoint-down(700px) {
-        height: fit-content;
-        flex-basis: 100%;
-      }
-      @include media-breakpoint-down($mobile) {
-        flex: 1;
-        flex-basis: 100%;
-      }
-      img {
-        height: 500px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-
+        margin: $containerMargin;
+        // min-height: 100vh;
+        padding: 60px 0px;
+        // flex-wrap: wrap;
         @include media-breakpoint-down($tablet2) {
-          right: -100px;
+            margin: $containerMarginMedium;
+            padding: 30px 0px;
+            flex-wrap: wrap;
         }
-        @include media-breakpoint-down(700px) {
-          position: relative;
-          height: auto;
-          right: 0px;
-          margin: auto;
+
+        .servererror__image {
+            flex: 1;
+            height: 500px;
+            @include media-breakpoint-down(700px) {
+                height: fit-content;
+                flex-basis: 100%;
+            }
+            @include media-breakpoint-down($mobile) {
+                flex: 1;
+                flex-basis: 100%;
+            }
+            img {
+                height: 500px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+
+                @include media-breakpoint-down($tablet2) {
+                    right: -100px;
+                }
+                @include media-breakpoint-down(700px) {
+                    position: relative;
+                    height: auto;
+                    right: 0px;
+                    margin: auto;
+                }
+                @include media-breakpoint-down($mobile) {
+                    position: relative;
+                    height: auto;
+                    right: 0px;
+                }
+            }
         }
-        @include media-breakpoint-down($mobile) {
-          position: relative;
-          height: auto;
-          right: 0px;
+        .servererror__heading {
+            flex: 1;
+            @include media-breakpoint-down(700px) {
+                justify-content: center;
+                text-align: center;
+                flex: 1;
+            }
+            @include media-breakpoint-down($mobile) {
+                flex-basis: 100%;
+                justify-content: center;
+            }
+            h1 {
+                font-size: 120px;
+                display: inline;
+                font-weight: 700;
+                background: $linearGradient1;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            p {
+                font-size: 30px;
+            }
         }
-      }
     }
-    .servererror__heading {
-      @include media-breakpoint-down(700px) {
-        justify-content: center;
-        text-align: center;
-        flex: 1;
-      }
-      @include media-breakpoint-down($mobile) {
-        flex-basis: 100%;
-        justify-content: center;
-      }
-      h1 {
-        font-size: 120px;
-        display: inline;
-        font-weight: 700;
-        background: $linearGradient1;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      p {
-        font-size: 30px;
-      }
-    }
-  }
 }
 
 .circle__20 {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
-  width: 350px;
-  height: 350px;
-  left: -100px;
-  top: 150px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
-  @include media-breakpoint-down($tablet2) {
-    top: 350px;
-  }
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    left: -100px;
+    top: 150px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
+    @include media-breakpoint-down($tablet2) {
+        top: 350px;
+    }
 
-  @include media-breakpoint-down($mobile) {
-    width: 250px;
-    height: 250px;
-    left: -10px;
-    top: 250px;
-  }
+    @include media-breakpoint-down($mobile) {
+        width: 250px;
+        height: 250px;
+        left: -10px;
+        top: 250px;
+    }
 }
 
 .circle__21 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 350px;
-  height: 350px;
-  right: -150px;
-  top: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 2;
-  @include media-breakpoint-down($tablet2) {
-  }
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    right: -150px;
+    top: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 2;
+    @include media-breakpoint-down($tablet2) {
+    }
 
-  @include media-breakpoint-down($mobile) {
-    width: 250px;
-    height: 250px;
-    right: 0px;
-    top: -10px;
-  }
+    @include media-breakpoint-down($mobile) {
+        width: 250px;
+        height: 250px;
+        right: 0px;
+        top: -10px;
+    }
 }

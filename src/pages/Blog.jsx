@@ -11,46 +11,60 @@ import { blogs } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowRight, faRefresh } from '@fortawesome/free-solid-svg-icons';
+import {
+    faMagnifyingGlass,
+    faRefresh,
+} from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function BlogScreen() {
-  return (
-    <div className="blog__screen">
-      {/* <Header /> */}
-      <div className="blog">
-        <TabHeader heading="Blog">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras morbi lorem vel non ultrices. Quis metus, enim
-            nunc neque et a eget sed lectus.
-          </p>
-          <form>
-            <input type="text" placeholder="Email" className="primary__input" />
-            <button>
-              {' '}
-              <FontAwesomeIcon classname="social__icons" icon={faLongArrowRight} />
-            </button>
-          </form>
-        </TabHeader>
-        <div className="blog__container">
-          <div className="blog__head">
-            <BlogHeadCard />
-          </div>
-          <div class="blog__items">
-            {blogs.map((blog, index) => (
-              <BlogCard key={index} blog={blog} />
-            ))}
-          </div>
-          <div class="blog__button">
-            <button>
-              {' '}
-              <FontAwesomeIcon className="social__icons" icon={faRefresh} />
-              Show More
-            </button>
-          </div>
+    return (
+        <div className="blog__screen">
+            {/* <Header /> */}
+            <div className="blog">
+                <TabHeader heading="Blog">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras morbi lorem vel non ultrices. Quis metus, enim nunc
+                        neque et a eget sed lectus.
+                    </p>
+                    <form>
+                        <input
+                            type="text"
+                            placeholder="Email"
+                            className="primary__input"
+                        />
+                        <button>
+                            {' '}
+                            <FontAwesomeIcon
+                                classname="social__icons"
+                                icon={faMagnifyingGlass}
+                            />
+                        </button>
+                    </form>
+                </TabHeader>
+                <div className="blog__container">
+                    <div className="blog__head">
+                        <BlogHeadCard />
+                    </div>
+                    <div class="blog__items">
+                        {blogs.map((blog, index) => (
+                            <BlogCard key={index} blog={blog} />
+                        ))}
+                    </div>
+                    <div class="blog__button">
+                        <button>
+                            {' '}
+                            <FontAwesomeIcon
+                                className="social__icons"
+                                icon={faRefresh}
+                            />
+                            Show More
+                        </button>
+                    </div>
+                </div>
+                <div className="color__circles circle__18"></div>
+            </div>
+            {/* <Footer /> */}
         </div>
-        <div className="color__circles circle__18"></div>
-      </div>
-      {/* <Footer /> */}
-    </div>
-  );
+    );
 }

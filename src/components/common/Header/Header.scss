@@ -2,345 +2,357 @@
 @import '../../../styles/variables.scss';
 
 .item-active {
-  font-weight: bold;
-  color: $color2;
+    font-weight: bold;
+    color: $color2;
 }
 .header {
-  position: relative;
+    position: relative;
 
-  .header__secondary {
-    background-color: rgb(16, 7, 66);
-    font-size: 10px;
-    z-index: 5;
-    .header__secondary-container {
-      @apply flex justify-between;
-      margin: $containerMargin;
-      padding: 0.4rem 0rem;
-      // @include media-breakpoint-down(1025px) {
-      //   margin: 0rem 8rem;
-      // }
-      @include media-breakpoint-down($tablet2) {
-        margin: $containerMarginMedium;
-        padding: 0.8rem 0rem;
-      }
-      @include media-breakpoint-down($mobile) {
-        display: none;
-      }
+    .header__secondary {
+        background-color: rgb(16, 7, 66);
+        font-size: 10px;
+        z-index: 5;
+        .header__secondary-container {
+            @apply flex justify-between;
+            margin: $containerMargin;
+            padding: 0.4rem 0rem;
+            // @include media-breakpoint-down(1025px) {
+            //   margin: 0rem 8rem;
+            // }
+            @include media-breakpoint-down($tablet2) {
+                margin: $containerMarginMedium;
+                padding: 0.8rem 0rem;
+            }
+            @include media-breakpoint-down($mobile) {
+                display: none;
+            }
 
-      .header__secondary-social {
-        @apply flex;
-        font-size: $extraSmallFont;
+            .header__secondary-social {
+                @apply flex;
+                font-size: $extraSmallFont;
 
-        div {
-          padding: 0px 15px;
-          font-size: 10px;
-          @include media-breakpoint-down($tablet2) {
-            font-size: $smallFont;
-            padding: 0px 20px;
-          }
+                div {
+                    padding: 0px 15px;
+                    font-size: 10px;
+                    @include media-breakpoint-down($tablet2) {
+                        font-size: $smallFont;
+                        padding: 0px 20px;
+                    }
+                }
+                div:not(:last-child) {
+                    border-right: 1px solid $gradient1;
+                }
+            }
+            .header__secondary-translate {
+                @apply flex text-xs items-center;
+                @include media-breakpoint-down($tablet2) {
+                    font-size: $smallFont;
+                }
+                select {
+                    background: transparent;
+                    font-weight: bold;
+                    position: relative;
+
+                    option {
+                        background: $color2;
+                    }
+                }
+                select:focus {
+                    outline: none;
+                }
+            }
         }
-        div:not(:last-child) {
-          border-right: 1px solid $gradient1;
-        }
-      }
-      .header__secondary-translate {
-        @apply flex text-xs items-center;
-        @include media-breakpoint-down($tablet2) {
-          font-size: $smallFont;
-        }
-      }
     }
-  }
-  .header__primary {
-    @apply flex justify-between py-5 items-center;
-    margin: $containerMargin;
-    // @include media-breakpoint-down(1025px) {
-    //   margin: 0rem 8rem;
-    // }
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    .header__primary {
+        @apply flex justify-between py-5 items-center;
+        margin: $containerMargin;
+        // @include media-breakpoint-down(1025px) {
+        //   margin: 0rem 8rem;
+        // }
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
-
-    .header__primary-left {
-      @apply flex items-center justify-center;
-      img {
-        width: 35px;
-        padding-right: 5px;
-        @include media-breakpoint-down($tablet2) {
-          width: 45px;
-          padding-right: 5px;
-        }
-        @include media-breakpoint-down($tablet2) {
-          width: 35px;
-        }
-      }
-      .header__primary-left__text {
-        font-size: 28px;
-        font-family: $fontStyle;
-        color: $color1;
-        @include media-breakpoint-down($tablet2) {
-          font-size: $extraLargeFont;
-        }
         @include media-breakpoint-down($mobile) {
-          font-size: $largeFont;
+            margin: $containerMarginSmall;
         }
 
-        span {
-          color: $color2;
+        .header__primary-left {
+            @apply flex items-center justify-center;
+            img {
+                width: 35px;
+                padding-right: 5px;
+                @include media-breakpoint-down($tablet2) {
+                    width: 45px;
+                    padding-right: 5px;
+                }
+                @include media-breakpoint-down($tablet2) {
+                    width: 35px;
+                }
+            }
+            .header__primary-left__text {
+                font-size: 28px;
+                font-family: $fontStyle;
+                color: $color1;
+                @include media-breakpoint-down($tablet2) {
+                    font-size: $extraLargeFont;
+                }
+                @include media-breakpoint-down($mobile) {
+                    font-size: $largeFont;
+                }
+
+                span {
+                    color: $color2;
+                }
+            }
         }
-      }
-    }
-    .header__primary-navitems {
-      @apply flex-1 flex justify-center px-5 items-center gap-2;
-      font-size: 14px;
-      text-align: center;
-      height: 100%;
-      @include media-breakpoint-down($tablet2) {
-        display: none;
-      }
-      .header__primary-navitem {
-        flex: 1;
-        height: 100%;
-        // padding: 0.5rem 0rem;
-      }
-      .header__primary-navitem:hover {
-        color: $color2;
-      }
-    }
-    .header__primary-actions {
-      @include media-breakpoint-down($tablet2) {
-        display: none;
-      }
-    }
-    .header__primary-username {
-      @include media-breakpoint-down($tablet2) {
-        display: none;
-      }
-    }
-    .header__primary-collapse {
-      display: none;
-      color: $color2;
-      .social__icons {
-        @include media-breakpoint-down($tablet2) {
-          font-size: 40px;
+        .header__primary-navitems {
+            @apply flex-1 flex justify-center px-5 items-center gap-2;
+            font-size: 14px;
+            text-align: center;
+            height: 100%;
+            @include media-breakpoint-down($tablet2) {
+                display: none;
+            }
+            .header__primary-navitem {
+                flex: 1;
+                height: 100%;
+                // padding: 0.5rem 0rem;
+            }
+            .header__primary-navitem:hover {
+                color: $color2;
+            }
         }
-        @include media-breakpoint-down($mobile) {
-          font-size: 30px;
+        .header__primary-actions {
+            @include media-breakpoint-down($tablet2) {
+                display: none;
+            }
         }
-      }
+        .header__primary-username {
+            @include media-breakpoint-down($tablet2) {
+                display: none;
+            }
+        }
+        .header__primary-collapse {
+            display: none;
+            color: $color2;
+            .social__icons {
+                @include media-breakpoint-down($tablet2) {
+                    font-size: 40px;
+                }
+                @include media-breakpoint-down($mobile) {
+                    font-size: 30px;
+                }
+            }
 
-      @include media-breakpoint-down($tablet2) {
-        display: block;
-      }
+            @include media-breakpoint-down($tablet2) {
+                display: block;
+            }
+        }
     }
-  }
 
-  .header__primary-login-menu {
-    @apply flex-col absolute z-50 w-44 py-2;
-    margin: $containerMargin;
-    right: 0px;
-    z-index: 50000;
-    background-color: $color3;
-    box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
-    .header__primary-login-menu-navitem {
-      @apply p-1 px-5;
+    .header__primary-login-menu {
+        @apply flex-col absolute z-50 w-44 py-2;
+        margin: $containerMargin;
+        right: 0px;
+        z-index: 50000;
+        background-color: $color3;
+        box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
+        .header__primary-login-menu-navitem {
+            @apply p-1 px-5;
+        }
+        .header__primary-login-menu-logout {
+            @apply p-1 px-5;
+            color: $color2;
+            font-size: 18px;
+        }
+        .header__primary-login-menu-logout:hover {
+            color: $color1;
+            cursor: pointer;
+        }
+        .header__primary-login-menu-navitem:hover {
+            color: $color2;
+            background-color: #2b1e5b;
+            cursor: pointer;
+        }
     }
-    .header__primary-login-menu-logout {
-      @apply p-1 px-5;
-      color: $color2;
-      font-size: 18px;
-    }
-    .header__primary-login-menu-logout:hover {
-      color: $color1;
-      cursor: pointer;
-    }
-    .header__primary-login-menu-navitem:hover {
-      color: $color2;
-      background-color: #2b1e5b;
-      cursor: pointer;
-    }
-  }
-  .header__primary-menu {
-    @apply absolute z-50 w-80;
-    margin: $containerMargin;
-    right: 0px;
-    z-index: 500;
-    box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
-    .menu-top {
-      padding: 2rem;
-      background-color: #2b1e5b;
-      border: 2px solid #2b1e5b;
+    .header__primary-menu {
+        @apply absolute z-50 w-80;
+        margin: $containerMargin;
+        right: 0px;
+        z-index: 500;
+        box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
+        .menu-top {
+            padding: 2rem;
+            background-color: #2b1e5b;
+            border: 2px solid #2b1e5b;
 
-      text-align: center;
-      h1 {
-        font-size: $mediumFont;
-      }
-      button {
-        @apply mt-8;
-      }
-    }
-    .menu-top:hover {
-      border: 2px solid rgb(194, 187, 187);
-    }
-    .menu-bottom {
-      padding: 2rem;
-      background-color: #030d36;
-      text-align: center;
-      border: 2px solid #030d36;
+            text-align: center;
+            h1 {
+                font-size: $mediumFont;
+            }
+            button {
+                @apply mt-8;
+            }
+        }
+        .menu-top:hover {
+            border: 2px solid rgb(194, 187, 187);
+        }
+        .menu-bottom {
+            padding: 2rem;
+            background-color: #030d36;
+            text-align: center;
+            border: 2px solid #030d36;
 
-      h1 {
-        font-size: $mediumFont;
-      }
-      p {
-        @apply pt-5;
-        font-size: 14px;
-      }
+            h1 {
+                font-size: $mediumFont;
+            }
+            p {
+                @apply pt-5;
+                font-size: 14px;
+            }
+        }
+        .menu-bottom:hover {
+            border: 2px solid rgb(194, 187, 187);
+        }
     }
-    .menu-bottom:hover {
-      border: 2px solid rgb(194, 187, 187);
-    }
-  }
 }
 
 .mobile__navigation-overlay {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 500;
-  top: 0;
-  left: 0;
-  // background-color: $color4;
-  // opacity: 0.9;
-
-  background-color: rgba(5, 16, 58, 0.9);
-
-  // overflow-x: hidden;
-  transition: 0.5s;
-
-  .mobile__navigation-overlay-content {
-    position: relative;
-    // top: 25%;
-    max-width: 380px;
     height: 100%;
-    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    // background-color: $color4;
+    // opacity: 0.9;
 
-    background: rgba(90, 47, 179, 0.3);
-    border: 2px solid rgba(207, 70, 241, 0.7);
+    background-color: rgba(5, 16, 58, 0.9);
 
-    @include media-breakpoint-down($mobile) {
-      max-width: 100%;
-    }
-    .mobile__navigation-header {
-      @apply flex items-center content-center px-5 my-8;
-      @include media-breakpoint-down($mobile) {
-        @apply my-4;
-      }
-      img {
-        height: 40px;
-        width: auto;
-        padding-right: 5px;
-      }
-      .mobile__navigation-header-left__text {
-        font-size: 32px;
-        font-family: $fontStyle;
-        color: $color1;
+    // overflow-x: hidden;
+    transition: 0.5s;
 
-        span {
-          color: $color2;
-        }
-      }
-    }
-
-    .mobile__navigation-navitems {
-      .mobile__navigation-navitem {
-        @apply py-5 pl-5;
-        text-align: left;
-        font-size: 25px;
-        @include media-breakpoint-down($mobile) {
-          @apply py-2;
-          font-size: 20px;
-        }
-      }
-    }
-    .mobile__navigation-submenu {
-      .menu-top {
-        padding: 1rem;
-        background-color: #2b1e5b;
-        border: 2px solid #2b1e5b;
-
+    .mobile__navigation-overlay-content {
+        position: relative;
+        // top: 25%;
+        max-width: 380px;
+        height: 100%;
         text-align: center;
 
-        h1 {
-          font-size: $mediumFont;
-        }
-        button {
-          @apply mt-8;
-          @include media-breakpoint-down($mobile) {
-            @apply mt-3;
-          }
-        }
-      }
-      .menu-top:hover {
-        border: 2px solid rgb(194, 187, 187);
-      }
-      .menu-bottom {
-        padding: 2rem;
-        background-color: rgb(5, 16, 58);
-        text-align: center;
-        border: 2px solid #030d36;
-        @include media-breakpoint-down($mobile) {
-          padding: 1rem;
-        }
-        h1 {
-          font-size: $mediumFont;
-        }
-        p {
-          @apply pt-5;
-          font-size: 14px;
-        }
-      }
-      .menu-bottom:hover {
-        border: 2px solid rgb(194, 187, 187);
-      }
-    }
-    .mobile__navigation-username {
-      @apply px-5 my-5;
-      color: $color2;
-      text-align: left;
-    }
-    .mobile__navigation-footer {
-      @apply flex justify-between mt-10;
-      @include media-breakpoint-down($mobile) {
-        @apply mt-6;
-        font-size: 15px;
-      }
-      .mobile__navigation-social {
-        @apply flex;
+        background: rgba(90, 47, 179, 0.3);
+        border: 2px solid rgba(207, 70, 241, 0.7);
 
-        .social__icons {
-          font-size: $extraSmallFont;
-          @include media-breakpoint-down($mobile) {
-            font-size: $extraSmallFont;
-          }
-        }
-        div {
-          padding: 0px 15px;
-          font-size: 10px;
-        }
-        div:not(:last-child) {
-          border-right: 1px solid $gradient1;
-        }
-      }
-      .mobile__navigation-translate {
-        @apply flex text-xs items-center pr-2;
         @include media-breakpoint-down($mobile) {
-          font-size: $extraSmallFont;
+            max-width: 100%;
         }
-      }
+        .mobile__navigation-header {
+            @apply flex items-center content-center px-5 my-8;
+            @include media-breakpoint-down($mobile) {
+                @apply my-4;
+            }
+            img {
+                height: 40px;
+                width: auto;
+                padding-right: 5px;
+            }
+            .mobile__navigation-header-left__text {
+                font-size: 32px;
+                font-family: $fontStyle;
+                color: $color1;
+
+                span {
+                    color: $color2;
+                }
+            }
+        }
+
+        .mobile__navigation-navitems {
+            .mobile__navigation-navitem {
+                @apply py-5 pl-5;
+                text-align: left;
+                font-size: 25px;
+                @include media-breakpoint-down($mobile) {
+                    @apply py-2;
+                    font-size: 20px;
+                }
+            }
+        }
+        .mobile__navigation-submenu {
+            .menu-top {
+                padding: 1rem;
+                background-color: #2b1e5b;
+                border: 2px solid #2b1e5b;
+
+                text-align: center;
+
+                h1 {
+                    font-size: $mediumFont;
+                }
+                button {
+                    @apply mt-8;
+                    @include media-breakpoint-down($mobile) {
+                        @apply mt-3;
+                    }
+                }
+            }
+            .menu-top:hover {
+                border: 2px solid rgb(194, 187, 187);
+            }
+            .menu-bottom {
+                padding: 2rem;
+                background-color: rgb(5, 16, 58);
+                text-align: center;
+                border: 2px solid #030d36;
+                @include media-breakpoint-down($mobile) {
+                    padding: 1rem;
+                }
+                h1 {
+                    font-size: $mediumFont;
+                }
+                p {
+                    @apply pt-5;
+                    font-size: 14px;
+                }
+            }
+            .menu-bottom:hover {
+                border: 2px solid rgb(194, 187, 187);
+            }
+        }
+        .mobile__navigation-username {
+            @apply px-5 my-5;
+            color: $color2;
+            text-align: left;
+        }
+        .mobile__navigation-footer {
+            @apply flex justify-between mt-10;
+            @include media-breakpoint-down($mobile) {
+                @apply mt-6;
+                font-size: 15px;
+            }
+            .mobile__navigation-social {
+                @apply flex;
+
+                .social__icons {
+                    font-size: $extraSmallFont;
+                    @include media-breakpoint-down($mobile) {
+                        font-size: $extraSmallFont;
+                    }
+                }
+                div {
+                    padding: 0px 15px;
+                    font-size: 10px;
+                }
+                div:not(:last-child) {
+                    border-right: 1px solid $gradient1;
+                }
+            }
+            .mobile__navigation-translate {
+                @apply flex text-xs items-center pr-2;
+                @include media-breakpoint-down($mobile) {
+                    font-size: $extraSmallFont;
+                }
+            }
+        }
     }
-  }
 }

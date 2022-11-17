@@ -60,8 +60,13 @@ export default function Header({ login, setLogin }) {
             </div>
             <div className="header__secondary-translate">
               {' '}
-              <p className="px-1">ENG</p>
-              <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" />
+              <select>
+                <option>ENG</option>
+                <option>GER</option>
+                <option>SPA</option>
+              </select>
+              {/* <p className="px-1">ENG</p>
+              <FontAwesomeIcon icon={faCaretDown} classname="social__icons" className="text-pink-500" /> */}
             </div>
           </div>
         </div>

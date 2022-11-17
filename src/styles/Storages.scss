@@ -1,112 +1,113 @@
 @import './variables.scss';
 
 .storages {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .storages__container {
-    @apply flex-col mt-16;
-    padding: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
-    }
-
-    @include media-breakpoint-down($mobile) {
-      padding: $containerMarginSmall;
-    }
-
-    .storages__filter {
-      @apply flex justify-between;
-      p {
-        font-weight: bold;
-        .social__icons {
-          padding-right: 10px;
-          color: $color2;
+    .storages__container {
+        @apply flex-col mt-16;
+        padding: $containerMargin;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
         }
-      }
-    }
 
-    .storages__pagination {
-      @apply flex justify-center;
-      span {
-        padding: 5px;
-        color: $color2;
-      }
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+
+        .storages__filter {
+            @apply flex justify-between;
+            p {
+                font-weight: bold;
+                .social__icons {
+                    padding-right: 10px;
+                    color: $color2;
+                }
+            }
+        }
+
+        .storages__pagination {
+            @apply flex justify-center;
+            span {
+                padding: 5px;
+                color: $color2;
+            }
+        }
     }
-  }
 }
 
 .storage__card__outer {
-  padding: 3px;
-  background-color: $color2;
-  clip-path: $clipPath6;
-  margin: 2rem 0px;
-  .storage__card {
-    @apply flex gap-10;
-    flex-wrap: wrap;
-    clip-path: inherit;
-    padding: 1.5rem 2.5rem;
-
-    background-color: $color3;
-    .storage__card-image {
-      @apply flex  justify-center text-center items-center;
-
-      @include media-breakpoint-down($mobile) {
-        flex-basis: 100%;
-      }
-      img {
-      }
-    }
-    .storage__card-info {
-      flex: 1;
-      .storage__card-subheading {
-        font-size: 12px;
-        padding-bottom: 15px;
-      }
-      .storage__card-heading {
-        @apply flex justify-between;
-        font-size: $mediumFont;
-        font-weight: bold;
-        padding-bottom: 10px;
-        .storage__card-selected {
-          p {
-            font-size: $extraSmallFont;
-            color: green;
-          }
-        }
-      }
-      .storage__card-actions {
-        @apply flex justify-between items-end;
+    padding: 3px;
+    background-color: $color2;
+    clip-path: $clipPath6;
+    margin: 2rem 0px;
+    .storage__card {
+        @apply flex gap-10;
         flex-wrap: wrap;
-        @include media-breakpoint-down($mobile) {
-          justify-content: center;
+        clip-path: inherit;
+        padding: 1.5rem 2.5rem;
+
+        background-color: $color3;
+        .storage__card-image {
+            @apply flex  justify-center text-center items-center;
+
+            @include media-breakpoint-down($mobile) {
+                flex-basis: 100%;
+            }
+            img {
+            }
         }
-        h2 {
-          font-family: $fontStyle;
-          font-weight: 700;
-          font-size: 24px;
-          color: #e98342;
-          span {
-            font-size: 15px;
-            font-weight: 200;
-          }
+        .storage__card-info {
+            flex: 1;
+            .storage__card-subheading {
+                font-size: 12px;
+                padding-bottom: 15px;
+            }
+            .storage__card-heading {
+                @apply flex justify-between;
+                font-size: $mediumFont;
+                font-weight: bold;
+                padding-bottom: 10px;
+                .storage__card-selected {
+                    p {
+                        font-size: $extraSmallFont;
+                        color: rgb(27, 172, 27);
+                        font-weight: 900 !important;
+                    }
+                }
+            }
+            .storage__card-actions {
+                @apply flex justify-between items-end;
+                flex-wrap: wrap;
+                @include media-breakpoint-down($mobile) {
+                    justify-content: center;
+                }
+                h2 {
+                    font-family: $fontStyle;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #e98342;
+                    span {
+                        font-size: 15px;
+                        font-weight: 200;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

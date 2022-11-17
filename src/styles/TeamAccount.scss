@@ -1,145 +1,146 @@
 @import './variables.scss';
 
 .team {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .team__container {
-    @apply flex-col mt-16;
-    padding: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
-    }
-
-    @include media-breakpoint-down($mobile) {
-      padding: $containerMarginSmall;
-    }
-    .team__filter {
-      p {
-        font-weight: bold;
-        .social__icons {
-          padding-right: 10px;
-          color: $color2;
+    .team__container {
+        @apply flex-col mt-16;
+        padding: $containerMargin;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
         }
-      }
+
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .team__filter {
+            p {
+                font-weight: bold;
+                .social__icons {
+                    padding-right: 10px;
+                    color: $color2;
+                }
+            }
+        }
+        .team__accounts {
+            display: grid;
+            padding: 30px 0px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            row-gap: 40px;
+            column-gap: 20px;
+            @include media-breakpoint-down($tablet2) {
+                grid-template-columns: auto;
+            }
+        }
+        .team__pagination {
+            @apply flex justify-center;
+            span {
+                padding: 5px;
+                color: $color2;
+            }
+        }
     }
-    .team__accounts {
-      display: grid;
-      padding: 30px 0px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      row-gap: 40px;
-      column-gap: 20px;
-      @include media-breakpoint-down($tablet2) {
-        grid-template-columns: auto;
-      }
-    }
-    .team__pagination {
-      @apply flex justify-center;
-      span {
-        padding: 5px;
-        color: $color2;
-      }
-    }
-  }
 }
 
 .team__card__outer {
-  padding: 3px;
-  background-color: $bgColor1;
-  clip-path: $clipPath6;
-  .team__card {
-    // position: absolute;
-    clip-path: inherit;
-    padding: 1rem 0.8rem;
-    text-align: center;
-    background-color: $color3;
-    @include media-breakpoint-down($tablet2) {
-      @apply py-5 flex gap-2;
-      justify-content: space-between;
-    }
-    @include media-breakpoint-down($mobile) {
-      @apply py-5 flex-col gap-2;
-      justify-content: space-between;
-    }
-
-    .team__card-heading {
-      .team__card-description {
-        font-size: $extraSmallFont;
-        // margin-bottom: 30px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        // text-align: left;
+    padding: 3px;
+    background-color: $bgColor1;
+    clip-path: $clipPath6;
+    .team__card {
+        // position: absolute;
+        clip-path: inherit;
+        padding: 1rem 0.8rem;
+        text-align: center;
+        background-color: $color3;
         @include media-breakpoint-down($tablet2) {
-          text-align: left;
+            @apply py-5 flex gap-2;
+            justify-content: space-between;
         }
         @include media-breakpoint-down($mobile) {
-          text-align: left;
-        }
-      }
-      .team__card-title {
-        h1 {
-          font-size: $mediumFont;
-          padding-bottom: 20px;
-          @include media-breakpoint-down($tablet2) {
-            padding-bottom: 5px;
-          }
-        }
-        .team__card-subheading {
-          color: green;
-          font-size: $extraSmallFont;
-          padding-bottom: 10px;
+            @apply py-5 flex-col gap-2;
+            justify-content: space-between;
         }
 
-        @include media-breakpoint-down($tablet2) {
-          @apply flex py-5 px-3 gap-x-5;
-          justify-content: flex-end;
-          flex-direction: row-reverse;
-          align-items: baseline;
-          align-content: center;
-        }
-        @include media-breakpoint-down($mobile) {
-          @apply py-5 px-3;
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-        }
-      }
-    }
-    .team__card-info {
-      @apply py-4;
-      @include media-breakpoint-down($tablet2) {
-        @apply py-8;
-      }
-      @include media-breakpoint-down($mobile) {
-        @apply py-4;
-      }
+        .team__card-heading {
+            .team__card-description {
+                font-size: $extraSmallFont;
+                // margin-bottom: 30px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                // text-align: left;
+                @include media-breakpoint-down($tablet2) {
+                    text-align: left;
+                }
+                @include media-breakpoint-down($mobile) {
+                    text-align: left;
+                }
+            }
+            .team__card-title {
+                h1 {
+                    font-size: $mediumFont;
+                    padding-bottom: 20px;
+                    @include media-breakpoint-down($tablet2) {
+                        padding-bottom: 5px;
+                    }
+                }
+                .team__card-subheading {
+                    color: rgb(30, 165, 30);
+                    font-size: $extraSmallFont;
+                    padding-bottom: 10px;
+                    font-weight: bold;
+                }
 
-      .team__card-more {
-        font-size: $extraSmallFont;
-        padding-bottom: 20px;
-        text-decoration: underline;
-        color: orange;
-      }
-      .team__card-button {
-      }
+                @include media-breakpoint-down($tablet2) {
+                    @apply flex py-5 px-3 gap-x-5;
+                    justify-content: flex-end;
+                    flex-direction: row-reverse;
+                    align-items: baseline;
+                    align-content: center;
+                }
+                @include media-breakpoint-down($mobile) {
+                    @apply py-5 px-3;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .team__card-info {
+            @apply py-4;
+            @include media-breakpoint-down($tablet2) {
+                @apply py-8;
+            }
+            @include media-breakpoint-down($mobile) {
+                @apply py-4;
+            }
+
+            .team__card-more {
+                font-size: $extraSmallFont;
+                padding-bottom: 20px;
+                text-decoration: underline;
+                color: orange;
+            }
+            .team__card-button {
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

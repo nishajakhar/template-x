@@ -1,63 +1,64 @@
 @import '../../styles/variables.scss';
 
 .bloghead__card-container {
-  // margin: $containerMargin;
+    // margin: $containerMargin;
 
-  .bloghead__card {
-    @apply flex justify-center content-center gap-5;
-    flex-wrap: wrap;
+    .bloghead__card {
+        @apply flex justify-center content-center gap-5;
+        flex-wrap: wrap;
 
-    .bloghead__card-image {
-      flex: 1;
-      @include media-breakpoint-down($mobile) {
-        flex-basis: 100%;
-      }
+        .bloghead__card-image {
+            flex: 1;
+            @include media-breakpoint-down($mobile) {
+                flex-basis: 100%;
+            }
+        }
     }
-  }
 }
 
 .blog__card-container {
-  // margin: $containerMargin;
+    // margin: $containerMargin;
 
-  .blog__card {
-    @apply flex-col justify-center content-center;
-    .blog__card-image {
-      padding: 0px 0px 20px 0px;
+    .blog__card {
+        @apply flex-col justify-center content-center;
+        .blog__card-image {
+            padding: 0px 0px 20px 0px;
+        }
     }
-  }
 }
 
 .blog__card-content__outer {
-  flex: 1;
-  .blog__card-content {
-    @apply flex-col;
-    .card__date {
-      font-size: $extraSmallFont;
-      padding-bottom: 0.8rem;
-      font-size: $fontStyle2;
+    flex: 1;
+    .blog__card-content {
+        @apply flex-col;
+        .card__date {
+            font-size: $extraSmallFont;
+            padding-bottom: 0.8rem;
+            font-size: $fontStyle2;
+        }
+        .card__heading {
+            font-size: 18px;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .card__description {
+            font-size: $extraSmallFont;
+            margin-bottom: 0.8rem;
+            font-size: $fontStyle2;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+        .card__hastags {
+            color: $color2;
+            span {
+                font-size: 14px;
+                padding-right: 25px;
+            }
+        }
     }
-    .card__heading {
-      font-size: 18px;
-      margin-bottom: 0.8rem;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-    .card__description {
-      font-size: $extraSmallFont;
-      margin-bottom: 0.8rem;
-      font-size: $fontStyle2;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-    }
-    .card__hastags {
-      color: $color2;
-      span {
-        padding-right: 5px;
-      }
-    }
-  }
 }

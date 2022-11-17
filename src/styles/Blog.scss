@@ -1,58 +1,58 @@
 @import './variables.scss';
 
 .blog {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .blog__container {
-    @apply mt-16;
-    padding: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
-    }
+    .blog__container {
+        @apply mt-16;
+        padding: $containerMargin;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
+        }
 
-    @include media-breakpoint-down($mobile) {
-      padding: $containerMarginSmall;
-    }
-    .blog__items {
-      display: grid;
-      padding: 30px 0px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      row-gap: 40px;
-      column-gap: 20px;
-      @include media-breakpoint-down($mobile) {
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        // width: 100%;
-      }
-    }
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .blog__items {
+            display: grid;
+            padding: 30px 0px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            row-gap: 40px;
+            column-gap: 20px;
+            @include media-breakpoint-down($mobile) {
+                // display: flex;
+                // flex-wrap: wrap;
+                // justify-content: center;
+                // width: 100%;
+            }
+        }
 
-    .blog__button {
-      margin: 40px 0px;
-      color: white;
-      text-align: center;
-      font-size: 18px;
-      .social__icons {
-        padding-right: 5px;
-        color: $color2;
-        font-size: 20px;
-      }
+        .blog__button {
+            margin: 40px 0px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            .social__icons {
+                padding-right: 5px;
+                color: $color2;
+                font-size: 20px;
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

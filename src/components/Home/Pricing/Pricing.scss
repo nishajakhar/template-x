@@ -1,115 +1,115 @@
 @import '../../../styles/variables.scss';
 
 .pricing__container {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 .pricing {
-  @apply py-12;
-  margin: $containerMargin;
-  z-index: 50;
+    @apply py-12;
+    margin: $containerMargin;
+    z-index: 50;
 
-  @include media-breakpoint-down($tablet2) {
-    margin: $containerMarginMedium;
-    padding-top: 50px;
-  }
-  @include media-breakpoint-down($mobile) {
-    margin: $containerMarginSmall;
-  }
-  .pricing__heading {
-    padding-bottom: 40px;
-    font-family: $fontStyle;
-    text-align: center;
-    h1 {
-      font-size: $extraLargeFont;
-    }
-    .pricing__heading-filter {
-      z-index: 500;
-      display: flex;
-      justify-content: center;
-      padding-top: 3rem;
-      border-bottom: 1px solid $color1;
-
-      div {
-        z-index: 500;
-        color: #5a2fb3;
-        font-weight: bold;
-        @include media-breakpoint-down($mobile) {
-          flex: 1;
-          width: 100%;
-        }
-      }
-      .active {
-        button {
-          color: white;
-        }
-        div {
-          min-height: 2px;
-          width: 100%;
-          background: $linearGradient1;
-
-          // padding-bottom: 2px;
-          // font-family: $fontStyle;
-          // color: white;
-        }
-      }
-
-      button {
-        font-size: 14px;
-        color: #5a2fb3;
-
-        // background-color: $color4;
-        padding: 10px 50px;
-        @include media-breakpoint-down($mobile) {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .pricing__cards {
-    z-index: 500;
-    @apply flex justify-center;
-    @include media-breakpoint-down(900px) {
-      // flex-wrap: wrap;
-    }
     @include media-breakpoint-down($tablet2) {
-      flex-wrap: wrap;
-      padding: 0px 50px;
+        margin: $containerMarginMedium;
+        padding-top: 50px;
     }
     @include media-breakpoint-down($mobile) {
-      padding: 0px;
+        margin: $containerMarginSmall;
     }
-  }
+    .pricing__heading {
+        padding-bottom: 40px;
+        font-family: $fontStyle;
+        text-align: center;
+        h1 {
+            font-size: $extraLargeFont;
+        }
+        .pricing__heading-filter {
+            z-index: 500;
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            border-bottom: 1px solid $color1;
+
+            div {
+                z-index: 500;
+                color: #5a2fb3;
+                font-weight: bold;
+                @include media-breakpoint-down($mobile) {
+                    flex: 1;
+                    width: 100%;
+                }
+            }
+            .active {
+                button {
+                    color: white;
+                }
+                div {
+                    min-height: 2px;
+                    width: 100%;
+                    background: $linearGradient1;
+
+                    // padding-bottom: 2px;
+                    // font-family: $fontStyle;
+                    // color: white;
+                }
+            }
+
+            button {
+                font-size: 14px;
+                color: #5a2fb3;
+
+                // background-color: $color4;
+                padding: 10px 50px;
+                @include media-breakpoint-down($mobile) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .pricing__cards {
+        z-index: 500;
+        @apply flex justify-center;
+        @include media-breakpoint-down(900px) {
+            // flex-wrap: wrap;
+        }
+        @include media-breakpoint-down($tablet2) {
+            flex-wrap: wrap;
+            padding: 0px 50px;
+        }
+        @include media-breakpoint-down($mobile) {
+            padding: 0px;
+        }
+    }
 }
 
 .circle__pricing-1 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  left: -350px;
-  top: 50px;
-  filter: blur(200px);
-  transform: rotate(1.3deg);
-  // z-index: 1;
-  @include media-breakpoint-down($mobile) {
-    left: -400px;
-    filter: blur(150px);
-  }
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    left: -350px;
+    top: 50px;
+    filter: blur(200px);
+    transform: rotate(1.3deg);
+    // z-index: 1;
+    @include media-breakpoint-down($mobile) {
+        left: -400px;
+        filter: blur(150px);
+    }
 }
 .circle__pricing-2 {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  right: -100px;
-  top: -150px;
-  filter: blur(100px);
-  transform: rotate(1.3deg);
-  // z-index: 1;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    right: -100px;
+    top: -150px;
+    filter: blur(100px);
+    transform: rotate(1.3deg);
+    // z-index: 1;
 }
 
 // .pricing__card {
@@ -125,117 +125,118 @@
 // }
 
 .pricing__card-outer {
-  z-index: 500;
-  clip-path: $clipPath6;
-  background: $linearGradient2;
-  padding: 3px;
-  // height: 550px;
-  max-width: 250px;
-  height: 550px;
-  margin: 10px;
-  @include media-breakpoint-down($tablet2) {
-    height: 500px;
-  }
-  @include media-breakpoint-down($mobile) {
+    z-index: 500;
+    clip-path: $clipPath6;
+    background: $linearGradient2;
+    padding: 3px;
+    // height: 550px;
     max-width: 250px;
-    // height: 400px;
-  }
-  .pricing__card {
-    @apply flex flex-col pb-5;
-    clip-path: inherit;
-    // padding: 15px;
-    background-color: #000136;
-    height: 544px;
-
+    // height: 560px;
+    margin: 10px;
     @include media-breakpoint-down($tablet2) {
-      height: 494px;
+        height: 500px;
     }
-    .pricing__card-heading {
-      position: relative;
-      h1 {
-        text-align: center;
-        font-size: $smallFont;
-        font-weight: 700;
-        background: $linearGradient2;
-      }
-      p {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        font-size: $extraSmallFont;
-        background-color: white;
-        color: #cf46f1;
-        font-weight: bold;
-        font-size: $extraSmallFont;
-      }
+    @include media-breakpoint-down($mobile) {
+        max-width: 250px;
+        // height: 400px;
     }
-    .pricing__card-list {
-      @apply mt-5 px-8;
-      flex-grow: 1;
-      // height: 400px;
-      overflow: hidden;
-      font-style: 'Raleway';
-      font-weight: 400;
+    .pricing__card {
+        @apply flex flex-col pb-5;
+        clip-path: inherit;
+        // padding: 15px;
+        background-color: #000136;
+        height: 580px;
 
-      .not-available {
-        color: #5a2fb3;
-        .social__icons {
-          color: #5a2fb3;
-          left: -15px;
+        @include media-breakpoint-down($tablet2) {
+            height: 494px;
         }
-      }
-      .available {
-        .social__icons {
-          left: -15px;
+        .pricing__card-heading {
+            position: relative;
+            h1 {
+                @apply py-1.5;
+                text-align: center;
+                font-size: $smallFont;
+                font-weight: 700;
+                background: $linearGradient2;
+            }
+            p {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                font-size: $extraSmallFont;
+                background-color: white;
+                color: #cf46f1;
+                font-weight: bold;
+                font-size: $extraSmallFont;
+            }
         }
-      }
-      @include media-breakpoint-down($tablet2) {
-        // height: 300px;
-      }
-      @include media-breakpoint-down($mobile) {
-        // height: fit-content;
-      }
-      ul {
-        list-style-type: circle;
-        li {
-          font-size: $extraSmallFont;
-          line-height: 15px;
-          padding-top: 3px;
-        }
-      }
-    }
-    .pricing__cards-price {
-      @apply mb-2;
-      text-align: center;
-      line-height: 16px;
-      p {
-        @apply py-2;
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: 10px;
-        color: #5a2fb3;
-        text-decoration: line-through;
-      }
-      h2 {
-        font-family: $fontStyle;
-        font-weight: 700;
-        font-size: 25px;
-        color: #e98342;
-        span {
-          font-size: 12px;
-          font-weight: 100;
-        }
-      }
-    }
-    .pricing__choose {
-      text-align: center;
-      //   padding: 18px 0px;
+        .pricing__card-list {
+            @apply mt-5 px-8;
+            flex-grow: 1;
+            // height: 400px;
+            overflow: hidden;
+            font-style: 'Raleway';
+            font-weight: 400;
 
-      button {
-        // width: 7rem;
-        // height: 2rem;
-        font-size: $extraSmallFont;
-      }
+            .not-available {
+                color: #5a2fb3;
+                .social__icons {
+                    color: #5a2fb3;
+                    left: -15px;
+                }
+            }
+            .available {
+                .social__icons {
+                    left: -15px;
+                }
+            }
+            @include media-breakpoint-down($tablet2) {
+                // height: 300px;
+            }
+            @include media-breakpoint-down($mobile) {
+                // height: fit-content;
+            }
+            ul {
+                list-style-type: circle;
+                li {
+                    font-size: $extraSmallFont;
+                    line-height: 17px;
+                    padding-top: 3px;
+                }
+            }
+        }
+        .pricing__cards-price {
+            @apply mb-2;
+            text-align: center;
+            line-height: 16px;
+            p {
+                @apply py-2;
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: 10px;
+                color: #5a2fb3;
+                text-decoration: line-through;
+            }
+            h2 {
+                font-family: $fontStyle;
+                font-weight: 700;
+                font-size: 25px;
+                color: #e98342;
+                span {
+                    font-size: 12px;
+                    font-weight: 100;
+                }
+            }
+        }
+        .pricing__choose {
+            text-align: center;
+            //   padding: 18px 0px;
+
+            button {
+                // width: 7rem;
+                // height: 2rem;
+                font-size: $extraSmallFont;
+            }
+        }
     }
-  }
 }

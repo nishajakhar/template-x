@@ -1,87 +1,111 @@
 @import '../variables.scss';
 
 .settings-modal {
-  .modal-container {
-    @apply flex justify-center;
-    margin-top: 5rem;
-  }
-  .modal-content {
-    width: 90%;
-  }
-  .settings-modal__heading {
-    @apply flex justify-center py-5;
-    font-size: 30px;
-  }
-  .settings__form-info {
-    @apply flex gap-5;
-    .settings__form-left {
-      .settings__form-view-items {
-        @apply py-5;
-        h1 {
-          color: $color2;
-          font-size: 18px;
-        }
-        .settings__form-view-item {
-          @apply my-3 py-3 px-3 flex justify-between;
-          background: $color5;
-          span {
-            color: $color2;
-            font-weight: 500;
-          }
-        }
-      }
+    .modal-container {
+        @apply flex justify-center;
+        margin-top: 5rem;
+    }
+    .modal-content {
+        width: 90%;
+    }
+    .settings-modal__heading {
+        @apply flex justify-center py-5;
+        font-size: 30px;
+    }
+    .settings__form-info {
+        @apply flex gap-5;
+        .settings__form-left {
+            .settings__form-view-items {
+                @apply py-5;
+                .settings__view-header {
+                    h1 {
+                        color: $color2;
+                        font-size: 15px;
+                        font-weight: 900;
+                    }
+                    div {
+                        p {
+                            color: white;
+                            font-weight: 900;
+                            font-size: 15px;
+                        }
+                        .add_icon {
+                            .social__icons {
+                                color: $color2;
+                            }
+                        }
+                    }
+                }
 
-      .settings__form-input {
-        @apply my-2;
+                .settings__form-view-item {
+                    @apply my-3 py-3 px-3 flex justify-between;
+                    background: $color5;
+                    span {
+                        color: $color2;
+                        font-weight: 500;
+                    }
+                    .social__icons {
+                        color: $color2;
+                        font-weight: 100 !important;
+                    }
+                }
+            }
 
-        input {
-          background: rgba(90, 47, 179, 0.3);
-        }
-        input[type='checkbox']:checked {
-          background: $color2;
-        }
-        label {
-          font-size: 15px;
-          font-weight: 350;
-        }
-      }
-      .settings__form-sort {
-        @apply my-2;
-        select {
-          @apply w-full px-3 py-2;
-          margin-bottom: 20px;
-          background: $color1;
-          border-radius: 3px;
-          opacity: 0.3;
-        }
-      }
-    }
-  }
-  .settings__form-right {
-    .settings__form-right-header {
-      p {
-        color: $color2;
-      }
-    }
-    .settings__form-input {
-      @apply flex items-center;
-      input {
-        @apply mr-2 my-2;
-        width: 20px;
-        height: 20px;
+            .settings__form-input {
+                @apply my-2;
 
-        background: rgba(90, 47, 179, 0.3);
-      }
-      input[type='checkbox']:checked {
-        background: $color2;
-      }
+                input[type='checkbox'] {
+                    background: transparent;
+                    border: 1px solid $color2 !important;
+                    border-radius: 0px;
+                }
+                input[type='checkbox']:checked {
+                    background: $color2;
+                }
+                label {
+                    font-size: 15px;
+                    font-weight: 350;
+                }
+            }
+            .settings__form-sort {
+                @apply my-2;
+                select {
+                    @apply w-full px-3 py-2;
+                    margin-bottom: 20px;
+                    background: $color1;
+                    border-radius: 3px;
+                    opacity: 0.3;
+                }
+            }
+        }
     }
-  }
-  .settings__form-action {
-    @apply flex justify-center pt-5 pb-2 gap-5;
-    flex-wrap: wrap-reverse;
-    button {
-      font-weight: 300;
+    .settings__form-right {
+        .settings__form-right-header {
+            p {
+                color: $color2;
+                font-size: 15px;
+                font-weight: 900;
+            }
+        }
+        .settings__form-input {
+            @apply flex items-center;
+            input {
+                @apply mr-2 my-2;
+                width: 20px;
+                height: 20px;
+
+                background: rgba(90, 47, 179, 0.3);
+            }
+            input[type='checkbox']:checked {
+                background: $color2;
+            }
+        }
     }
-  }
+    .settings__form-action {
+        @apply flex justify-center pt-5 pb-2 gap-5;
+        flex-wrap: wrap-reverse;
+        button {
+            font-weight: 300;
+        }
+    }
 }

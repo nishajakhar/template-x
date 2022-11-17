@@ -1,67 +1,73 @@
 @import './variables.scss';
 
 .contactus {
-  position: relative;
-  overflow: hidden;
-
-  .contactus__container {
-    @apply py-10;
     position: relative;
-    margin: $containerMargin;
-    z-index: 100;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    overflow: hidden;
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
-    .contactus__form {
-      @apply text-white;
-      font-size: $extraSmallFont;
-      div {
-        padding: 10px 0px;
-      }
-      .contactus__form-heading__text {
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: $extraLargeFont;
-        line-height: 60px;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-      .contactus__form-inputs {
-        @apply flex justify-between;
-        gap: 10px;
+    .contactus__container {
+        @apply py-10;
+        position: relative;
+        margin: $containerMargin;
+        z-index: 100;
         @include media-breakpoint-down($tablet2) {
-          flex-wrap: wrap;
+            margin: $containerMarginMedium;
         }
-        .contactus__form-question {
-          width: 100%;
-        }
-        .contactus__form-email {
-          width: 100%;
-        }
-      }
 
-      .contactus__form-button {
-        @apply flex justify-center pt-10;
-      }
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
+        }
+        .contactus__form {
+            @apply text-white;
+            font-size: $extraSmallFont;
+            div {
+                padding: 10px 0px;
+            }
+            .contactus__form-heading__text {
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: $extraLargeFont;
+                line-height: 60px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .contactus__form-inputs {
+                @apply flex justify-between;
+                gap: 10px;
+                @include media-breakpoint-down($tablet2) {
+                    flex-wrap: wrap;
+                }
+                .contactus__form-question {
+                    width: 100%;
+                }
+                .contactus__form-email {
+                    width: 100%;
+                }
+            }
+            .contactus__form-policy {
+                input[type='checkbox'] {
+                    border-radius: 0px !important;
+                    border: 1px solid $color2;
+                }
+            }
+
+            .contactus__form-button {
+                @apply flex justify-center pt-10;
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

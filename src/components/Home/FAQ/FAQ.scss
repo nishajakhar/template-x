@@ -1,129 +1,130 @@
 @import '../../../styles/variables.scss';
 
 .faq {
-  position: relative;
-  overflow: hidden;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  .faq__heading {
-    text-align: center;
-    h1 {
-      font-size: $extraLargeFont;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .faq__heading {
+        text-align: center;
+        h1 {
+            font-size: $extraLargeFont;
+        }
     }
-  }
-  .faq__filters {
-    @apply flex;
-    overflow-x: scroll;
-    margin-bottom: 5rem;
-  }
-  .faq__items {
-    @apply flex-col justify-center content-center items-center;
-    margin: $containerMargin;
-    text-align: center;
-    // padding: 40px 0px;
-    z-index: 50;
+    .faq__filters {
+        @apply flex;
+        overflow-x: scroll;
+        margin-bottom: 5rem;
+        background: linear-gradient(to right, #010239, transparent, #010239);
+    }
+    .faq__items {
+        @apply flex-col justify-center content-center items-center;
+        margin: $containerMargin;
+        text-align: center;
+        // padding: 40px 0px;
+        z-index: 50;
 
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
+        }
     }
-  }
 }
 .category__outer {
-  @apply mx-2 my-6;
-  clip-path: $clipPath4;
-  background: $linearGradient2;
-  padding: 3px;
-  width: 180px;
-
-  .cat-active {
+    @apply mx-2 my-6;
+    clip-path: $clipPath4;
     background: $linearGradient2;
-  }
-  .category {
-    @apply px-10 py-2;
-    display: flex;
-    width: 174px;
+    padding: 3px;
+    width: 180px;
 
-    clip-path: inherit;
-    background-color: $color3;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      text-align: center;
-      font-size: $smallFont;
+    .cat-active {
+        background: $linearGradient2;
     }
-  }
+    .category {
+        @apply px-10 py-2;
+        display: flex;
+        width: 174px;
+
+        clip-path: inherit;
+        background-color: $color3;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            font-size: $smallFont;
+        }
+    }
 }
 
 .faqItem__outer {
-  @apply my-6;
-  clip-path: $clipPath5;
-  background: $linearGradient1;
-  padding: 2px;
-  z-index: 50;
-  cursor: pointer;
+    @apply my-6;
+    clip-path: $clipPath5;
+    background: $linearGradient1;
+    padding: 2px;
+    z-index: 50;
+    cursor: pointer;
 
-  @include media-breakpoint-down($tablet2) {
-  }
-  @include media-breakpoint-down($mobile) {
-  }
-  .faqItem {
-    display: flex;
-    clip-path: inherit;
-    padding: 15px;
-    background-color: $color3;
-
-    justify-content: space-between;
-    align-items: center;
     @include media-breakpoint-down($tablet2) {
     }
     @include media-breakpoint-down($mobile) {
     }
-    h1 {
-      text-align: left;
-      font-size: $smallFont;
+    .faqItem {
+        display: flex;
+        clip-path: inherit;
+        padding: 15px;
+        background-color: $color3;
+
+        justify-content: space-between;
+        align-items: center;
+        @include media-breakpoint-down($tablet2) {
+        }
+        @include media-breakpoint-down($mobile) {
+        }
+        h1 {
+            text-align: left;
+            font-size: $smallFont;
+        }
     }
-  }
 }
 .faqItem__expand {
-  background-color: $color3;
-  opacity: 0.8;
-  color: white;
-  text-align: left;
-
-  p {
-    padding: 20px;
+    background-color: $color3;
+    opacity: 0.8;
     color: white;
-    z-index: 500;
-  }
+    text-align: left;
+
+    p {
+        padding: 20px;
+        color: white;
+        z-index: 500;
+    }
 }
 
 .circle__faq-1 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  right: -350px;
-  bottom: 50px;
-  filter: blur(130px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    right: -350px;
+    bottom: 50px;
+    filter: blur(130px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }
 
 .circle__faq-2 {
-  position: absolute;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  right: -250px;
-  bottom: -350px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
-  background: #5a2fb2 !important;
+    position: absolute;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    right: -250px;
+    bottom: -350px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
+    background: #5a2fb2 !important;
 }

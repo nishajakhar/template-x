@@ -1,101 +1,105 @@
 @import './variables.scss';
 
 .payment {
-  position: relative;
-  overflow: hidden;
-
-  .payment__container {
-    @apply flex py-24 gap-4;
-    flex-wrap: wrap;
     position: relative;
-    margin: $containerMargin;
-    z-index: 100;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    overflow: hidden;
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
-    .payment__info {
-      @apply items-center;
-      flex: 1;
-
-      .payment__info-price {
-        @apply pb-5;
-        font-size: $jumboFont;
-        font-weight: 700;
-      }
-      select {
-        padding: 5px 20px 5px 0px;
-        margin-bottom: 20px;
-        background: none;
-      }
-      .payment__info-plan {
-        @apply flex justify-between pb-16;
-      }
-      .payment__info-billing {
-        .payment__info-billing__heading {
-          @apply flex justify-between py-4;
-          h1 {
-            color: $color2;
-            font-size: $mediumFont;
-          }
-          p {
-            font-weight: bold;
-            font-size: $smallFont;
-          }
-        }
-        .payment__info-billing__item {
-          @apply flex justify-between py-2;
-          h1 {
-            font-weight: 100;
-          }
-          p {
-            font-weight: 500;
-          }
-        }
-      }
-    }
-    .payment__form {
-      @apply p-8;
-      flex: 1;
-      border: 2px solid $color2;
-      background: rgba(90, 47, 179, 0.3);
-      .payment__form-input {
-        @apply py-2;
-        label {
-          display: block;
-          font-size: $extraSmallFont;
-          margin-bottom: 5px;
+    .payment__container {
+        @apply flex py-24 gap-4;
+        flex-wrap: wrap;
+        position: relative;
+        margin: $containerMargin;
+        z-index: 100;
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
         }
 
-        select {
-          @apply w-full px-3 py-2;
-          margin-bottom: 20px;
-          background: $color1;
-          border-radius: 3px;
-          opacity: 0.3;
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
         }
-      }
-      .payment__form-button {
-        @apply text-center my-2;
-      }
+        .payment__info {
+            @apply items-center;
+            flex: 1;
+
+            .payment__info-price {
+                @apply pb-5;
+                font-size: $jumboFont;
+                font-weight: 700;
+            }
+            select {
+                padding: 5px 20px 5px 0px;
+                margin-bottom: 20px;
+                background: none;
+            }
+            .payment__info-plan {
+                @apply flex justify-between pb-16;
+            }
+            .payment__info-billing {
+                .payment__info-billing__heading {
+                    @apply flex justify-between py-4;
+                    h1 {
+                        color: $color2;
+                        font-size: $mediumFont;
+                    }
+                    p {
+                        font-weight: bold;
+                        font-size: $smallFont;
+                    }
+                }
+                .payment__info-billing__item {
+                    @apply flex justify-between py-2;
+                    h1 {
+                        font-weight: 100;
+                    }
+                    input {
+                        @apply px-2;
+                        background: transparent;
+                    }
+                    input:focus {
+                        background: $color3;
+                    }
+                }
+            }
+        }
+        .payment__form {
+            @apply p-8;
+            flex: 1;
+            border: 2px solid $color2;
+            background: rgba(90, 47, 179, 0.3);
+            .payment__form-input {
+                @apply py-2;
+                label {
+                    display: block;
+                    font-size: $extraSmallFont;
+                    margin-bottom: 5px;
+                }
+
+                select {
+                    @apply w-full px-3 py-2;
+                    margin-bottom: 20px;
+                    background: $color1;
+                    border-radius: 3px;
+                    opacity: 0.3;
+                }
+            }
+            .payment__form-button {
+                @apply text-center my-2;
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }
