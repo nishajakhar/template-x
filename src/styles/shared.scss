@@ -105,6 +105,9 @@ input[type='checkbox']:checked {
 }
 
 .primary__input:focus {
+    outline: none;
+    border: none;
+    color: white;
     box-shadow: 2px 2px 10px $color1, -2px -2px 10px $color1;
 }
 .primary__button:hover {
@@ -112,13 +115,6 @@ input[type='checkbox']:checked {
 }
 
 *::placeholder {
-    color: white;
-}
-.primary__input:hover {
-}
-.primary__input:focus {
-    outline: none;
-    border: none;
     color: white;
 }
 
@@ -142,7 +138,7 @@ input[type='radio'] {
     margin: 0;
     cursor: pointer;
     border: 1px solid $color2;
-    background: green;
+    background: $color1;
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
     &:after {
         content: '';

@@ -29,6 +29,8 @@ import EmailsScreen from './pages/Emails';
 import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
 import ApiDocsSection from './pages/ApiDocsSection';
+import EmailBuilderScreen from './pages/EmailBuilder';
+
 import TestScreen from './pages/Test';
 
 function App() {
@@ -111,6 +113,11 @@ function App() {
                         element={<TemplatesScreen />}
                     />
                     <Route path={ROUTES.EMAILS} element={<EmailsScreen />} />
+                    <Route
+                        path={ROUTES.EMAIL_BUILDER}
+                        element={<EmailBuilderScreen />}
+                    />
+
                     <Route path={ROUTES.TEST} element={<TestScreen />} />
                 </Routes>
                 <Footer />

@@ -1,0 +1,329 @@
+@import './variables.scss';
+
+.email-builder {
+    position: relative;
+    overflow: hidden;
+
+    .email-builder__container {
+        @apply flex-col mt-16;
+        padding: 0rem 10rem;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
+        }
+
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .email-builder__heading {
+            @apply flex;
+            align-content: center;
+            align-items: center;
+            @include media-breakpoint-down($tablet2) {
+                @apply my-5;
+                overflow-x: scroll;
+            }
+        }
+        .email-builder__filter {
+            @apply flex justify-between;
+            p {
+                cursor: pointer;
+                font-weight: bold;
+                .social__icons {
+                    padding-right: 5px;
+                    color: $color2;
+                }
+            }
+
+            .background-text {
+                @apply px-1 py-1 rounded;
+                @include media-breakpoint-down($tablet2) {
+                    display: none;
+                }
+                background: #15184f;
+                // opacity: 0.5;
+                svg {
+                    color: $color1;
+                }
+            }
+
+            .email-builder__filter-export {
+                position: relative;
+                .export__menu {
+                    @apply absolute left-0 top-8;
+                    height: 200px;
+                    overflow-y: scroll;
+                    width: 180px;
+                    z-index: 100;
+                    background-color: $color4;
+                    box-shadow: 0px 0px 15px $color2;
+
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                        display: none;
+                    }
+
+                    ::-webkit-scrollbar-thumb:vertical {
+                        background: $color2;
+                        border-radius: 1px;
+                        width: 1px;
+                        outline: none;
+                        border: none;
+                    }
+
+                    p {
+                        @apply px-4 py-2;
+                        color: white;
+                        font-size: 15px;
+                        &:hover {
+                            background: $color2;
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-filter-options {
+            display: none;
+            .background-text {
+                @apply px-1 py-1 rounded;
+                background: #15184f;
+                // opacity: 0.5;
+                svg {
+                    color: $color1;
+                }
+            }
+            @include media-breakpoint-down($tablet2) {
+                @apply flex justify-between mt-5;
+            }
+        }
+
+        .email-builder__main {
+            @apply flex gap-x-12;
+            @include media-breakpoint-down($tablet2) {
+                flex-wrap: wrap-reverse;
+            }
+            /* Track */
+            ::-webkit-scrollbar-track {
+                display: none;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: $color2;
+                border-radius: 1px;
+                width: 1px !important;
+                outline: none;
+                border: none;
+            }
+            .email-builder__main__canvas {
+                width: 70%;
+                background-color: white;
+                height: 700px;
+                @include media-breakpoint-down($tablet2) {
+                    @apply mt-10;
+                    width: 100%;
+                }
+                div {
+                    @apply py-4 px-5;
+                    background: #f5dafc;
+
+                    width: 70%;
+                    margin: auto;
+                    text-align: center;
+                    span {
+                        color: $color2;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .email-builder__main__editor__1 {
+                @apply flex flex-wrap gap-4;
+                width: 30%;
+
+                @include media-breakpoint-down($tablet2) {
+                    width: 100%;
+                    height: 240px;
+                    overflow-y: scroll;
+                }
+                .email-builder__main__editor-item {
+                    @apply p-2 text-center;
+
+                    clip-path: $clipPath4;
+                    width: 100px;
+
+                    background: $color3;
+                    .editor-item-image {
+                        @apply flex justify-center items-center;
+                        min-height: 65px;
+                    }
+                    h1 {
+                        color: $color2;
+                        // background: $linearGradient2;
+                    }
+                }
+            }
+            .email-builder__main__editor__2 {
+                width: 30%;
+                @include media-breakpoint-down($tablet2) {
+                    @apply flex gap-x-5;
+                    width: 100%;
+                }
+
+                h1 {
+                    @apply mb-5;
+                    color: $color2;
+                    @include media-breakpoint-down($tablet2) {
+                        display: none;
+                    }
+                }
+                .left,
+                .right {
+                    @include media-breakpoint-down($tablet2) {
+                        width: 50%;
+                    }
+                }
+                .email-builder__main__editor-item {
+                    @apply flex my-1;
+                    height: 45px;
+
+                    div {
+                        // flex: 1;
+                        background: rgba(134, 73, 250, 0.25);
+                        border: 1px solid #cf46f1;
+                        box-shadow: 0px 5px 10px rgba(112, 99, 253, 0.3);
+                        @include media-breakpoint-down($tablet2) {
+                            height: 50px;
+                        }
+                    }
+                    &:hover {
+                        background: rgba(134, 73, 250, 0.5);
+                        box-shadow: 0px 0px 5px #cf46f1;
+                    }
+                }
+            }
+
+            .email-builder__main__editor__4 {
+                width: 30%;
+                @include media-breakpoint-down($tablet2) {
+                    @apply flex gap-x-10;
+                    width: 100%;
+                }
+                .right,
+                .left {
+                    @include media-breakpoint-down($tablet2) {
+                        width: 50%;
+                    }
+                }
+                .email-builder__main__editor-item {
+                    .email-builder__main__editor-item__heading {
+                        @apply flex justify-between mb-5;
+
+                        color: $color2;
+                    }
+                    .email-builder__main__editor-item__body-general,
+                    .email-builder__main__editor-item__body-links {
+                        .email-builder__main__editor-item__body__item {
+                            @apply flex justify-between pb-4;
+                            font-size: 13px;
+
+                            input:checked {
+                                background-color: $color2;
+                            }
+                        }
+                    }
+                    .email-builder__main__editor-item__body-email {
+                        .email-builder__main__editor-item__body__item {
+                            h1 {
+                                @apply my-1;
+                                font-size: 15px;
+                            }
+                            input {
+                                @apply py-2 px-2 my-2 rounded w-full;
+                            }
+                            p {
+                                @apply mb-5;
+                                font-size: 8px;
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+            .email-builder__main__editor__5 {
+                width: 30%;
+                @include media-breakpoint-down($tablet2) {
+                    width: 100%;
+                }
+                .email-builder__main__editor-search {
+                    form {
+                        display: flex;
+                        button {
+                            width: 50px;
+                            background: $linearGradient1;
+                        }
+                    }
+                    p {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+
+                        text-align: center;
+                    }
+                }
+                .email-builder__main__editor-body {
+                    @apply flex flex-wrap gap-4 py-5 justify-center;
+                    img {
+                        width: 120px;
+                    }
+                }
+                .show-more {
+                    @apply pb-2;
+                    text-align: center;
+                    cursor: pointer;
+                    svg {
+                        @apply pr-1;
+                        color: $color2;
+                    }
+                    &:hover {
+                        color: $color1;
+                        svg {
+                            color: $color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.color__circles {
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
+}
+.circle__18 {
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
+}
+
+.collapse-menu {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    width: 180px;
+    box-shadow: 0px 0px 20px $color2, -0px -0px 20px $color2;
+    background-color: #000136;
+    z-index: 1;
+    p {
+        cursor: pointer;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+    }
+    p:hover {
+        background-color: $color1;
+    }
+}

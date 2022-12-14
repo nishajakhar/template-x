@@ -1,0 +1,365 @@
+@import '../variables.scss';
+
+.photo-edit-modal {
+    .modal-container {
+        @apply flex justify-center items-center;
+    }
+    .modal-content {
+        width: 90%;
+    }
+
+    .photo-edit-modal__heading {
+        @apply flex justify-center py-2;
+        font-size: 30px;
+        text-align: center;
+    }
+    .photo-edit-modal__subheading {
+        @apply flex justify-center text-center py-2;
+        font-size: 14px;
+        font-weight: 300;
+        div {
+            @apply absolute right-16 px-3 py-2;
+            background: $linearGradient1;
+            svg {
+                font-size: 15px;
+            }
+            &:hover {
+                box-shadow: 0px 0px 10px $color2;
+            }
+        }
+    }
+    .photo-edit-modal__filters {
+        @apply flex gap-x-4 justify-center py-2 mb-5;
+        @include media-breakpoint-down($tablet2) {
+            overflow-x: scroll;
+        }
+
+        .photo-edit-modal__filters-item {
+            @apply text-center;
+            cursor: pointer;
+            .photo-edit-modal__filters-image {
+                @apply flex justify-center items-center;
+                min-height: 50px;
+                img {
+                    width: 20px !important;
+                }
+            }
+            h1 {
+                font-size: 12px;
+                color: $color2;
+            }
+            &:hover {
+                h1 {
+                    color: white;
+                }
+            }
+        }
+    }
+    .photo-edit-modal__filters__1,
+    .photo-edit-modal__filters__9 {
+        @apply flex gap-x-5 pb-4 pt-2 mb-5;
+        overflow-x: scroll;
+        .photo-edit-modal__filters-item {
+            @apply text-center;
+            cursor: pointer;
+            border: 1px solid #cf46f1;
+            .photo-edit-modal__filters-image {
+                @apply flex justify-center items-center p-2;
+                min-width: 120px;
+                img {
+                    width: 120px !important;
+                }
+            }
+            h1 {
+                font-size: 12px;
+                color: white;
+            }
+            &:hover {
+                background: $color2;
+            }
+        }
+    }
+    .photo-edit-modal__filters__2 {
+        @apply flex gap-x-5 justify-between pb-4 pt-2 mb-5;
+        .photo-edit-modal__filters-right {
+            @apply flex gap-x-3;
+            flex: 1;
+            align-items: flex-end;
+
+            div {
+                @apply flex gap-x-1;
+                label {
+                    font-size: 13px;
+                }
+            }
+        }
+        .photo-edit-modal__filters-left {
+            flex: 1;
+            @apply flex gap-x-4 justify-between;
+            p {
+                @apply pb-5;
+                font-size: 14px;
+            }
+            input {
+                @apply p-2;
+                outline: none;
+                background: #5a2fb3;
+                opacity: 0.5;
+                color: white;
+                width: 150px;
+            }
+        }
+    }
+    .photo-edit-modal__filters__3 {
+        @apply flex gap-x-5 pb-4 pt-2 mb-5;
+        .photo-edit-modal__filters-right {
+            @apply flex gap-x-5;
+            flex: 1;
+            align-items: flex-end;
+
+            .ratio-inputs {
+                @apply flex gap-x-1;
+                label {
+                    font-size: 13px;
+                }
+            }
+            .ratio-options {
+                @apply flex gap-x-1;
+                align-items: flex-end;
+                .ratio-item {
+                    .ratio-box {
+                        width: 30px;
+                        background: rgba(90, 47, 179, 0.25);
+                        border: 1px solid #cf46f1;
+                    }
+                    &:hover {
+                        .ratio-box {
+                            background: rgba(207, 70, 241, 0.45);
+                        }
+                    }
+                }
+            }
+        }
+
+        .photo-edit-modal__filters-left {
+            @apply flex gap-x-2;
+            p {
+                @apply pb-5;
+                font-size: 14px;
+            }
+            input {
+                @apply p-2;
+                outline: none;
+                background: #5a2fb3;
+                opacity: 0.5;
+                color: white;
+                width: 110px;
+            }
+        }
+    }
+    .photo-edit-modal__filters__4 {
+        @apply flex gap-x-8 justify-center pb-4 pt-2;
+
+        .photo-edit-modal__filters-right,
+        .photo-edit-modal__filters-left {
+            @apply flex gap-x-2;
+
+            .background-text {
+                @apply px-1 py-1;
+                background: $color5;
+                box-shadow: 0px 0px 5px $color4;
+                // opacity: 0.5;
+                svg {
+                    color: $color2;
+                }
+                &:hover {
+                    background: rgba(207, 70, 241, 0.45);
+                }
+            }
+        }
+    }
+
+    .photo-edit-modal__filters__5 {
+        @apply flex gap-x-10 justify-center pb-4 pt-2;
+        align-items: flex-end;
+        .photo-edit-modal__filters-right,
+        .photo-edit-modal__filters-left,
+        .photo-edit-modal__filters-middle {
+            p {
+                @apply pt-3 text-center;
+                font-size: 13px;
+            }
+        }
+        .brush-colors {
+            @apply flex gap-x-3;
+            div {
+                @apply rounded-full;
+                width: 18px;
+                height: 18px;
+                &:hover {
+                    border: 2px solid #cf46f1;
+                }
+            }
+        }
+        .brush-sizes {
+            @apply flex gap-x-3 items-center;
+            div {
+                @apply rounded-full;
+                border: 2px solid white;
+                &:hover {
+                    border: 2px solid $color2;
+                }
+            }
+        }
+    }
+    .photo-edit-modal__filters__6 {
+        @apply flex gap-x-10 justify-center pb-4 pt-2;
+        align-items: flex-end;
+
+        .photo-edit-modal__filters-left,
+        .photo-edit-modal__filters-middle {
+            p {
+                @apply pt-3 text-center;
+                font-size: 13px;
+            }
+        }
+        .brush-colors {
+            @apply flex gap-x-3;
+            div {
+                @apply rounded-full;
+                width: 18px;
+                height: 18px;
+                &:hover {
+                    border: 2px solid #cf46f1;
+                }
+            }
+        }
+        .photo-edit-modal__filters-right {
+            .subheading {
+                @apply pt-3 text-center;
+                font-size: 13px;
+            }
+            .font-styles {
+                position: relative;
+                .font-style-heading {
+                    p {
+                        width: 140px;
+                    }
+
+                    svg {
+                        color: $color2;
+                    }
+                }
+
+                form {
+                    @apply p-2;
+                    display: flex;
+                    button {
+                        width: 50px;
+                        background: $linearGradient1;
+                    }
+                    input {
+                        background: rgba(114, 111, 111, 0.356);
+                    }
+                }
+                .font-menu {
+                    @apply absolute right-0 top-6;
+                    height: 300px;
+                    overflow-y: scroll;
+                    width: 200px;
+                    z-index: 100;
+                    background-color: $color3;
+                    box-shadow: 0px 0px 15px $color2;
+
+                    /* Track */
+                    ::-webkit-scrollbar-track {
+                        display: none;
+                    }
+
+                    ::-webkit-scrollbar-thumb:vertical {
+                        background: $color2;
+                        border-radius: 1px;
+                        width: 1px;
+                        outline: none;
+                        border: none;
+                    }
+                    p {
+                        @apply px-4 py-2;
+                        &:hover {
+                            background: $color2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .photo-edit-modal__filters__7,
+    .photo-edit-modal__filters__8 {
+        @apply flex gap-x-2 pb-4 pt-2 mb-5;
+        overflow-x: scroll;
+        .photo-edit-modal__filters-item {
+            @apply text-center;
+            cursor: pointer;
+            border: 1px solid $color2;
+            .photo-edit-modal__filters-image {
+                @apply flex justify-center items-center p-2;
+                min-width: 120px;
+                height: 80px;
+                img {
+                    width: 50px !important;
+                }
+            }
+            h1 {
+                @apply pb-2;
+                font-size: 12px;
+                color: white;
+            }
+            &:hover {
+                box-shadow: 0px 0px 10px $color2;
+            }
+        }
+    }
+
+    .photo-edit-modal__filters__10 {
+        @apply py-5;
+        .photo-edit-modal__filters-body {
+            @apply flex gap-x-5 justify-center items-center p-2;
+            input {
+                width: 300px;
+            }
+        }
+    }
+    .photo-edit-modal__filters__11 {
+        @apply py-5;
+        .photo-edit-modal__filters-body {
+            @apply p-2 text-center;
+            .brush-colors {
+                @apply flex gap-x-3 justify-center;
+                div {
+                    @apply rounded-full;
+                    width: 18px;
+                    height: 18px;
+                    &:hover {
+                        border: 2px solid #cf46f1;
+                    }
+                }
+            }
+        }
+    }
+    .photo-edit-modal__zoom {
+        @apply my-4 flex gap-x-2 justify-center;
+
+        font-size: 15px;
+    }
+    .photo-edit-modal__actions {
+        @apply flex justify-center pt-4 pb-2 gap-5;
+        flex-wrap: wrap-reverse;
+        .tertiary__button {
+            background-color: $color3;
+        }
+        button {
+            font-weight: 500;
+        }
+    }
+}

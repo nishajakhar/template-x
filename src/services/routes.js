@@ -22,6 +22,7 @@ const ROUTES = {
     STORAGE_DETAIL: '/storages/storage-detail',
     TEMPLATES: '/templates',
     EMAILS: '/emails',
+    EMAIL_BUILDER: '/email-builder',
     TEST: '/test',
 };
 
