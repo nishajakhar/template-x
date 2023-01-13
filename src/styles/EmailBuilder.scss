@@ -163,7 +163,7 @@
             .email-builder__main__editor__2 {
                 width: 30%;
                 @include media-breakpoint-down($tablet2) {
-                    @apply flex gap-x-5;
+                    @apply flex gap-x-5 items-center;
                     width: 100%;
                 }
 
@@ -181,7 +181,7 @@
                     }
                 }
                 .email-builder__main__editor-item {
-                    @apply flex my-1;
+                    @apply flex my-1 items-center;
                     height: 45px;
 
                     div {
@@ -213,6 +213,14 @@
                     }
                 }
                 .email-builder__main__editor-item {
+                    .padding-container {
+                        @apply py-4 px-4;
+                        background: #13164b;
+                        .padding-heading {
+                            color: $color2;
+                            font-weight: bold;
+                        }
+                    }
                     .email-builder__main__editor-item__heading {
                         @apply flex justify-between mb-5;
 

@@ -1,129 +1,129 @@
 @import './variables.scss';
 
 .apidocs__screen {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 .apidocs {
-  @apply pb-20;
-  margin: $containerMargin;
+    @apply pb-20;
+    margin: $containerMargin;
 
-  @include media-breakpoint-down($tablet2) {
-    margin: $containerMarginMedium;
-  }
-
-  @include media-breakpoint-down($mobile) {
-    margin: $containerMarginSmall;
-  }
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    display: none;
-  }
-
-  ::-webkit-scrollbar-thumb:vertical {
-    background: $color2;
-    border-radius: 1px;
-    width: 1px;
-    outline: none;
-    border: none;
-  }
-  .docs-row {
-    display: flex;
-    height: 100%;
-
-    @include media-breakpoint-up($tablet) {
-      margin-top: 70px;
+    @include media-breakpoint-down($tablet2) {
+        margin: $containerMarginMedium;
     }
 
-    @include media-breakpoint-up($desktop) {
-      margin-top: 80px;
+    @include media-breakpoint-down($mobile) {
+        margin: $containerMarginSmall;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
     }
 
-    .docs-menu-col {
-      width: 30%;
-      flex-shrink: 0;
-      flex-grow: 0;
-      // display: block;
-      font-size: $mediumFont;
-      @include media-breakpoint-down($mobile) {
+    /* Track */
+    ::-webkit-scrollbar-track {
         display: none;
-      }
-      .docs-menu-col-inner {
-        display: none;
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        background: $color2;
+        border-radius: 1px;
+        width: 1px;
+        outline: none;
+        border: none;
+    }
+    .docs-row {
+        display: flex;
         height: 100%;
-        max-height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        // if position sticky does not work
-        // remove overflow, overflow-x, overflow-y
-        // from all ancestors of this div
-        position: sticky;
-        top: 120px;
-        // width: 340px;
 
         @include media-breakpoint-up($tablet) {
-          display: block;
+            margin-top: 70px;
         }
-      }
 
-      @include media-breakpoint-up($tablet) {
-        padding-right: 5px;
-        border-right: 1px solid #bdc8d8;
-      }
-    }
-    .docs-content-col {
-      flex-grow: 1;
-      height: 100%;
-    }
-  }
+        @include media-breakpoint-up($desktop) {
+            margin-top: 80px;
+        }
 
-  .doc-mobile-menu-button {
-    padding: 30px 0;
-    button {
-      padding: 0;
-      svg {
-        width: 20px;
-        height: 20px;
-        color: $primary;
-      }
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 34px;
-      color: $secondary;
+        .docs-menu-col {
+            width: 30%;
+            flex-shrink: 0;
+            flex-grow: 0;
+            // display: block;
+            font-size: $mediumFont;
+            @include media-breakpoint-down($mobile) {
+                display: none;
+            }
+            .docs-menu-col-inner {
+                display: none;
+                height: 100%;
+                max-height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                // if position sticky does not work
+                // remove overflow, overflow-x, overflow-y
+                // from all ancestors of this div
+                position: sticky;
+                top: 120px;
+                // width: 340px;
+
+                @include media-breakpoint-up($tablet) {
+                    display: block;
+                }
+            }
+
+            @include media-breakpoint-up($tablet) {
+                padding-right: 5px;
+                border-right: 1px solid #bdc8d8;
+            }
+        }
+        .docs-content-col {
+            flex-grow: 1;
+            height: 100%;
+        }
     }
-    @include media-breakpoint-up($tablet) {
-      display: none;
+
+    .doc-mobile-menu-button {
+        padding: 30px 0;
+        button {
+            padding: 0;
+            svg {
+                width: 20px;
+                height: 20px;
+                color: $primary;
+            }
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 34px;
+            color: $secondary;
+        }
+        @include media-breakpoint-up($tablet) {
+            display: none;
+        }
     }
-  }
 }
 
 .mobile__navigation-menu {
-  .mobile__navigation-overlay-content {
-    height: 100vh;
-    overflow: hidden;
-  }
-  .docs-menu-col-inner {
-    height: 100%;
-    overflow-y: scroll;
-  }
+    .mobile__navigation-overlay-content {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .docs-menu-col-inner {
+        height: 100%;
+        overflow-y: scroll;
+    }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

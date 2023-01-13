@@ -7,7 +7,19 @@
     .modal-content {
         width: 90%;
     }
-
+    .code-modal__buttons {
+        @apply flex gap-x-5 justify-end py-2;
+        color: white;
+        font-weight: 500;
+        svg {
+            color: $color2;
+        }
+    }
+    .code-modal__body {
+        @apply py-5;
+        textarea {
+        }
+    }
     .code-modal__image {
         @apply flex justify-center py-2;
     }

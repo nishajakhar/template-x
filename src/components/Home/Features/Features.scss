@@ -1,59 +1,63 @@
 @import '../../../styles/variables.scss';
 
 .features {
-  @apply py-16;
-  position: relative;
-  overflow: hidden;
-  // padding-bottom: 5rem;
-  @include media-breakpoint-down($mobile) {
-    @apply pt-5 pb-16;
-  }
-  .features__heading {
-    @apply pb-10;
-    font-size: $extraLargeFont;
-    // font-weight: 700;
-    // padding: 2rem 0rem;
-    text-align: center;
+    @apply py-16;
+    position: relative;
+    overflow: hidden;
+
+    // padding-bottom: 5rem;
     @include media-breakpoint-down($mobile) {
-      @apply pb-10;
+        @apply pt-5 pb-16;
     }
-  }
-  .features__items {
-    @apply flex pt-20 pb-10 gap-5;
-    overflow-x: scroll;
-    @include media-breakpoint-down($mobile) {
-      @apply flex py-10;
+    .features__heading {
+        @apply pb-10;
+        font-size: $extraLargeFont;
+        // font-weight: 700;
+        // padding: 2rem 0rem;
+        text-align: center;
+        @include media-breakpoint-down($mobile) {
+            @apply pb-10;
+        }
     }
-  }
+    .features__items {
+        @apply flex pt-20 pb-10 gap-5;
+        overflow-x: scroll;
+        max-width: 90%;
+        margin: auto;
+
+        @include media-breakpoint-down($mobile) {
+            @apply flex py-10;
+        }
+    }
 }
 
 .circle__feat-1 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 450px;
-  height: 450px;
-  bottom: -150px;
-  left: -200px;
-  background: #5a2fb2 !important;
-  filter: blur(170px);
-  transform: rotate(1.3deg);
-  z-index: 1;
-  @include media-breakpoint-down($mobile) {
-    bottom: -250px;
-    left: -350px;
-  }
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    bottom: -150px;
+    left: -200px;
+    background: #5a2fb2 !important;
+    filter: blur(170px);
+    transform: rotate(1.3deg);
+    z-index: 1;
+    @include media-breakpoint-down($mobile) {
+        bottom: -250px;
+        left: -350px;
+    }
 }
 
 .circle__feat-2 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  right: 0px;
-  top: 0px;
-  filter: blur(10px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    position: absolute;
+    background: $linearGradient1;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    right: 0px;
+    top: 0px;
+    filter: blur(10px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

@@ -49,7 +49,7 @@ export default function CookieModal(props) {
                     <div className="cookie-modal__actions">
                         <Link to="/cookie-settings">
                             <div className="tertiary__button-outer">
-                                <button className="tertiary__button">
+                                <button className="tertiary__button modal__button">
                                     CONFIGURE
                                 </button>
                             </div>

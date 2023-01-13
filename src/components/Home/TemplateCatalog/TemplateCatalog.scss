@@ -1,50 +1,52 @@
 @import '../../../styles/variables.scss';
 
 .catalog {
-  // min-height: 70vh;
-  @include media-breakpoint-down($tablet2) {
-    min-height: fit-content;
-    padding-bottom: 50px;
-  }
-  @include media-breakpoint-down($mobile) {
-    min-height: fit-content;
-    padding-bottom: 50px;
-  }
-  .catalog__heading {
-    @apply flex justify-between pb-10;
-    margin: $containerMargin;
-    flex-wrap: wrap;
-
+    // min-height: 70vh;
     @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
+        min-height: fit-content;
+        padding-bottom: 50px;
     }
-
     @include media-breakpoint-down($mobile) {
-      @apply justify-center gap-y-5;
-      margin: $containerMarginSmall;
+        min-height: fit-content;
+        padding-bottom: 50px;
     }
-    h1 {
-      font-size: $extraLargeFont;
-    }
-    button {
-      @include media-breakpoint-down($tablet2) {
-      }
+    .catalog__heading {
+        @apply flex justify-between pb-10;
+        margin: $containerMargin;
+        flex-wrap: wrap;
 
-      @include media-breakpoint-down($mobile) {
-        width: 80%;
-      }
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
+
+        @include media-breakpoint-down($mobile) {
+            @apply justify-center gap-y-5;
+            margin: $containerMarginSmall;
+        }
+        h1 {
+            font-size: $extraLargeFont;
+        }
+        .primary_button {
+            @include media-breakpoint-down($tablet2) {
+            }
+
+            @include media-breakpoint-down($mobile) {
+                width: 80%;
+            }
+        }
     }
-  }
-  .catalog__items {
-    @apply flex pb-10 mb-10;
-    overflow-x: scroll;
-    @include media-breakpoint-down($mobile) {
-      @apply mb-0;
+    .catalog__items {
+        @apply flex pb-10 mb-10;
+        overflow-x: scroll;
+        max-width: 90%;
+        margin: auto;
+        @include media-breakpoint-down($mobile) {
+            @apply mb-0;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+            padding: 5px;
+        }
     }
-    img {
-      width: 200px;
-      height: 150px;
-      padding: 5px;
-    }
-  }
 }

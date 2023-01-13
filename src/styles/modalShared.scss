@@ -14,8 +14,10 @@
 
 .modal-container {
     @apply relative w-full;
-    margin: $containerMargin;
+    // margin: $containerMargin;
+    margin: auto;
     padding-top: 5rem;
+    max-width: 800px;
 
     // padding-top: 5rem;
     @include media-breakpoint-down($tablet2) {
@@ -55,6 +57,9 @@
     -webkit-animation-duration: 0.4s;
     animation-name: animateClose;
     animation-duration: 0.4s;
+}
+.modal__button {
+    background: #2d2977 !important;
 }
 
 /* Add Animation */

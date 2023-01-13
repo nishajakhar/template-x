@@ -24,7 +24,7 @@ import {
 config.autoAddCss = false;
 export default function EmailsScreen() {
     const [open, setOpen] = useState(false);
-
+    const [seeCheckbox, setSeeCheckbox] = useState(false);
     return (
         <>
             {open && <SettingsModal open={setOpen} />}
@@ -42,7 +42,11 @@ export default function EmailsScreen() {
                                 />
                                 Refresh
                             </p>
-                            <p onClick={() => setOpen(true)}>
+                            <p
+                                onClick={() => setSeeCheckbox(!seeCheckbox)}
+                                className={seeCheckbox ? 'text-pink-400' : ''}
+                                style={{ color: seeCheckbox ? '#cf46f1' : '' }}
+                            >
                                 {' '}
                                 <FontAwesomeIcon
                                     className="social__icons"
@@ -67,14 +71,25 @@ export default function EmailsScreen() {
                                 Create new email
                             </p>
                         </div>
+                        {seeCheckbox && (
+                            <div className="delete-emails">
+                                <p className="p-2 m-2 text-sm">
+                                    <FontAwesomeIcon
+                                        className="social__icons text-pink-500 pr-2"
+                                        icon={faTrash}
+                                    />{' '}
+                                    Delete
+                                </p>
+                            </div>
+                        )}{' '}
                         <div className="emails__heading">
                             <h1>My Emails</h1>
                         </div>
                         <div class="emails__groups">
-                            <EmailCard />
-                            <EmailCard />
-                            <EmailCard />
-                            <EmailCard />
+                            <EmailCard seeCheckbox={seeCheckbox} />
+                            <EmailCard seeCheckbox={seeCheckbox} />
+                            <EmailCard seeCheckbox={seeCheckbox} />
+                            <EmailCard seeCheckbox={seeCheckbox} />
                         </div>
                         <div class="emails__pagination">
                             <span>1</span>
@@ -91,7 +106,7 @@ export default function EmailsScreen() {
     );
 }
 
-function EmailCard() {
+function EmailCard({ seeCheckbox }) {
     const collapsemenu = useRef();
     const handleClick = () => {
         collapsemenu.current.classList.toggle('hidden');
@@ -99,9 +114,11 @@ function EmailCard() {
     return (
         <div className="email__card__outer">
             <div className="email__card">
-                <div className="select-emails">
-                    <input type="checkbox" />
-                </div>
+                {seeCheckbox && (
+                    <div className="select-emails">
+                        <input type="checkbox" />
+                    </div>
+                )}
                 <div className="email__card-image">
                     <img src="templates.png" />
                 </div>

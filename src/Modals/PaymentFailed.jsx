@@ -38,7 +38,7 @@ export default function PaymentFailedModal(props) {
                     <div className="payment-fail-modal__actions">
                         <div className="tertiary__button-outer">
                             <button
-                                className="tertiary__button"
+                                className="tertiary__button modal__button"
                                 onClick={handleClose}
                             >
                                 CLOSE

@@ -1,129 +1,133 @@
 @import './variables.scss';
 
 .pagenotfound__screen {
-  position: relative;
+    position: relative;
+    z-index: 10;
 }
 .pagenotfound {
-  // position: relative;
-  // overflow-x: hidden;
+    z-index: 11;
+    // position: relative;
+    // overflow-x: hidden;
 
-  .pagenotfound__container {
-    @apply flex gap-y-20;
-    margin: $containerMargin;
-    min-height: 100vh;
-    flex-wrap: nowrap;
-    padding: 60px 0px;
-    position: relative;
+    .pagenotfound__container {
+        @apply flex gap-y-20;
+        margin: $containerMargin;
+        min-height: 100vh;
+        flex-wrap: nowrap;
+        padding: 60px 0px;
+        position: relative;
+        @include media-breakpoint-down($tablet2) {
+            justify-content: center;
+            margin: $containerMarginMedium;
+            flex-wrap: wrap;
+            min-height: fit-content;
+        }
+
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
+        }
+        .pagenotfound__image {
+            // position: relative;
+            .pagenotfound__image-container {
+                position: absolute;
+                right: -300px;
+                width: 80%;
+                @include media-breakpoint-down($tablet2) {
+                    right: -180px;
+                }
+
+                @include media-breakpoint-down($mobile) {
+                    width: 100%;
+                    position: unset;
+                    // display: block;
+                    right: 0px;
+                }
+            }
+            // width: 40%;
+
+            @include media-breakpoint-down($mobile) {
+                width: 100%;
+            }
+            img {
+                // width: fit-content;
+                // right: -500px;
+                // width: 1000px;
+                @include media-breakpoint-down($tablet2) {
+                    // width: 100%;
+                    // position: relative;
+                    right: 0px;
+                }
+            }
+        }
+        .pagenotfound__heading {
+            font-size: 60px;
+            margin-bottom: 3rem;
+            text-align: left;
+            @include media-breakpoint-down($tablet2) {
+                flex: 1;
+            }
+            @include media-breakpoint-down(600px) {
+                flex-basis: 100%;
+                // text-align: center;
+                margin-bottom: 0rem;
+            }
+
+            @include media-breakpoint-down($mobile) {
+                width: 100%;
+                text-align: center;
+            }
+            h1 {
+                @include media-breakpoint-down($mobile) {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+.circle__4__pnf {
+    position: absolute;
+    background: $linearGradient1 !important;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    left: -350px;
+    top: 50px;
+    filter: blur(200px);
+    transform: rotate(1.3deg);
+    z-index: 1;
     @include media-breakpoint-down($tablet2) {
-      justify-content: center;
-      margin: $containerMarginMedium;
-      flex-wrap: wrap;
-      min-height: fit-content;
+        top: 350px;
     }
 
     @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
+        width: 350px;
+        height: 350px;
+        left: -200px;
+        top: 0px;
+        filter: blur(120px);
     }
-    .pagenotfound__image {
-      // position: relative;
-      .pagenotfound__image-container {
-        position: absolute;
-        right: -300px;
-        width: 80%;
-        @include media-breakpoint-down($tablet2) {
-          right: -180px;
-        }
-
-        @include media-breakpoint-down($mobile) {
-          width: 100%;
-          position: unset;
-          // display: block;
-          right: 0px;
-        }
-      }
-      // width: 40%;
-
-      @include media-breakpoint-down($mobile) {
-        width: 100%;
-      }
-      img {
-        // width: fit-content;
-        // right: -500px;
-        // width: 1000px;
-        @include media-breakpoint-down($tablet2) {
-          // width: 100%;
-          // position: relative;
-          right: 0px;
-        }
-      }
-    }
-    .pagenotfound__heading {
-      font-size: 60px;
-      margin-bottom: 3rem;
-      text-align: left;
-      @include media-breakpoint-down($tablet2) {
-        flex: 1;
-      }
-      @include media-breakpoint-down(600px) {
-        flex-basis: 100%;
-        // text-align: center;
-        margin-bottom: 0rem;
-      }
-
-      @include media-breakpoint-down($mobile) {
-        width: 100%;
-        text-align: center;
-      }
-      h1 {
-        @include media-breakpoint-down($mobile) {
-          font-size: 40px;
-        }
-      }
-    }
-  }
 }
 
-.circle__4 {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  left: -350px;
-  top: 50px;
-  filter: blur(200px);
-  transform: rotate(1.3deg);
-  z-index: 1;
-  @include media-breakpoint-down($tablet2) {
-    top: 350px;
-  }
+.circle__5__pnf {
+    position: absolute;
+    background: $linearGradient1 !important;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    right: -350px;
+    top: -150px;
+    filter: blur(200px);
+    transform: rotate(1.3deg);
+    z-index: 2;
+    @include media-breakpoint-down($tablet2) {
+    }
 
-  @include media-breakpoint-down($mobile) {
-    width: 250px;
-    height: 250px;
-    left: -10px;
-    top: 250px;
-  }
-}
-
-.circle__5 {
-  position: absolute;
-  background: $linearGradient1;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  right: -350px;
-  top: -150px;
-  filter: blur(200px);
-  transform: rotate(1.3deg);
-  z-index: 2;
-  @include media-breakpoint-down($tablet2) {
-  }
-
-  @include media-breakpoint-down($mobile) {
-    width: 250px;
-    height: 250px;
-    right: 0px;
-    top: -10px;
-  }
+    @include media-breakpoint-down($mobile) {
+        width: 350px;
+        height: 350px;
+        right: -150px;
+        top: 350px;
+        filter: blur(150px);
+    }
 }

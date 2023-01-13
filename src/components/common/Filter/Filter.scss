@@ -1,0 +1,100 @@
+@import '../../../styles/shared.scss';
+.mobile__filter__navigation-menu {
+    ::-webkit-scrollbar-thumb:vertical {
+        background: $color2;
+        border-radius: 1px;
+        width: 5px !important;
+        outline: none;
+        border: none;
+    }
+    ::-webkit-scrollbar:vertical {
+        width: 5px !important;
+    }
+    ::-webkit-scrollbar-track {
+        display: none;
+    }
+    .mobile__navigation-overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 500;
+        top: 30px;
+        left: 0px !important;
+        margin: $containerMargin;
+        background-color: rgba(5, 16, 58, 0.9);
+
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
+        @include media-breakpoint-down($mobile) {
+            position: fixed !important;
+            top: 0px !important;
+        }
+        .mobile__navigation-overlay-content {
+            @apply p-5;
+            overflow: scroll;
+            // position: relative;
+            // top: 25%;
+            max-width: 380px;
+            // height: 100%;
+            text-align: center;
+
+            background: rgba(90, 47, 179, 0.3);
+            border: 2px solid rgba(207, 70, 241, 0.7);
+
+            @include media-breakpoint-down($mobile) {
+                max-width: 100%;
+            }
+            .mobile__navigation-header-close {
+                display: flex;
+                @include media-breakpoint-down($mobile) {
+                    display: none;
+                }
+            }
+            .mobile__navigation-header-mobile {
+                @apply flex items-center content-center px-2;
+                display: none;
+                @include media-breakpoint-down($mobile) {
+                    display: flex;
+                }
+                img {
+                    height: 40px;
+                    width: auto;
+                    padding-right: 5px;
+                }
+                .mobile__navigation-header-left__text {
+                    font-size: 32px;
+                    font-family: $fontStyle;
+                    color: $color1;
+
+                    span {
+                        color: $color2;
+                    }
+                }
+            }
+            .close-icon {
+                color: $color2;
+                font-size: 30px;
+            }
+
+            .filter__form-topics {
+                @apply flex-col justify-start text-left py-5;
+                .filter__form-type,
+                .filter__form-topic {
+                    @apply flex items-center;
+                    input {
+                        @apply mr-2 my-2;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 0px;
+                        border: 1px solid $color2;
+                        background-color: transparent;
+                    }
+                    input:checked {
+                        background-color: $color2;
+                    }
+                }
+            }
+        }
+    }
+}

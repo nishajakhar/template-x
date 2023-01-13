@@ -1,122 +1,138 @@
 @import '../../../styles/variables.scss';
 
 .tab__header {
-  margin: 0px;
-  background-color: $color1;
-  padding: 10px 0px;
-  position: relative;
-  overflow: hidden;
-  min-height: 260px;
-  max-height: 260px;
+    margin: 0px;
+    background-color: $color1;
+    padding: 10px 0px;
+    position: relative;
+    overflow: hidden;
+    min-height: 260px;
+    max-height: 260px;
 
-  .tab__header-route {
-    display: flex;
-    margin: $containerMargin;
-    position: absolute;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    .tab__header-route {
+        display: flex;
+        margin: $containerMargin;
+        position: absolute;
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
+        }
 
-    div {
-      padding: 5px;
+        div {
+            padding: 5px;
+        }
     }
-  }
-  .tab__header-heading {
-    margin: $containerMargin;
-    font-size: $extraLargeFont;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    // padding: 80px 0px;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
+    .tab__header-heading {
+        margin: $containerMargin;
+        font-size: $extraLargeFont;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        // padding: 80px 0px;
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
+        }
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
+        }
 
-    h1 {
-      font-weight: 500;
-      font-style: $fontStyle;
-      z-index: 5;
+        h1 {
+            font-weight: 500;
+            font-style: $fontStyle;
+            z-index: 5;
+        }
     }
-  }
 }
 
 .tab__form {
-  @apply px-36;
-  margin: $containerMargin;
-  @include media-breakpoint-down($tablet2) {
-    @apply px-0;
-
-    margin: $containerMarginMedium;
-  }
-
-  @include media-breakpoint-down($mobile) {
-    @apply px-0;
-
-    margin: $containerMarginSmall;
-  }
-  p {
-    @apply py-3 px-4 text-center text-white;
-    font-size: 14px;
+    @apply px-36;
+    margin: $containerMargin;
     @include media-breakpoint-down($tablet2) {
-      @apply px-0;
+        @apply px-0;
+
+        margin: $containerMarginMedium;
     }
+
     @include media-breakpoint-down($mobile) {
-      @apply px-0;
-    }
-  }
-  form {
-    @apply flex justify-center mx-24;
+        @apply px-0;
 
-    input {
-      background-color: #8167b4;
-      opacity: 0.9;
-      color: white;
-      z-index: 5;
+        margin: $containerMarginSmall;
     }
-    @include media-breakpoint-down($tablet2) {
-      @apply mx-0;
+    p {
+        @apply py-3 px-4 text-center text-white;
+        font-size: 14px;
+        @include media-breakpoint-down($tablet2) {
+            @apply px-0;
+        }
+        @include media-breakpoint-down($mobile) {
+            @apply px-0;
+        }
     }
-    @include media-breakpoint-down($mobile) {
-      @apply mx-0;
-    }
+    form {
+        @apply flex justify-center mx-24;
 
-    button {
-      @apply px-4;
-      z-index: 5;
+        input {
+            background-color: #8167b4;
+            opacity: 0.9;
+            color: white;
+            z-index: 5;
+        }
+        @include media-breakpoint-down($tablet2) {
+            @apply mx-0;
+        }
+        @include media-breakpoint-down($mobile) {
+            @apply mx-0;
+        }
 
-      background: $linearGradient1;
+        button {
+            @apply px-4;
+            z-index: 5;
+
+            background: $linearGradient1;
+        }
     }
-  }
 }
 .circle__head-1 {
-  position: absolute;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  left: 50px;
-  top: 30px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  background: $color2 !important;
-  z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    left: 50px;
+    top: 30px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    background: $color2 !important;
+    z-index: 1;
+    @include media-breakpoint-down($tablet2) {
+        filter: blur(100px);
+
+        left: -300px;
+        top: 100px;
+    }
+    @include media-breakpoint-down($mobile) {
+    }
 }
 
 .circle__head-2 {
-  position: absolute;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  right: -200px;
-  top: -300px;
-  background: $color2 !important;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    right: -200px;
+    bottom: -100px;
+    background: $color2 !important;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 2;
+    @include media-breakpoint-down($tablet2) {
+        filter: blur(100px);
+
+        right: -350px;
+        bottom: 50px;
+    }
+    @include media-breakpoint-down($mobile) {
+    }
 }

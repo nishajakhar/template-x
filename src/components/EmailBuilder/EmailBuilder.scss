@@ -1,0 +1,254 @@
+@import '../../styles/variables.scss';
+
+.content {
+    @apply flex flex-wrap gap-4;
+    width: 30%;
+
+    @include media-breakpoint-down($tablet2) {
+        width: 100%;
+        height: 240px;
+        overflow-y: scroll;
+    }
+    .item {
+        @apply p-2 text-center;
+
+        clip-path: $clipPath4;
+        width: 100px;
+
+        background: $color3;
+        .editor-item-image {
+            @apply flex justify-center items-center;
+            min-height: 65px;
+        }
+        h1 {
+            color: $color2;
+            // background: $linearGradient2;
+        }
+    }
+}
+.blocks {
+    width: 30%;
+    @include media-breakpoint-down($tablet2) {
+        @apply flex gap-x-5 items-center;
+        width: 100%;
+    }
+
+    h1 {
+        @apply mb-5;
+        color: $color2;
+        @include media-breakpoint-down($tablet2) {
+            display: none;
+        }
+    }
+    .left,
+    .right {
+        @include media-breakpoint-down($tablet2) {
+            width: 50%;
+        }
+    }
+    .item {
+        @apply flex my-1 items-center;
+        height: 45px;
+
+        div {
+            @apply h-full;
+            background: rgba(134, 73, 250, 0.25);
+            border: 1px solid #cf46f1;
+            box-shadow: 0px 5px 10px rgba(112, 99, 253, 0.3);
+            @include media-breakpoint-down($tablet2) {
+                height: 50px;
+            }
+        }
+        &:hover {
+            background: rgba(134, 73, 250, 0.5);
+            box-shadow: 0px 0px 5px #cf46f1;
+        }
+    }
+}
+
+.body {
+    width: 30%;
+    @include media-breakpoint-down($tablet2) {
+        @apply flex gap-x-10;
+        width: 100%;
+    }
+    .right,
+    .left {
+        @include media-breakpoint-down($tablet2) {
+            width: 50%;
+        }
+    }
+    .section {
+        .padding-container {
+            @apply py-4 px-4;
+            background: #13164b;
+            .padding-heading {
+                color: $color2;
+                font-weight: bold;
+            }
+        }
+        .section__heading {
+            @apply flex justify-between mb-5;
+
+            color: $color2;
+        }
+        .general,
+        .links {
+            .section-item {
+                @apply flex justify-between pb-4;
+                font-size: 13px;
+
+                input:checked {
+                    background-color: $color2;
+                }
+            }
+        }
+        .email {
+            .section-item {
+                h1 {
+                    @apply my-1;
+                    font-size: 15px;
+                }
+                input {
+                    @apply py-2 px-2 my-2 rounded w-full;
+                }
+                p {
+                    @apply mb-5;
+                    font-size: 8px;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+.image {
+    width: 30%;
+    @include media-breakpoint-down($tablet2) {
+        width: 100%;
+    }
+    .image-search {
+        form {
+            display: flex;
+            button {
+                width: 50px;
+                background: $linearGradient1;
+            }
+        }
+        p {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+
+            text-align: center;
+        }
+    }
+    .images {
+        @apply flex flex-wrap gap-4 py-5 justify-center;
+        img {
+            width: 120px;
+        }
+    }
+    .show-more {
+        @apply pb-2;
+        text-align: center;
+        cursor: pointer;
+        svg {
+            @apply pr-1;
+            color: $color2;
+        }
+        &:hover {
+            color: $color1;
+            svg {
+                color: $color1;
+            }
+        }
+    }
+}
+
+.text,
+.menu {
+    width: 30%;
+    @include media-breakpoint-down($tablet2) {
+        @apply flex gap-x-10;
+        width: 100%;
+    }
+    .right,
+    .left {
+        @include media-breakpoint-down($tablet2) {
+            width: 50%;
+        }
+    }
+    .section {
+        .padding-container {
+            @apply py-4 px-4;
+            background: #13164b;
+            .padding-heading {
+                color: $color2;
+                font-weight: bold;
+            }
+        }
+        .section__heading {
+            @apply flex justify-between mb-2 mt-5;
+
+            color: $color2;
+        }
+        .section-items {
+            .section-item {
+                @apply flex justify-between pb-4;
+                font-size: 13px;
+
+                input:checked {
+                    background-color: $color2;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    .section__subheading {
+        @apply flex gap-x-2 my-3;
+        border-bottom: 1px solid $color2;
+        p {
+            @apply pb-1;
+            display: inline;
+            font-size: 15px;
+            &:hover {
+                color: $color2;
+            }
+        }
+    }
+    .image-upload {
+        @apply pb-5;
+        form {
+            display: flex;
+            button {
+                width: 50px;
+                background: $linearGradient1;
+            }
+        }
+        p {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+
+            text-align: center;
+        }
+    }
+    .blocks {
+        @apply w-full;
+    }
+    .number-input {
+        @apply flex gap-x-1 items-center justify-end;
+        svg {
+            color: $color2;
+            font-size: 16px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: bolder;
+        }
+    }
+}

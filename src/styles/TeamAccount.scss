@@ -7,6 +7,7 @@
     .team__container {
         @apply flex-col mt-16;
         padding: $containerMargin;
+        position: relative;
         @include media-breakpoint-down($tablet2) {
             padding: $containerMarginMedium;
         }

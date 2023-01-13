@@ -1,8 +1,9 @@
 import '../styles/TeamAccount.scss';
 import '../styles/shared.scss';
 import { Link } from 'react-router-dom';
-import Header from '../components/common/Header/Header';
-import Footer from '../components/common/Footer/Footer';
+import Filter from '../components/common/Filter/Filter';
+import { useState, useEffect, useRef } from 'react';
+
 import TabHeader from '../components/common/TabHeader/TabHeader';
 import { teamAccounts } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -14,6 +15,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function TeamAccountScreen() {
+    const [openFilter, setOpenFilter] = useState(false);
+    const temp = useRef();
+    useEffect(() => {
+        if (openFilter) temp.current.style.maxHeight = '100vh';
+        else temp.current.style.maxHeight = 'unset';
+    }, [openFilter]);
+
     return (
         <div className="team__screen">
             {/* <Header /> */}
@@ -39,9 +47,12 @@ export default function TeamAccountScreen() {
                         </button>
                     </form>
                 </TabHeader>
-                <div className="team__container">
+                <div className="team__container" ref={temp}>
                     <div className="team__filter">
-                        <p>
+                        <p
+                            className="cursor-pointer"
+                            onClick={() => setOpenFilter(!openFilter)}
+                        >
                             {' '}
                             <FontAwesomeIcon
                                 className="social__icons"
@@ -61,6 +72,7 @@ export default function TeamAccountScreen() {
                         <span>3</span>
                         <span>4</span>
                     </div>
+                    {openFilter && <Filter open={setOpenFilter} />}
                 </div>
                 <div className="color__circles circle__18"></div>
             </div>

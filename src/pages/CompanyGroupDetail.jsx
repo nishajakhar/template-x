@@ -6,8 +6,8 @@ import Footer from '../components/common/Footer/Footer';
 import TabHeader from '../components/common/TabHeader/TabHeader';
 import InviteUserModal from '../Modals/InviteUser';
 import CompanyGroupConfigModal from '../Modals/CompanyGroupConfig';
-
-import { useState, useEffect } from 'react';
+import Filter from '../components/common/Filter/Filter';
+import { useState, useEffect, useRef } from 'react';
 
 import { users } from '../services/data';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -25,7 +25,12 @@ config.autoAddCss = false;
 export default function CompanyGroupDetailScreen() {
     const [open, setOpen] = useState(false);
     const [openConfig, setOpenConfig] = useState(false);
-
+    const [openFilter, setOpenFilter] = useState(false);
+    const temp = useRef();
+    useEffect(() => {
+        if (openFilter) temp.current.style.maxHeight = '100vh';
+        else temp.current.style.maxHeight = 'unset';
+    }, [openFilter]);
     return (
         <>
             {open && <InviteUserModal open={setOpen} />}
@@ -106,9 +111,15 @@ export default function CompanyGroupDetailScreen() {
                                 </button>
                             </div>
                         </div>
+                    </div>
+                    <div className="relative cgd-section" ref={temp}>
+                        {openFilter && <Filter open={setOpenFilter} />}
 
                         <div className="cgd__user-filter">
-                            <p>
+                            <p
+                                className="cursor-pointer"
+                                onClick={() => setOpenFilter(!openFilter)}
+                            >
                                 {' '}
                                 <FontAwesomeIcon
                                     className="social__icons"
@@ -116,6 +127,7 @@ export default function CompanyGroupDetailScreen() {
                                 />
                                 Filter
                             </p>
+
                             <p
                                 onClick={() => setOpen(true)}
                                 className="cursor-pointer"
@@ -140,6 +152,7 @@ export default function CompanyGroupDetailScreen() {
                             <span>4</span>
                         </div>
                     </div>
+
                     <div className="color__circles circle__18"></div>
                 </div>
                 {/* <Footer /> */}

@@ -1,127 +1,128 @@
 @import './variables.scss';
 
 .company {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .company__container {
-    @apply flex-col mt-16;
-    padding: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
-    }
-
-    @include media-breakpoint-down($mobile) {
-      padding: $containerMarginSmall;
-    }
-    .company__filter {
-      @apply flex justify-between;
-      p {
-        font-weight: bold;
-        .social__icons {
-          padding-right: 10px;
-          color: $color2;
+    .company__container {
+        @apply flex-col mt-16;
+        padding: $containerMargin;
+        position: relative;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
         }
-      }
+
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .company__filter {
+            @apply flex justify-between;
+            p {
+                font-weight: bold;
+                .social__icons {
+                    padding-right: 10px;
+                    color: $color2;
+                }
+            }
+        }
+        .company__groups {
+        }
+        .company__pagination {
+            @apply flex justify-center;
+            span {
+                padding: 5px;
+                color: $color2;
+            }
+        }
     }
-    .company__groups {
-    }
-    .company__pagination {
-      @apply flex justify-center;
-      span {
-        padding: 5px;
-        color: $color2;
-      }
-    }
-  }
 }
 
 .company__card__outer {
-  background-color: $color2;
-  clip-path: $clipPath6;
-  margin: 2rem 0px;
-  padding: 3px;
-  .company__card {
-    clip-path: inherit;
-    padding: 1.5rem 2.5rem;
-    background-color: $color3;
-    @include media-breakpoint-down($mobile) {
-      padding: 1.5rem 1.5rem;
-    }
-    .company__card-subheading {
-      font-size: 12px;
-      padding-bottom: 15px;
-      @include media-breakpoint-down($mobile) {
-        font-size: 14px;
-      }
-    }
-    .company__card-heading {
-      @apply flex justify-between;
-      font-size: $mediumFont;
-      font-weight: bold;
-      padding-bottom: 10px;
-      .company__card-more {
-        font-size: $extraSmallFont;
-        text-decoration: underline;
-        color: orange;
+    background-color: $color2;
+    clip-path: $clipPath6;
+    margin: 2rem 0px;
+    padding: 3px;
+    .company__card {
+        clip-path: inherit;
+        padding: 1.5rem 2.5rem;
+        background-color: $color3;
         @include media-breakpoint-down($mobile) {
-          display: none;
+            padding: 1.5rem 1.5rem;
         }
-      }
-    }
-    .company__card-items {
-      font-size: 13px;
-      @include media-breakpoint-down($mobile) {
-        font-size: 14px;
-      }
-      ul {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        list-style-type: circle;
-        margin: 0rem 1rem;
-        // padding: 0px 30px;
-        @include media-breakpoint-down($mobile) {
-          margin: 0rem 1rem;
+        .company__card-subheading {
+            font-size: 12px;
+            padding-bottom: 15px;
+            @include media-breakpoint-down($mobile) {
+                font-size: 14px;
+            }
         }
-        li {
-          margin: 0rem 0.5rem;
-          padding: 0px 10px;
-          @include media-breakpoint-down($mobile) {
-            line-height: 30px;
-          }
+        .company__card-heading {
+            @apply flex justify-between;
+            font-size: $mediumFont;
+            font-weight: bold;
+            padding-bottom: 10px;
+            .company__card-more {
+                font-size: $extraSmallFont;
+                text-decoration: underline;
+                color: orange;
+                @include media-breakpoint-down($mobile) {
+                    display: none;
+                }
+            }
         }
+        .company__card-items {
+            font-size: 13px;
+            @include media-breakpoint-down($mobile) {
+                font-size: 14px;
+            }
+            ul {
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                list-style-type: circle;
+                margin: 0rem 1rem;
+                // padding: 0px 30px;
+                @include media-breakpoint-down($mobile) {
+                    margin: 0rem 1rem;
+                }
+                li {
+                    margin: 0rem 0.5rem;
+                    padding: 0px 10px;
+                    @include media-breakpoint-down($mobile) {
+                        line-height: 30px;
+                    }
+                }
 
-        @include media-breakpoint-down($mobile) {
-          columns: 1;
+                @include media-breakpoint-down($mobile) {
+                    columns: 1;
+                }
+            }
         }
-      }
-    }
-    .company__card-more-2 {
-      display: none;
+        .company__card-more-2 {
+            display: none;
 
-      @include media-breakpoint-down($mobile) {
-        @apply pt-5 text-center;
-        display: block;
-        font-size: $smallFont;
-        text-decoration: underline;
-        color: orange;
-      }
+            @include media-breakpoint-down($mobile) {
+                @apply pt-5 text-center;
+                display: block;
+                font-size: $smallFont;
+                text-decoration: underline;
+                color: orange;
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

@@ -11,11 +11,14 @@
     .header__secondary {
         background-color: rgb(16, 7, 66);
         font-size: 10px;
+        max-height: 50px !important;
+
         z-index: 5;
         .header__secondary-container {
             @apply flex justify-between;
             margin: $containerMargin;
             padding: 0.4rem 0rem;
+
             // @include media-breakpoint-down(1025px) {
             //   margin: 0rem 8rem;
             // }
@@ -48,17 +51,17 @@
                 @include media-breakpoint-down($tablet2) {
                     font-size: $smallFont;
                 }
-                select {
+                .header__secondary-translate-select {
                     background: transparent;
                     font-weight: bold;
                     position: relative;
-
+                    padding: 0px;
                     option {
                         background: $color2;
                     }
-                }
-                select:focus {
-                    outline: none;
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
         }

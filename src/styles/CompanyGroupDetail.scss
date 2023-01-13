@@ -1,153 +1,164 @@
 @import './variables.scss';
 
 .cgd {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  .cgd__container {
-    @apply flex-col my-16;
-    padding: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      padding: $containerMarginMedium;
-    }
+    .cgd__container {
+        @apply flex-col my-16;
+        padding: $containerMargin;
 
-    @include media-breakpoint-down($mobile) {
-      padding: $containerMarginSmall;
-    }
-    .cgd__items {
-      @apply mb-10;
-      ul {
-        margin-bottom: 3rem;
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        // list-style-type: circle;
-        font-size: 15px;
-        li {
-          @apply px-3;
-          .social__icons {
-            top: 6px;
-          }
-          @include media-breakpoint-down($mobile) {
-            @apply py-1;
-            font-family: Raleway;
-            font-weight: 400;
-          }
-        }
-        @include media-breakpoint-down($mobile) {
-          margin-left: 20px;
-          columns: 1;
-          line-height: 25px;
-        }
-      }
-      .cgd__items-configure {
-        text-align: center;
-        button {
-          @include media-breakpoint-down($mobile) {
-            width: 75%;
-          }
-        }
-      }
-    }
-    .cgd__user-filter {
-      @apply flex justify-between mb-10;
-      .social__icons {
-        padding-right: 10px;
-        color: $color2;
-      }
-    }
-    .cgd__users {
-      display: grid;
-      padding: 30px 0px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      row-gap: 40px;
-      column-gap: 20px;
-      @include media-breakpoint-down($tablet2) {
-        grid-template-columns: auto;
-      }
-    }
-    .cgd__groups {
-    }
-    .cgd__pagination {
-      @apply flex justify-center;
-      span {
-        padding: 5px;
-        color: $color2;
-      }
-    }
-  }
-}
-
-.user__card__outer {
-  background-color: $color2;
-  clip-path: $clipPath6;
-  padding: 3px;
-  // margin: 2rem 0px;
-  .user__card {
-    clip-path: inherit;
-    padding: 1.5rem 2.5rem;
-    // height: 264px;
-    height: 100%;
-    width: 100%;
-    background-color: $color3;
-
-    @include media-breakpoint-down($tablet2) {
-      display: flex;
-      column-gap: 2rem;
-      align-items: center;
-    }
-    @include media-breakpoint-down($mobile) {
-      display: block;
-    }
-
-    .user__card-subheading {
-      font-size: 12px;
-      padding-bottom: 15px;
-      @include media-breakpoint-down($tablet2) {
-        font-size: 15px;
-        text-align: left;
-      }
-      @include media-breakpoint-down($mobile) {
-        font-size: 15px;
-        text-align: center;
-      }
-    }
-    .user__card-heading {
-      font-size: $mediumFont;
-      font-weight: bold;
-      padding-bottom: 10px;
-      @include media-breakpoint-down($tablet2) {
-        text-align: left;
-      }
-      @include media-breakpoint-down($mobile) {
-        text-align: center;
-      }
-    }
-    .user__card-details {
-      div {
-        @apply flex justify-between gap-2;
         @include media-breakpoint-down($tablet2) {
-          justify-content: flex-start;
+            padding: $containerMarginMedium;
+        }
+
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .cgd__items {
+            @apply mb-10;
+            ul {
+                margin-bottom: 3rem;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                // list-style-type: circle;
+                font-size: 15px;
+                li {
+                    @apply px-3;
+                    .social__icons {
+                        top: 6px;
+                    }
+                    @include media-breakpoint-down($mobile) {
+                        @apply py-1;
+                        font-family: Raleway;
+                        font-weight: 400;
+                    }
+                }
+                @include media-breakpoint-down($mobile) {
+                    margin-left: 20px;
+                    columns: 1;
+                    line-height: 25px;
+                }
+            }
+            .cgd__items-configure {
+                text-align: center;
+                button {
+                    @include media-breakpoint-down($mobile) {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+    .cgd-section {
+        padding: $containerMargin;
+        @include media-breakpoint-down($tablet2) {
+            padding: $containerMarginMedium;
+        }
+
+        @include media-breakpoint-down($mobile) {
+            padding: $containerMarginSmall;
+        }
+        .cgd__user-filter {
+            @apply flex justify-between mb-10;
+            position: relative;
+            .social__icons {
+                padding-right: 10px;
+                color: $color2;
+            }
+        }
+        .cgd__users {
+            display: grid;
+            padding: 30px 0px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            row-gap: 40px;
+            column-gap: 20px;
+            @include media-breakpoint-down($tablet2) {
+                grid-template-columns: auto;
+            }
+        }
+        .cgd__groups {
+        }
+        .cgd__pagination {
+            @apply flex justify-center;
+            span {
+                padding: 5px;
+                color: $color2;
+            }
+        }
+    }
+}
+.user__card__outer {
+    background-color: $color2;
+    clip-path: $clipPath6;
+    padding: 3px;
+    // margin: 2rem 0px;
+    .user__card {
+        clip-path: inherit;
+        padding: 1.5rem 2.5rem;
+        // height: 264px;
+        height: 100%;
+        width: 100%;
+        background-color: $color3;
+
+        @include media-breakpoint-down($tablet2) {
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
         }
         @include media-breakpoint-down($mobile) {
-          justify-content: center;
+            display: block;
         }
-      }
+
+        .user__card-subheading {
+            font-size: 12px;
+            padding-bottom: 15px;
+            @include media-breakpoint-down($tablet2) {
+                font-size: 15px;
+                text-align: left;
+            }
+            @include media-breakpoint-down($mobile) {
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        .user__card-heading {
+            font-size: $mediumFont;
+            font-weight: bold;
+            padding-bottom: 10px;
+            @include media-breakpoint-down($tablet2) {
+                text-align: left;
+            }
+            @include media-breakpoint-down($mobile) {
+                text-align: center;
+            }
+        }
+        .user__card-details {
+            div {
+                @apply flex justify-between gap-2;
+                @include media-breakpoint-down($tablet2) {
+                    justify-content: flex-start;
+                }
+                @include media-breakpoint-down($mobile) {
+                    justify-content: center;
+                }
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

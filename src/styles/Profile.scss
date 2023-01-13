@@ -1,168 +1,216 @@
 @import './variables.scss';
 
 .profile {
-  position: relative;
-  overflow: hidden;
-
-  .profile__container {
-    @apply py-16;
     position: relative;
-    margin: $containerMargin;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    overflow: hidden;
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
-    .profile__form {
-      @apply text-white;
-
-      .profile__form-heading__text {
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: $mediumFont;
-      }
-      .profile__form-inputs {
-        gap: 3rem;
+    .profile__container {
+        @apply py-16;
+        position: relative;
+        margin: $containerMargin;
         @include media-breakpoint-down($tablet2) {
-          flex-wrap: wrap;
-          gap: 0rem;
+            margin: $containerMarginMedium;
         }
 
-        h5 {
-          @apply pb-2;
+        @include media-breakpoint-down($mobile) {
+            margin: $containerMarginSmall;
         }
-        .profile__form-name,
-        .profile__form-email,
-        .profile__form-vat,
-        .profile__form-birthday,
-        .profile__form-company {
-          flex: 1;
-          padding: 10px 0px;
-          font-size: $extraSmallFont;
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
-        }
+        .profile__form {
+            @apply text-white;
 
-        .profile__form-gender {
-          @apply flex-col;
-          padding: 10px 0px;
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
-          flex: 1;
-          div {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-          }
+            .profile__form-heading__text {
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: $mediumFont;
+            }
+            .profile__form-inputs {
+                gap: 3rem;
+                @include media-breakpoint-down($tablet2) {
+                    flex-wrap: wrap;
+                    gap: 0rem;
+                }
+
+                h5 {
+                    @apply pb-2;
+                }
+                .profile__form-name,
+                .profile__form-email,
+                .profile__form-vat,
+                .profile__form-birthday,
+                .profile__form-company {
+                    flex: 1;
+                    padding: 10px 0px;
+                    font-size: $extraSmallFont;
+                    @include media-breakpoint-down($tablet2) {
+                        flex-basis: 100%;
+                    }
+                }
+
+                .profile__form-gender {
+                    @apply flex-col;
+                    padding: 10px 0px;
+                    @include media-breakpoint-down($tablet2) {
+                        flex-basis: 100%;
+                    }
+                    flex: 1;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                    }
+                }
+                .profile__form-birthday {
+                    flex: 1;
+                    padding: 10px 0px;
+                    @include media-breakpoint-down($tablet2) {
+                        flex-basis: 100%;
+                    }
+                }
+                .profile__form-password {
+                    flex: 1;
+                    @include media-breakpoint-down($tablet2) {
+                        flex-basis: 100%;
+                    }
+                    h1 {
+                        @apply pb-5;
+                        font-size: $mediumFont;
+                    }
+                    input {
+                        @apply mb-5;
+                    }
+                    button {
+                        font-size: $extraSmallFont;
+                    }
+                }
+                .profile__form-pricing__plan {
+                    flex: 1;
+                    @include media-breakpoint-down($tablet2) {
+                        flex-basis: 100%;
+                    }
+                    h1 {
+                        @apply pb-5 mb-8;
+                        font-size: $mediumFont;
+                        @include media-breakpoint-down($tablet2) {
+                            @apply mb-0;
+                        }
+                    }
+                    div {
+                        @apply mb-8;
+                        @include media-breakpoint-down($tablet2) {
+                            @apply mb-2;
+                        }
+                    }
+                    .primary__button {
+                        font-size: $extraSmallFont;
+                    }
+                }
+            }
         }
-        .profile__form-birthday {
-          flex: 1;
-          padding: 10px 0px;
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
+        .pricing-plan {
+            @include media-breakpoint-down($tablet2) {
+                gap: 2rem !important;
+            }
         }
-        .profile__form-password {
-          flex: 1;
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
-          h1 {
-            @apply pb-5;
-            font-size: $mediumFont;
-          }
-          input {
-            @apply mb-5;
-          }
-          button {
-            font-size: $extraSmallFont;
-          }
+        .profile__invoices {
+            @include media-breakpoint-down($mobile) {
+                display: none;
+            }
+            h1 {
+                @apply py-5;
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: $mediumFont;
+            }
+            table {
+                width: 100%;
+                text-align: left;
+                border-spacing: 0rem 0.5rem;
+                border-collapse: separate;
+                thead {
+                    th {
+                        @apply px-5;
+                        font-family: $fontStyle;
+                        font-weight: 100;
+                        font-size: 15px;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        width: 100%;
+                        border: 2px solid #5a2fb2;
+                        font-size: 15px;
+                        td {
+                            @apply py-3 px-5;
+                            border-top: 2px solid #5a2fb2;
+                            border-bottom: 2px solid #5a2fb2;
+                        }
+                        td:first-child {
+                            border-left: 2px solid #5a2fb2;
+                        }
+                        td:last-child {
+                            border-right: 2px solid #5a2fb2;
+                        }
+                    }
+                    .invoice__outer {
+                        margin: 5px;
+                        padding: 2px;
+                        background: $linearGradient2;
+                        width: 100%;
+                        .invoice__inner {
+                            @apply py-3 px-5;
+                            width: 100%;
+                            background-color: #010239;
+                        }
+                    }
+                }
+            }
         }
-        .profile__form-pricing__plan {
-          flex: 1;
-          @include media-breakpoint-down($tablet2) {
-            flex-basis: 100%;
-          }
-          h1 {
-            @apply pb-5;
-            font-size: $mediumFont;
-          }
-          button {
-            font-size: $extraSmallFont;
-          }
+        .profile__invoices__mobile {
+            display: none;
+            @include media-breakpoint-down($mobile) {
+                display: block;
+            }
+            h1 {
+                @apply py-5;
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: $mediumFont;
+            }
+
+            .invoices__mobile__items {
+                @apply flex items-center;
+                font-size: 14px;
+                .invoices__mobile__title {
+                    width: 40%;
+                }
+                .invoices__mobile__value__outer {
+                    width: 60%;
+                    margin: 5px;
+                    padding: 2px;
+                    background: $linearGradient2;
+
+                    .invoices__mobile__value__inner {
+                        @apply py-3 px-2;
+                        background-color: #010239;
+                    }
+                }
+            }
         }
-      }
     }
-    .profile__invoices {
-      h1 {
-        @apply py-5;
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: $mediumFont;
-      }
-      table {
-        width: 100%;
-        text-align: left;
-        border-spacing: 0rem 0.5rem;
-        border-collapse: separate;
-        thead {
-          th {
-            @apply px-5;
-            font-family: $fontStyle;
-            font-weight: 100;
-            font-size: 15px;
-          }
-        }
-
-        tbody {
-          tr {
-            width: 100%;
-            border: 2px solid #5a2fb2;
-            font-size: 15px;
-            td {
-              @apply py-3 px-5;
-              border-top: 2px solid #5a2fb2;
-              border-bottom: 2px solid #5a2fb2;
-            }
-            td:first-child {
-              border-left: 2px solid #5a2fb2;
-            }
-            td:last-child {
-              border-right: 2px solid #5a2fb2;
-            }
-          }
-          .invoice__outer {
-            margin: 5px;
-            padding: 2px;
-            background: $linearGradient2;
-            width: 100%;
-            .invoice__inner {
-              @apply py-3 px-5;
-              width: 100%;
-              background-color: #010239;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

@@ -1,120 +1,121 @@
 @import './variables.scss';
 
 .payment-plan {
-  position: relative;
-  overflow: hidden;
-
-  .payment-plan__container {
     position: relative;
-    margin: $containerMargin;
-    z-index: 100;
-    @include media-breakpoint-down($tablet2) {
-      margin: $containerMarginMedium;
-    }
+    overflow: hidden;
 
-    @include media-breakpoint-down($mobile) {
-      margin: $containerMarginSmall;
-    }
-    .payment-plan__heading {
-      .payment-plan__heading-text {
-        @apply my-20;
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 60px;
-        text-align: center;
-      }
-    }
-    .payment-plan__advantages {
-      display: grid;
-      // padding: 30px 0px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-      row-gap: 40px;
-      column-gap: 20px;
-    }
-    .payment-plan__subheading {
-      .payment-plan__subheading-text {
-        @apply my-10;
-        font-family: $fontStyle;
-        font-weight: 400;
-        font-size: 26px;
-      }
-    }
-    .payment-plan__items {
-      @apply px-5;
-      ul {
-        margin-bottom: 3rem;
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-        // list-style-type: circle;
-        font-size: 15px;
-        li {
-          @apply px-2;
-          .social__icons {
-            left: -10px;
-          }
+    .payment-plan__container {
+        position: relative;
+        margin: $containerMargin;
+        z-index: 100;
+        @include media-breakpoint-down($tablet2) {
+            margin: $containerMarginMedium;
         }
+
         @include media-breakpoint-down($mobile) {
-          columns: 1;
+            margin: $containerMarginSmall;
         }
-      }
-    }
-    .payment-plan__actions {
-      @apply flex justify-between items-end mb-24 mt-10;
-      flex-wrap: wrap;
-      .payment-plan__price {
-        @apply flex items-end;
-        .payment-plan__price-main {
-          p {
-            font-weight: 500;
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #cf46f1;
-          }
-          h2 {
-            font-family: $fontStyle;
-            font-weight: 700;
-            font-size: $largeFont;
-            color: #e98342;
-            span {
-              font-size: $mediumFont;
-              font-weight: 200;
+        .payment-plan__heading {
+            .payment-plan__heading-text {
+                @apply my-20;
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 60px;
+                text-align: center;
             }
-          }
         }
-        .payment-plan__price-striked {
-          @apply px-5;
-          p {
-            font-family: $fontStyle;
-            font-weight: 300;
-            font-size: $mediumFont;
-            color: #5a2fb3;
-            text-decoration: line-through;
-          }
+        .payment-plan__advantages {
+            display: grid;
+            // padding: 30px 0px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+            row-gap: 40px;
+            column-gap: 20px;
         }
-      }
-      .next-button {
-        @include media-breakpoint-down($mobile) {
-          @apply pt-20;
-          margin: auto;
+        .payment-plan__subheading {
+            .payment-plan__subheading-text {
+                @apply my-10;
+                font-family: $fontStyle;
+                font-weight: 400;
+                font-size: 26px;
+            }
         }
-      }
+        .payment-plan__items {
+            @apply px-5;
+            ul {
+                margin-bottom: 3rem;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                // list-style-type: circle;
+                font-size: 16px;
+                li {
+                    @apply px-2;
+                    font-weight: 400;
+                    .social__icons {
+                        left: -10px;
+                    }
+                }
+                @include media-breakpoint-down($mobile) {
+                    columns: 1;
+                }
+            }
+        }
+        .payment-plan__actions {
+            @apply flex justify-between items-end mb-24 mt-10;
+            flex-wrap: wrap;
+            .payment-plan__price {
+                @apply flex items-end;
+                .payment-plan__price-main {
+                    p {
+                        font-weight: 500;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: #cf46f1;
+                    }
+                    h2 {
+                        font-family: $fontStyle;
+                        font-weight: 700;
+                        font-size: $largeFont;
+                        color: #e98342;
+                        span {
+                            font-size: $mediumFont;
+                            font-weight: 200;
+                        }
+                    }
+                }
+                .payment-plan__price-striked {
+                    @apply px-5;
+                    p {
+                        font-family: $fontStyle;
+                        font-weight: 300;
+                        font-size: $mediumFont;
+                        color: #5a2fb3;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            .next-button {
+                @include media-breakpoint-down($mobile) {
+                    @apply pt-20;
+                    margin: auto;
+                }
+            }
+        }
     }
-  }
 }
 
 .color__circles {
-  position: absolute;
-  background: $linearGradient2;
-  border-radius: 50%;
+    position: absolute;
+    background: $linearGradient2;
+    border-radius: 50%;
 }
 .circle__18 {
-  width: 230px;
-  height: 230px;
-  bottom: -70px;
-  right: -70px;
-  filter: blur(150px);
-  transform: rotate(1.3deg);
-  z-index: 1;
+    width: 230px;
+    height: 230px;
+    bottom: -70px;
+    right: -70px;
+    filter: blur(150px);
+    transform: rotate(1.3deg);
+    z-index: 1;
 }

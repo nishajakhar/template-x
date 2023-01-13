@@ -16,12 +16,20 @@
     .company-group-config-modal__heading {
         @apply flex justify-center py-2;
         font-size: 30px;
+        @include media-breakpoint-down($mobile) {
+            @apply py-1;
+            font-size: 25px;
+        }
     }
     .company-group-config-modal__subheading {
         @apply flex justify-center text-center py-2;
         font-size: 18px;
         font-weight: 500;
         font-family: 'Quantico';
+        @include media-breakpoint-down($mobile) {
+            @apply pb-3;
+            font-size: 16px;
+        }
     }
     .company-group-config__form-name {
         label {
@@ -31,10 +39,10 @@
     .company-group-config__form-properties {
         @apply my-5;
         .company-group-config__form-property-item {
-            @apply flex items-center;
+            @apply flex items-start mb-3;
             input {
-                @apply my-3 mr-2;
-
+                @apply mr-2;
+                min-width: 20px;
                 background: transparent;
                 border-radius: 0px;
                 border: 1px solid $color2;
@@ -44,7 +52,7 @@
             }
             label {
                 font-size: 14px;
-                font-weight: 350;
+                font-weight: 400;
             }
         }
     }

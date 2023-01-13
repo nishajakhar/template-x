@@ -4,13 +4,15 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSignOut, faTimes, faUser, faCaretDown, faCancel } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSignOut, faTimes, faUser, faCaretDown, faCancel, faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedinIn, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 export default function Header({ login, setLogin }) {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [mobileMenuActive, setMobileMenuActive] = useState(0);
   const loginmenu = useRef();
   const mobile = useRef();
 
@@ -24,10 +26,8 @@ export default function Header({ login, setLogin }) {
     profilemenu.current.classList.toggle('hidden');
   };
   const handleMobileMenu = () => {
-    console.log('I am cliked.....');
-
-    mobile.current.classList.toggle('hidden');
-    if (mobile.current.classList.contains('hidden')) {
+    setMobileMenu(!mobileMenu);
+    if (mobileMenu == false) {
       document.body.style.maxHeight = 'unset';
     } else {
       document.body.style.maxHeight = '100vh';
@@ -60,7 +60,7 @@ export default function Header({ login, setLogin }) {
             </div>
             <div className="header__secondary-translate">
               {' '}
-              <select>
+              <select className="header__secondary-translate-select">
                 <option>ENG</option>
                 <option>GER</option>
                 <option>SPA</option>
@@ -117,9 +117,9 @@ export default function Header({ login, setLogin }) {
           </div>
           {login && (
             <div onClick={handleGetProfile} className="header__primary-username">
-              <p>
+              <p className='cursor-pointer hover:text-gray-500'>
                 {' '}
-                <FontAwesomeIcon icon={faUser} classname="social__icons" className="text-pink-500" />
+                <FontAwesomeIcon icon={faUser} className="social__icons text-pink-500 pr-1" />
                 Cornelia S.
               </p>
             </div>
@@ -246,7 +246,8 @@ export default function Header({ login, setLogin }) {
           </div>
         </div>
       </div>
-      <div className="mobile__navigation-menu hidden" ref={mobile}>
+      { mobileMenu && 
+      <div className="mobile__navigation-menu" ref={mobile}>
         <div className="mobile__navigation-overlay">
           <div className="mobile__navigation-overlay-content">
             <div className="mobile__navigation-header flex justify-between">
@@ -265,7 +266,7 @@ export default function Header({ login, setLogin }) {
                 />
               </div>
             </div>
-            <div className="mobile__navigation-navitems">
+       { mobileMenuActive == 0 &&      <div className="mobile__navigation-navitems">
               <div className={'mobile__navigation-navitem ' + (active == 0 ? 'item-active' : '')}>
                 <Link
                   to="/"
@@ -333,51 +334,129 @@ export default function Header({ login, setLogin }) {
                 </Link>
               </div>
             </div>
-            {!login && (
-              <div className="mobile__navigation-submenu" ref={mobile}>
-                <div>
-                  <div className="menu-top">
-                    <h1>Are you Registered?</h1>
-                    <Link to="/login">
-                      <button
-                        className="primary__button"
-                        onClick={() => {
-                          mobile.current.classList.toggle('hidden');
-                        }}
-                      >
-                        LOGIN
-                      </button>
-                    </Link>
-                  </div>
-                  <div className="menu-bottom">
-                    <h1>First time on the site?</h1>
-                    <div className="mt-5 flex justify-center">
-                      <div className="tertiary__button-outer">
-                        <Link to="/signup">
-                          <button
-                            className="tertiary__button"
-                            onClick={() => {
-                              mobile.current.classList.toggle('hidden');
-                            }}
-                          >
-                            CONFIGURE
-                          </button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+       }
+         
+       
+       {mobileMenuActive == 1 && 
+        <div className="mobile__navigation-navitems">
+          <div className='mobile__navigation-navitem ' onClick={() => setMobileMenuActive(0)}>
+            <p>            <FontAwesomeIcon icon={faCaretLeft} classname="social__icons" className="pr-2" />
+Back</p>
+            </div>
+        <div className={'mobile__navigation-navitem ' + (active == 6 ? 'item-active' : '')}>
+          <Link
+            to="/profile"
+            onClick={() => {
+              setActive(6);
+              handleMobileMenu();
+            }}
+          >
+            Profile
+          </Link>
+        </div>
+        <div className={'mobile__navigation-navitem ' + (active == 7 ? 'item-active' : '')}>
+          <Link
+            to="/tenplates"
+            onClick={() => {
+              setActive(7);
+              handleMobileMenu();
+            }}
+          >
+            Templates
+          </Link>
+        </div>
+        <div className={'mobile__navigation-navitem ' + (active == 8 ? 'item-active' : '')}>
+          <Link
+            to="/emails"
+            onClick={() => {
+              setActive(8);
+              handleMobileMenu();
+            }}
+          >
+            Emails
+          </Link>
+        </div>
+        <div className={'mobile__navigation-navitem ' + (active == 9 ? 'item-active' : '')}>
+          <Link
+            to="/"
+            onClick={() => {
+              setActive(9);
+              handleMobileMenu();
+            }}
+          >
+            Settings
+          </Link>
+        </div>
+        <div className={'mobile__navigation-navitem ' + (active == 10 ? 'item-active' : '')}>
+          <Link
+            to="/"
+            onClick={() => {
+              setActive(10);
+              handleMobileMenu();
+            }}
+          >
+            Help
+          </Link>
+        </div>
+         
+        
+      </div>
+       }
+      {!login && (
+        <div className="mobile__navigation-submenu" ref={mobile}>
+          <div>
+            <div className="menu-top">
+              <h1>Are you Registered?</h1>
+              <Link to="/login">
+                <button
+                  className="primary__button"
+                  onClick={() => {
+                    mobile.current.classList.toggle('hidden');
+                  }}
+                >
+                  LOGIN
+                </button>
+              </Link>
+            </div>
+            <div className="menu-bottom">
+              <h1>First time on the site?</h1>
+              <div className="mt-5 flex justify-center">
+                <div className="tertiary__button-outer">
+                  <Link to="/signup">
+                    <button
+                      className="tertiary__button"
+                      onClick={() => {
+                        mobile.current.classList.toggle('hidden');
+                      }}
+                    >
+                      CONFIGURE
+                    </button>
+                  </Link>
                 </div>
               </div>
-            )}
-            {login && (
-              <div onClick={handleGetProfile} className="mobile__navigation-username">
-                <p>
-                  {' '}
-                  <FontAwesomeIcon icon={faUser} classname="social__icons" className="pr-2" />
-                  Cornelia S.
-                </p>
-              </div>
-            )}
+            </div>
+          </div>
+        </div>
+      )}
+      {login && mobileMenuActive == 0 && (
+        <div onClick={() => setMobileMenuActive(1)} className="mobile__navigation-username">
+          <p>
+            {' '}
+            <FontAwesomeIcon icon={faUser} classname="social__icons" className="pr-2" />
+            Cornelia S.
+          </p>
+        </div>
+      )}
+      { login && mobileMenuActive == 1 && (
+        <div onClick={handleGetProfile} className="mobile__navigation-username">
+        <p>
+          {' '}
+          <FontAwesomeIcon icon={faSignOut} classname="social__icons" className="pr-2" />
+          Logout
+        </p>
+      </div>
+      )}
+      
             <div className="mobile__navigation-footer">
               <div className="mobile__navigation-social">
                 <div>
@@ -407,6 +486,8 @@ export default function Header({ login, setLogin }) {
           </div>
         </div>
       </div>
-    </>
+      }
+       
+   </>
   );
 }

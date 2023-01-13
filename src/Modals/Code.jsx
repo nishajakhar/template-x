@@ -12,70 +12,41 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function CodeModal(props) {
-    const [code, setCode] = useState(`  1
-    <!DOCTYPE html>
-    2
-    <html lang="en">
-    3
-    <head>
-    4
-    <meta charset="UTF-8">
-    5
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    6
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    7
-    <title>HTML 5 Boilerplate</title>
-    8
-    <link rel="stylesheet" href="style.css">
-    9
-    </head>
-    10
-    <body>
-    11
-    <script src="index.js"></script>
-    12
+    const [edit, setEdit] = useState(false);
+    const [code, setCode] = useState(
+        `<!DOCTYPE html>
+     <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>HTML 5 Boilerplate</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+     <body>
+        <script src="index.js"></script>
     </body>
-    13
-    </html>
-    14
-    <!DOCTYPE html>
-    15
-    <html lang="en">
-    16
-    <head>
-    17
-    <meta charset="UTF-8">
-    18
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    19
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    20
-    <title>HTML 5 Boilerplate</title>
-    21
-    <link rel="stylesheet" href="style.css">
-    22
-    </head>
-    23
-    <body>
-    24
-    <script src="index.js"></script>
-    25
-    </body>
-    26
-    </html>
-    27
-    <link rel="stylesheet" href="style.css">
-    28
-    </head>
-    29
-    <body>
-    30
-    <script src="index.js"></script>
-    31
-    </body>
-    32
-    </html>`);
+     </html>
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML 5 Boilerplate</title>
+        <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+        <script src="index.js"></script>
+     </body>
+     </html>
+        <link rel="stylesheet" href="style.css">
+     </head>    
+        <body>
+            <script src="index.js"></script>
+        </body>
+     </html>`
+    );
     const modal = useRef(0);
     const modalContent = useRef(0);
 
@@ -99,41 +70,53 @@ export default function CodeModal(props) {
                     </button>
 
                     <div className="code-modal__buttons">
-                        <button
-                            className="primary__button"
-                            onClick={handleClose}
-                        >
+                        <button className="" onClick={() => setEdit(!edit)}>
                             <FontAwesomeIcon
-                                className="social__icons"
+                                className="social__icons pr-2"
                                 icon={faPencil}
                             />
                             Edit Code
                         </button>
-                        <button
-                            className="primary__button"
-                            onClick={handleClose}
-                        >
+                        <button className="" onClick={handleClose}>
                             <FontAwesomeIcon
-                                className="social__icons"
+                                className="social__icons  pr-2"
                                 icon={faPaste}
                             />
                             Paste html
                         </button>
-                        <button
-                            className="primary__button"
-                            onClick={handleClose}
-                        >
+                        <button className="" onClick={handleClose}>
                             <FontAwesomeIcon
-                                className="social__icons"
+                                className="social__icons  pr-2"
                                 icon={faCopy}
                             />
                             Copy html
                         </button>
                     </div>
-                    <div className="code-modal__body">
+                    <div className="code-modal__body flex">
+                        <div className="pr-2">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                            <p>7</p>
+                            <p>9</p>
+                            <p>10</p>
+                            <p>11</p>
+                            <p>12</p>
+                            <p>13</p>
+                            <p>14</p>
+                            <p>15</p>
+                            <p>16</p>
+                        </div>
                         <textarea
                             rows="15"
-                            className="w-full bg-gray-500"
+                            className={
+                                edit
+                                    ? 'bg-white text-black w-full'
+                                    : 'bg-transparent w-full'
+                            }
                             value={code}
                         />
                     </div>

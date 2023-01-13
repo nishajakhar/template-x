@@ -1,10 +1,16 @@
 import '../styles/Modals/Settings.scss';
 import '../styles/modalShared.scss';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faTwitter,
+    faLinkedinIn,
+    faFacebookF,
+} from '@fortawesome/free-brands-svg-icons';
+
 import {
     faAdd,
     faArrowPointer,
@@ -12,9 +18,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 config.autoAddCss = false;
 export default function SettingsModal(props) {
+    const checkbox = useRef(0);
     const modal = useRef(0);
     const modalContent = useRef(0);
-
+    const [isSelect, setIsSelect] = useState(false);
     const handleClose = async e => {
         e.preventDefault();
         modalContent.current.classList.remove('modal-open');
@@ -22,6 +29,11 @@ export default function SettingsModal(props) {
         await new Promise(r => setTimeout(r, 300));
         modal.current.style.display = 'none';
         props.open(false);
+    };
+    const handlePublish = e => {
+        if (checkbox.current.checked) {
+            setIsSelect(true);
+        } else setIsSelect(false);
     };
     return (
         <div className="settings-modal modal" ref={modal}>
@@ -88,10 +100,42 @@ export default function SettingsModal(props) {
                                         Schedule once, publish everywhere
                                     </label>
                                     <div className="inputgroup">
-                                        <input type="checkbox" className="" />
+                                        <input
+                                            type="checkbox"
+                                            className=""
+                                            onClick={handlePublish}
+                                            ref={checkbox}
+                                        />
                                         <label className="inputgroup-label"></label>
                                     </div>
                                 </div>
+                                {isSelect && (
+                                    <div className="social flex gap-x-5 justify-end py-2">
+                                        <div className="hover:text-yellow-500">
+                                            <a href="#">
+                                                <FontAwesomeIcon
+                                                    classname="social__icons"
+                                                    icon={faLinkedinIn}
+                                                />
+                                            </a>{' '}
+                                        </div>
+                                        <div
+                                            style={{
+                                                borderRight: '1px solid pink',
+                                            }}
+                                        ></div>
+
+                                        <div className="hover:text-yellow-500">
+                                            <a href="#">
+                                                {' '}
+                                                <FontAwesomeIcon
+                                                    classname="social__icons"
+                                                    icon={faFacebookF}
+                                                />
+                                            </a>
+                                        </div>
+                                    </div>
+                                )}
                                 <div className="settings__form-input-socials"></div>
                                 <div className="settings__form-input">
                                     <label className="">Items Per Page</label>
@@ -214,7 +258,7 @@ export default function SettingsModal(props) {
                         <div className="settings__form-action flex justify-center my-5">
                             <div className="tertiary__button-outer">
                                 <button
-                                    className="tertiary__button"
+                                    className="tertiary__button modal__button"
                                     onClick={handleClose}
                                 >
                                     CLOSE

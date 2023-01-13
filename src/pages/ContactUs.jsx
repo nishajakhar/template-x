@@ -27,11 +27,11 @@ export default function ContactUsScreen() {
                             <div className="contactus__form-inputs">
                                 <div className="contactus__form-question">
                                     <label className="">Question</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Please enter your question"
-                                        className="primary__input"
-                                    />
+                                    <select>
+                                        <option>Question 1</option>
+                                        <option>Question 2</option>
+                                        <option>Question 3</option>
+                                    </select>
                                 </div>
                                 <div className="contactus__form-email">
                                     <label className="">Email</label>

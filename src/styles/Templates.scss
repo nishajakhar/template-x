@@ -101,6 +101,7 @@
                         font-weight: 500;
                         .social__icons {
                             @apply px-1;
+                            color: $color2;
                             @include media-breakpoint-down($mobile) {
                                 @apply px-2;
                             }

@@ -23,8 +23,22 @@ export default function PhotoEditModal(props) {
     const [active, setActive] = useState(0);
     const [font, setFont] = useState('Times New Roman');
     const [showFontMenu, setShowFontMenu] = useState(false);
+    const [zoomValue, setZoomValue] = useState(0);
+    const [filterSelected, setFilterSelected] = useState(0);
     const modal = useRef(0);
     const modalContent = useRef(0);
+    const handleZoom = e => {
+        setZoomValue(e.target.value);
+        var value =
+            ((e.target.value - e.target.min) / (e.target.max - e.target.min)) *
+            100;
+        e.target.style.background =
+            'linear-gradient(to right, #cf46f1 0%, #cf46f1 ' +
+            value +
+            '%, #fff ' +
+            value +
+            '%, white 100%)';
+    };
 
     const handleClose = async e => {
         e.preventDefault();
@@ -178,77 +192,110 @@ export default function PhotoEditModal(props) {
                             </div>
 
                             <div className="photo-edit-modal__filters__1">
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(0)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/grayscale.png" />
                                     </div>
                                     <h1>Grayscale</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(1)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/black&white.png" />
                                     </div>{' '}
                                     <h1>Black & White</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(2)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/sharpen.png" />
                                     </div>{' '}
                                     <h1>Sharpen</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(3)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/invert.png" />
                                     </div>{' '}
                                     <h1>Invert</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(4)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/vintage.png" />
                                     </div>{' '}
                                     <h1>Vintage</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(5)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/polaroid.png" />
                                     </div>{' '}
                                     <h1>Polaroid</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(6)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/kodachrome.png" />
                                     </div>{' '}
                                     <h1>Kodachrome</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(7)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/sharpen.png" />
                                     </div>{' '}
                                     <h1>Sharpen</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(8)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/polaroid.png" />
                                     </div>{' '}
                                     <h1>Polaroid</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(9)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/vintage.png" />
                                     </div>{' '}
                                     <h1>Vintage</h1>
                                 </div>
 
-                                <div className="photo-edit-modal__filters-item">
+                                <div
+                                    className="photo-edit-modal__filters-item"
+                                    onClick={() => setFilterSelected(10)}
+                                >
                                     <div className="photo-edit-modal__filters-image">
                                         <img src="/black&white.png" />
                                     </div>{' '}
@@ -1068,24 +1115,31 @@ export default function PhotoEditModal(props) {
                         </div>
                     </div>
 
-                    <div className="photo-edit-modal__zoom flex gap-x-5">
+                    <div className="photo-edit-modal__zoom flex gap-x-5 items-center">
                         <p>Zoom</p>
-                        <input type="range" className="w-1/2" />
-                        <p>15%</p>
+                        <input
+                            type="range"
+                            min="1"
+                            max="100"
+                            className="myinput w-2/3"
+                            onInput={handleZoom}
+                            value={zoomValue}
+                        />
+                        <p className="w-5">{zoomValue}%</p>
                     </div>
 
                     <div className="photo-edit-modal__actions">
                         <div className="tertiary__button-outer">
                             {active == 0 ? (
                                 <button
-                                    className="tertiary__button"
+                                    className="tertiary__button modal__button"
                                     onClick={handleClose}
                                 >
                                     CANCEL
                                 </button>
                             ) : (
                                 <button
-                                    className="tertiary__button"
+                                    className="tertiary__button modal__button"
                                     onClick={e => {
                                         e.preventDefault();
                                         setActive(0);
